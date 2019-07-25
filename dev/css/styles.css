@@ -1,0 +1,79 @@
+body {
+	background: #fff;
+	color: #222;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.5em;
+}
+
+body.home {
+	font-size: 2rem;
+}
+
+a.button {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #222;
+	font-weight: 600;
+	color: #0055FF;
+	display: block;
+	line-height: 1em;
+}
+
+header.main-header {
+	padding: 2rem;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+}
+
+	h1.logo {
+		color: #1ED261;
+		padding: 0; margin: 0;
+	}
+		h1.logo > span {
+			display: none;
+		}
+		h1.logo > img {
+			width: 30rem;
+		}
+
+	nav.main-nav {
+
+	}
+
+/*MAIN */
+main {
+
+}
+	header.cover {
+		background-color: #1ED261;
+		padding: 2rem;
+
+		display: flex;
+		flex-flow: column wrap;
+	}
+		header.cover h2 {
+			font-size: 3rem;
+			font-weight: 600;
+			line-height: 1.3em;
+			color: white;
+
+		}
+		header.cover a.button {
+			align-self: flex-end;
+		}
+
+section {
+	padding: 2rem;
+}
+
+
+/**/
+/*@media screen and (min-width: 960px) {
+  body {
+    background-color: lightblue;
+  }
+}*/
