@@ -53,7 +53,43 @@ header.main-header {
 
 
 	nav.main-nav {
+		.flex-display();
+	    .flex-flow(row wrap);
 
+		a.menu {
+			background: white url("../img/icon-menu.svg") no-repeat 0 0;
+			background-size: 4rem;
+			background-position: center;
+			color: transparent;
+			font-size: 0;
+			.icon-size(4rem);
+			padding: 1.6rem;
+			overflow: hidden;
+			.align-self(center);
+			border-radius: 50%;
+
+			position: fixed;
+			top: 5.5rem;
+			right: 2rem;
+			z-index: 9999;
+
+			&:hover {
+				background-color: @color-green;
+			}
+
+			&:active, &.active{
+				background-color: @color-green;
+			}
+		}
+	}
+}
+body.page {
+	header.main-header {
+		h1.logo {
+			> img {
+				width: 10rem;
+			}
+		}
 	}
 }
 
@@ -392,6 +428,42 @@ footer.main-footer {
     }
 
 }
+
+/*=====================
+MENU
+=====================*/
+
+body.menu-page {
+
+	main {
+		padding: 2rem;
+
+		h1 {
+			.section-h1;
+		}
+
+		nav.menu {
+			ul {
+				list-style-type: none;
+				padding-left: 0;
+
+				li {
+					a {
+						text-decoration: none;
+						font-weight: bold;
+						color: @color-green;
+
+						&:hover {
+							color: @color-black;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
 
 /**/
 /*@media screen and (min-width: 960px) {

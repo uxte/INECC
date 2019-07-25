@@ -60,6 +60,44 @@ header.main-header h1.logo > span {
 header.main-header h1.logo > img {
   width: 30rem;
 }
+header.main-header nav.main-nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+header.main-header nav.main-nav a.menu {
+  background: white url("../img/icon-menu.svg") no-repeat 0 0;
+  background-size: 4rem;
+  background-position: center;
+  color: transparent;
+  font-size: 0;
+  width: 4rem;
+  height: 4rem;
+  padding: 1.6rem;
+  overflow: hidden;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+  border-radius: 50%;
+  position: fixed;
+  top: 5.5rem;
+  right: 2rem;
+  z-index: 9999;
+}
+header.main-header nav.main-nav a.menu:hover {
+  background-color: #1ED261;
+}
+header.main-header nav.main-nav a.menu:active,
+header.main-header nav.main-nav a.menu.active {
+  background-color: #1ED261;
+}
+body.page header.main-header h1.logo > img {
+  width: 10rem;
+}
 /*MAIN */
 main header.cover {
   background-color: #1ED261;
@@ -387,6 +425,30 @@ footer.main-footer address.author {
 }
 footer.main-footer address.author {
   font-style: normal;
+}
+/*=====================
+MENU
+=====================*/
+body.menu-page main {
+  padding: 2rem;
+}
+body.menu-page main h1 {
+  margin: 0;
+  padding-bottom: 0.1em;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+}
+body.menu-page main nav.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+body.menu-page main nav.menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1ED261;
+}
+body.menu-page main nav.menu ul li a:hover {
+  color: #222222;
 }
 /**/
 /*@media screen and (min-width: 960px) {
