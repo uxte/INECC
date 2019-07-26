@@ -54,11 +54,12 @@ header.main-header h1.logo {
   padding: 0;
   margin: 0;
 }
-header.main-header h1.logo > span {
+header.main-header h1.logo span {
   display: none;
 }
-header.main-header h1.logo > img {
+header.main-header h1.logo img {
   width: 30rem;
+  height: auto;
 }
 header.main-header nav.main-nav {
   display: -webkit-flex;
@@ -84,7 +85,7 @@ header.main-header nav.main-nav a.menu {
   align-self: center;
   border-radius: 50%;
   position: fixed;
-  top: 5.5rem;
+  top: 4.5rem;
   right: 2rem;
   z-index: 9999;
 }
@@ -94,9 +95,6 @@ header.main-header nav.main-nav a.menu:hover {
 header.main-header nav.main-nav a.menu:active,
 header.main-header nav.main-nav a.menu.active {
   background-color: #1ED261;
-}
-body.page header.main-header h1.logo > img {
-  width: 10rem;
 }
 /*MAIN */
 main header.cover {
@@ -329,6 +327,8 @@ nav.index ul li {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   margin-top: 2em;
+  background: transparent url("../img/icon-arrow.svg") no-repeat center right;
+  background-size: 6rem;
 }
 nav.index ul li > a {
   text-decoration: none;
@@ -425,6 +425,15 @@ footer.main-footer address.author {
 }
 footer.main-footer address.author {
   font-style: normal;
+}
+/*=====================
+HOME
+=====================*/
+/*=====================
+PAGE
+=====================*/
+body.page header.main-header h1.logo img {
+  width: 10rem;
 }
 /*=====================
 MENU
