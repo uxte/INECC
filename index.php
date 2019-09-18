@@ -8,9 +8,9 @@
   <meta name="description" content="INECC">
   <meta name="author" content="Komuhn">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" media="screen and (min-width: 1025px)" href="css/full.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
+  <link rel="stylesheet" media="screen and (min-width: 1025px)" href="<?php echo get_stylesheet_directory_uri(); ?>/css/full.css">
 
 </head>
 
@@ -20,7 +20,7 @@
 		<h1 class="logo">
             <a href="index.html">
     			<span>INECC - People's Voices in Policy Choices</span>
-    			<img src="img/logo.svg" alt="Logo" />
+    			<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="Logo" />
             </a>
 		</h1>
 		<nav class="main-nav">
@@ -44,15 +44,15 @@
 				<ul>
 					<li>
 						<a href="our-work.html">Community <br>Resilience to <br>Climate Change</a>
-						<img src="img/icon-community.svg" alt="Community icon" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-community.svg" alt="Community icon" />
 					</li>
 					<li>
 						<a href="http://">Education and <br>Communication</a>
-						<img src="img/icon-education.svg" alt="Community icon" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-education.svg" alt="Community icon" />
 					</li>
 					<li>
 						<a href="http://">Research, Policy <br>and Advocacy</a>
-						<img src="img/icon-research.svg" alt="Community icon" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-research.svg" alt="Community icon" />
 					</li>
 				</ul>
 			</nav>
@@ -75,7 +75,7 @@
 				<h1>Name of event</h1>
 				<p>Description of event in two or three lines continuations of event in two or three lines of event in two or three lines</p>
                 <div class="wrapper">
-                    <figure><img src="img/thumb.svg" alt="Thumb" /></figure>
+                    <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" /></figure>
     				<footer>
     					<time datetime="2019-07-01" pubdate="pubdate">July 01, 2019</time>
     					<address>Place/City</address>
@@ -90,10 +90,10 @@
             <h1>Co-create with us...</h1>
             <h2>A better dialogue</h2>
             <p>Contribute to a more democratic and informed climate change dialogue our blog EcoEthic at ecoethic@inecc.net</p>
-            <figure><img src="img/thumb.svg" alt="Thumb" /></figure>
+            <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" /></figure>
             <h2>A better dialogue</h2>
             <p>Help create a better life for the marginalized with your donations.</p>
-            <figure><img src="img/thumb.svg" alt="Thumb" /></figure>
+            <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" /></figure>
             <p>If you have any questions about where your money is going, contact us at info@inecc.net</p>
         </section>
 
@@ -109,7 +109,7 @@
                     <cite class="author">Ranjana Gaur</cite>
                     <cite class="title">Secretary, Social Action and Research Centre; Varanasi</cite>
                     <figure>
-                        <img src="img/thumb.svg" alt="Thumb" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" />
                     </figure>
                 </footer>
 
@@ -121,11 +121,11 @@
 	<footer class="main-footer">
 
         <div class="social-media">
-            <a href="https://www.facebook.com/" title="Facebook"><svg class="icon icon-facebook"><use xlink:href="img/icons.svg#icon-facebook"></use></svg></a>
-            <a href="https://www.instagram.com/" title="Instagram"><svg class="icon icon-instagram"><use xlink:href="img/icons.svg#icon-instagram"></use></svg></a>
-            <a href="https://www.linkedin.com/company/" title="LinkedIn"><svg class="icon icon-linkedin"><use xlink:href="img/icons.svg#icon-linkedin"></use></svg></a>
-            <a href="https://medium.com/" title="Medium"><svg class="icon icon-medium"><use xlink:href="img/icons.svg#icon-medium"></use></svg></a>
-            <a href="https://twitter.com/" title="Twitter"><svg class="icon icon-twitter"><use xlink:href="img/icons.svg#icon-twitter"></use></svg></a>
+            <a href="https://www.facebook.com/" title="Facebook"><svg class="icon icon-facebook"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons.svg#icon-facebook"></use></svg></a>
+            <a href="https://www.instagram.com/" title="Instagram"><svg class="icon icon-instagram"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons.svg#icon-instagram"></use></svg></a>
+            <a href="https://www.linkedin.com/company/" title="LinkedIn"><svg class="icon icon-linkedin"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons.svg#icon-linkedin"></use></svg></a>
+            <a href="https://medium.com/" title="Medium"><svg class="icon icon-medium"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons.svg#icon-medium"></use></svg></a>
+            <a href="https://twitter.com/" title="Twitter"><svg class="icon icon-twitter"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons.svg#icon-twitter"></use></svg></a>
         </div>
 
         <a class="button donate" href="#">Donate to build a better future</a>
