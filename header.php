@@ -22,10 +22,20 @@
 		<h1 class="logo">
             <a href="<?php echo home_url(); ?>">
     			<span>INECC - People's Voices in Policy Choices</span>
-    			<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="Logo" />
+                <?php if ( is_home() ) : ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="Logo" />
+                <?php elseif ( is_page( 'menu' ) ) : ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-small-white.svg" alt="Logo" />
+                <?php else : ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-small.svg" alt="Logo" />
+                <?php endif; ?>
             </a>
 		</h1>
 		<nav class="main-nav">
-			<a class="menu" href="<?php open_menu(); ?>">Menu</a>
+            <?php if ( is_page( 'menu' ) ) : ?>
+			<a class="menu open" href="<?php open_menu(); ?>">Menu</a>
+            <?php else : ?>
+            <a class="menu" href="<?php open_menu(); ?>">Menu</a>
+            <?php endif; ?>
 		</nav>
 	</header>

@@ -17,6 +17,34 @@ function my_body_classes( $classes ) {
 
 }
 
+//Add custom menu functionality
+function new_custom_menu() {
+  register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+}
+add_action( 'init', 'new_custom_menu' );
+
+//
+// function show_post($path) {
+//   $post = get_page_by_path($path);
+//   $content = apply_filters('the_content', $post->post_content);
+//   echo $content;
+// }
+
+
+/**
+ * Return whether the current page is a child of $id
+ *
+ * Note: this function must be run after the `wp` hook.
+ * Otherwise, the WP_Post object is not set up, and
+ * is_page() will return false.
+ *
+ * @param  int  $id The post ID of the parent page
+ * @return bool Whether the current page is a child page of $id
+ */
+function is_child_of( $id ) {
+  return ( is_page() && $id === get_post()->post_parent );
+}
+
 //
 function open_menu () {
     $prev_url = home_url( $wp->request );

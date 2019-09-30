@@ -36,6 +36,24 @@ a.button span {
   display: block;
   letter-spacing: 0.05em;
 }
+.title-h1 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+.title-h2 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+/*=====================
+HEADER
+=====================*/
 header.main-header {
   padding: 4rem 2rem;
   display: -webkit-flex;
@@ -96,10 +114,15 @@ header.main-header nav.main-nav a.menu:active,
 header.main-header nav.main-nav a.menu.active {
   background-color: #1ED261;
 }
+header.main-header nav.main-nav a.menu.open {
+  background-color: #1ED261;
+  background-image: url("../img/icon-cross.svg");
+  position: absolute;
+}
 /*MAIN */
 main header.cover {
   background-color: #1ED261;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0rem 2rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -107,6 +130,14 @@ main header.cover {
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+}
+main header.cover h1 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: white;
 }
 main header.cover h2 {
   font-size: 3rem;
@@ -120,57 +151,8 @@ main header.cover a.button {
   align-self: flex-end;
   margin-bottom: 2rem;
 }
-/**/
-.section-h1 {
-  margin: 0;
-  padding-bottom: 0.1em;
-  text-transform: uppercase;
-  font-size: 4.5rem;
-}
-section {
-  padding: 4rem 2rem;
-}
-section header h1 {
-  margin: 0;
-  padding-bottom: 0.1em;
-  text-transform: uppercase;
-  font-size: 4.5rem;
-}
-section header h2 {
-  margin: 0;
-  font-weight: normal;
-  font-size: 3rem;
-}
-section > h1 {
-  margin: 0;
-  padding-bottom: 0.1em;
-  text-transform: uppercase;
-  font-size: 4.5rem;
-}
-section.our-work header h1 {
-  color: #1ED261;
-}
-section.our-reach {
-  background-color: rgba(39, 58, 67, 0.1);
-}
-section.our-reach header h1 {
-  color: #0055FF;
-}
-section.events > h1 {
-  color: #FF892F;
-}
-section.events article.event {
-  margin: 1em 0;
-}
-section.events article.event > h1 {
-  margin: 0;
-  font-size: 3rem;
-}
-section.events article.event > p {
-  margin: 0;
-  padding-bottom: 1em;
-}
-section.events article.event .wrapper {
+/*TABS*/
+.tabs nav.tabs-nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -178,212 +160,51 @@ section.events article.event .wrapper {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
 }
-section.events article.event figure {
-  background-color: red;
-  margin: 0;
-  padding: 0;
-  -webkit-order: 1;
-  -ms-order: 1;
-  order: 1;
+.tabs nav.tabs-nav > a {
+  background: rgba(99, 148, 171, 0.2);
+  color: #6394AB;
+  font-size: 2rem;
+  line-height: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2rem 1rem 1rem 1rem;
+  margin: 0 0.5rem;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
 }
-section.events article.event figure img {
-  vertical-align: middle;
-  width: auto;
-}
-section.events article.event footer {
-  -webkit-order: 0;
-  -ms-order: 0;
-  order: 0;
-}
-section.co-create {
-  background-color: #0055FF;
-  color: white;
-}
-section.co-create > h1,
-section.co-create > h2 {
-  color: #FFB600;
-  margin: 0;
-  padding: 0;
-}
-section.co-create > h1 {
+.tabs nav.tabs-nav > a span {
+  display: block;
+  border-bottom: #6394AB 0.5rem solid;
   padding-bottom: 0.5em;
 }
-section.co-create > h2 {
-  font-size: 3rem;
-}
-section.co-create p {
-  margin: 0;
-}
-section.co-create > figure {
+.tabs nav.tabs-nav > a:first-of-type {
   margin-left: 0;
 }
-section.testimonials {
+.tabs nav.tabs-nav > a:last-of-type {
+  margin-right: 0;
+}
+.tabs nav.tabs-nav > a:first-of-type {
   background-color: #1ED261;
-}
-section.testimonials blockquote {
-  margin: 0;
-  padding: 0;
-  font-size: 2.2rem;
-  line-height: 1.5em;
-  margin-bottom: -30px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-}
-section.testimonials blockquote p {
-  margin: 0;
-  padding: 0;
-  margin-left: 1.5em;
-  -webkit-order: 1;
-  -ms-order: 1;
-  order: 1;
-  position: relative;
-}
-section.testimonials blockquote p:before,
-section.testimonials blockquote p:after {
-  font-weight: bold;
-  font-size: 8em;
-  color: #0055FF;
-  position: absolute;
-}
-section.testimonials blockquote p:before {
-  content: open-quote;
-  top: -30px;
-  left: -130px;
-}
-section.testimonials blockquote p:after {
-  content: close-quote;
-  bottom: -80px;
-  right: 0;
-}
-section.testimonials blockquote footer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  -webkit-order: 0;
-  -ms-order: 0;
-  order: 0;
-}
-section.testimonials blockquote footer cite {
-  font-style: normal;
-  line-height: 1.2em;
-}
-section.testimonials blockquote footer cite.author {
-  font-weight: bold;
-  color: #0055FF;
-  margin-bottom: 0.5em;
-  -webkit-order: 1;
-  -ms-order: 1;
-  order: 1;
-}
-section.testimonials blockquote footer cite.title {
   color: white;
-  -webkit-order: 2;
-  -ms-order: 2;
-  order: 2;
+  padding: 3rem 1rem 2.3rem 1rem;
 }
-section.testimonials blockquote footer figure {
-  margin: 0;
-  width: 30vw;
-  height: 30vw;
-  border-radius: 50%;
-  overflow: hidden;
-  -webkit-order: 0;
-  -ms-order: 0;
-  order: 0;
-  position: relative;
-  margin-bottom: 0.7em;
-}
-section.testimonials blockquote footer figure img {
-  height: inherit;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-nav.index ul {
-  list-style-type: none;
-  margin: 0;
+.tabs nav.tabs-nav > a:first-of-type span {
+  border: none;
   padding: 0;
 }
-nav.index ul li {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  margin-top: 2em;
-  background: transparent url("../img/icon-arrow.svg") no-repeat center right;
-  background-size: 6rem;
+.tabs .tab {
+  background: rgba(30, 210, 97, 0.1);
+  border-top: #1ED261 0.7rem solid;
+  padding: 1rem;
 }
-nav.index ul li > a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #222222;
-  font-weight: 600;
-  font-size: 2.8rem;
-  margin-left: 1.3em;
-  -webkit-order: 1;
-  -ms-order: 1;
-  order: 1;
-  -webkit-align-self: center;
-  -ms-align-self: center;
-  align-self: center;
-}
-nav.index ul li > img {
-  width: 16rem;
-  height: 16rem;
-  -webkit-order: 0;
-  -ms-order: 0;
-  order: 0;
-  -webkit-flex: 0 0 16rem;
-  -ms-flex: 0 0 16rem;
-  flex: 0 0 16rem;
-}
-aside.cta {
-  padding: 4rem 2rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-}
-aside.cta > h1 {
-  margin: 0;
-  padding-bottom: 0.1em;
-  text-transform: uppercase;
-  font-size: 4.5rem;
-}
-aside.cta > h1 span {
-  text-transform: none;
-  font-weight: lighter;
-  display: block;
-  color: #222222;
-}
-aside.cta a.button {
-  -webkit-align-self: flex-end;
-  -ms-align-self: flex-end;
-  align-self: flex-end;
-}
-aside.cta.eco-website > h1 {
-  color: #1ED261;
-}
+/*=====================
+FOOTER
+=====================*/
 footer.main-footer {
   padding: 4rem 2rem;
   text-align: center;
@@ -429,35 +250,355 @@ footer.main-footer address.author {
 /*=====================
 HOME
 =====================*/
+body.home section {
+  padding: 4rem 2rem;
+}
+body.home section header h1 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+body.home section header h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 3rem;
+}
+body.home section > h1 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+body.home section.our-work header h1 {
+  color: #1ED261;
+}
+body.home section.our-reach {
+  background-color: rgba(39, 58, 67, 0.1);
+}
+body.home section.our-reach header h1 {
+  color: #0055FF;
+}
+body.home section.events > h1 {
+  color: #FF892F;
+}
+body.home section.events article.event {
+  margin: 1em 0;
+}
+body.home section.events article.event > h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+body.home section.events article.event > p {
+  margin: 0;
+  padding-bottom: 1em;
+}
+body.home section.events article.event .wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+body.home section.events article.event figure {
+  background-color: red;
+  margin: 0;
+  padding: 0;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+}
+body.home section.events article.event figure img {
+  vertical-align: middle;
+  width: auto;
+}
+body.home section.events article.event footer {
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+}
+body.home section.co-create {
+  background-color: #0055FF;
+  color: white;
+}
+body.home section.co-create > h1,
+body.home section.co-create > h2 {
+  color: #FFB600;
+  margin: 0;
+  padding: 0;
+}
+body.home section.co-create > h1 {
+  padding-bottom: 0.5em;
+}
+body.home section.co-create > h2 {
+  font-size: 3rem;
+}
+body.home section.co-create p {
+  margin: 0;
+}
+body.home section.co-create > figure {
+  margin-left: 0;
+}
+body.home section.testimonials {
+  background-color: #1ED261;
+}
+body.home section.testimonials blockquote {
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+  line-height: 1.5em;
+  margin-bottom: -30px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+body.home section.testimonials blockquote p {
+  margin: 0;
+  padding: 0;
+  margin-left: 1.5em;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+  position: relative;
+}
+body.home section.testimonials blockquote p:before,
+body.home section.testimonials blockquote p:after {
+  font-weight: bold;
+  font-size: 8em;
+  color: #0055FF;
+  position: absolute;
+}
+body.home section.testimonials blockquote p:before {
+  content: open-quote;
+  top: -30px;
+  left: -130px;
+}
+body.home section.testimonials blockquote p:after {
+  content: close-quote;
+  bottom: -80px;
+  right: 0;
+}
+body.home section.testimonials blockquote footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+}
+body.home section.testimonials blockquote footer cite {
+  font-style: normal;
+  line-height: 1.2em;
+}
+body.home section.testimonials blockquote footer cite.author {
+  font-weight: bold;
+  color: #0055FF;
+  margin-bottom: 0.5em;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+}
+body.home section.testimonials blockquote footer cite.title {
+  color: white;
+  -webkit-order: 2;
+  -ms-order: 2;
+  order: 2;
+}
+body.home section.testimonials blockquote footer figure {
+  margin: 0;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+  position: relative;
+  margin-bottom: 0.7em;
+}
+body.home section.testimonials blockquote footer figure img {
+  height: inherit;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body.home nav.index ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body.home nav.index ul li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-top: 2em;
+  background: transparent url("../img/icon-arrow.svg") no-repeat center right;
+  background-size: 6rem;
+}
+body.home nav.index ul li > a {
+  margin: 0;
+  padding-bottom: 0;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: #222222;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 1.3em;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+body.home nav.index ul li > img {
+  width: 16rem;
+  height: 16rem;
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+  -webkit-flex: 0 0 16rem;
+  -ms-flex: 0 0 16rem;
+  flex: 0 0 16rem;
+}
+body.home aside.cta {
+  padding: 4rem 2rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+body.home aside.cta > h1 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+body.home aside.cta > h1 span {
+  text-transform: none;
+  font-weight: lighter;
+  display: block;
+  color: #222222;
+}
+body.home aside.cta a.button {
+  -webkit-align-self: flex-end;
+  -ms-align-self: flex-end;
+  align-self: flex-end;
+}
+body.home aside.cta.eco-website > h1 {
+  color: #1ED261;
+}
 /*=====================
 PAGE
 =====================*/
 body.page header.main-header h1.logo img {
   width: 10rem;
 }
+body.page section {
+  padding: 0 2rem;
+}
+body.page section.content.subpage {
+  background: rgba(30, 210, 97, 0.1);
+  border-top: #1ED261 0.7rem solid;
+  padding: 1rem;
+  margin: 0 2rem;
+}
+body.page section.content.subpage header h1,
+body.page section.content.subpage header h2 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+body.page section.tabs {
+  padding-bottom: 0;
+}
+body.page aside.content.parent {
+  padding: 0 2rem;
+}
+body.page aside.content.parent h3 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: white;
+  background-color: #1ED261;
+  padding: 4rem 2rem 0rem 2rem;
+  margin: 0 -2rem 0 -2rem;
+}
 /*=====================
 MENU
 =====================*/
-body.page-menu main {
-  padding: 2rem;
+body.page-menu {
+  background-color: #1ED261;
 }
-body.page-menu main h1 {
-  margin: 0;
-  padding-bottom: 0.1em;
-  text-transform: uppercase;
-  font-size: 4.5rem;
+body.page-menu nav.menu {
+  padding: 0 2rem;
 }
-body.page-menu main nav.menu ul {
+body.page-menu nav.menu ul {
   list-style-type: none;
   padding-left: 0;
 }
-body.page-menu main nav.menu ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #1ED261;
+body.page-menu nav.menu ul li {
+  margin-bottom: 0.2em;
 }
-body.page-menu main nav.menu ul li a:hover {
-  color: #222222;
+body.page-menu nav.menu ul li:first-child {
+  margin-top: 1rem;
+}
+body.page-menu nav.menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+}
+body.page-menu nav.menu ul li a:hover {
+  text-decoration: underline;
+}
+body.page-menu nav.menu ul li ul {
+  padding-left: 1em;
+}
+body.page-menu nav.menu ul li ul li {
+  border: 0;
+}
+body.page-menu nav.menu ul li ul li a {
+  text-transform: none;
+}
+body.page-menu nav.menu ul li.menu-item-home,
+body.page-menu nav.menu ul li.menu-item-has-children {
+  padding-bottom: 0.5em;
+}
+body.page-menu nav.menu ul li.menu-item-home > a,
+body.page-menu nav.menu ul li.menu-item-has-children > a {
+  font-size: 3.5rem;
 }
 /**/
 /*@media screen and (min-width: 960px) {
