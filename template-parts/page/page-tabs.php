@@ -31,10 +31,18 @@
         <?php
         while ( $subpages -> have_posts() ) : $subpages -> the_post();
         //Mark anchor selected
-        // $a_class = '';
-        // if ()
+        $a_class = '';
+
+        if ( get_the_ID() == get_queried_object_id()) {
+        //If tab (page) ID equals main page ID mark anchor selected
+            $a_class = 'class="selected"';
+        } elseif ( $subpages->current_post == 0 && get_queried_object_id() == $parent_id ) {
+        //Or if is parent page
+            $a_class = 'class="selected"';
+        }
+
         ?>
-        <a <?php //echo $a_class; ?> href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
+        <a <?php echo $a_class; ?> href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
         <?php endwhile; ?>
     </nav>
 

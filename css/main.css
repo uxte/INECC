@@ -188,12 +188,12 @@ main header.cover a.button {
 .tabs nav.tabs-nav > a:last-of-type {
   margin-right: 0;
 }
-.tabs nav.tabs-nav > a:first-of-type {
+.tabs nav.tabs-nav > a.selected {
   background-color: #1ED261;
   color: white;
   padding: 3rem 1rem 2.3rem 1rem;
 }
-.tabs nav.tabs-nav > a:first-of-type span {
+.tabs nav.tabs-nav > a.selected span {
   border: none;
   padding: 0;
 }

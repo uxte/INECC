@@ -47,7 +47,7 @@ function is_child_of( $id ) {
 
 //
 function open_menu () {
-    $prev_url = home_url( $wp->request );
+    $prev_url = $_SERVER['HTTP_REFERER'];
     $menu_url = get_permalink( get_page_by_path( 'menu' ) );
 
     if ( is_page_template('page-menu.php') ) {

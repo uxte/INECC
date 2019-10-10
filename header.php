@@ -17,10 +17,9 @@
 </head>
 
 <body <?php body_class(); ?> >
-
 	<header class="main-header">
 		<h1 class="logo">
-            <a href="<?php echo home_url(); ?>">
+            <a href="<?php echo get_home_url(); ?>">
     			<span>INECC - People's Voices in Policy Choices</span>
                 <?php if ( is_home() ) : ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="Logo" />
