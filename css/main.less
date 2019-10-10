@@ -556,6 +556,28 @@ body.page {
 
 }
 
+/*SUBPAGE*/
+
+body.page-child {
+	main {
+
+		//Change order of sections for SEO
+		.flex-display();
+	    .flex-flow(column wrap);
+
+		> section.tabs {
+			.flex-order(1);
+		}
+
+		> section.content {
+			.flex-order(2);
+		}
+
+		> aside.content {
+			.flex-order(0);
+		}
+	}
+}
 
 
 /*=====================

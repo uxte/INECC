@@ -23,6 +23,9 @@ function new_custom_menu() {
 }
 add_action( 'init', 'new_custom_menu' );
 
+//Agg featured image functionality
+add_theme_support( 'post-thumbnails' );
+
 //
 // function show_post($path) {
 //   $post = get_page_by_path($path);

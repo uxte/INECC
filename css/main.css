@@ -554,6 +554,31 @@ body.page aside.content.parent h3 {
   padding: 4rem 2rem 0rem 2rem;
   margin: 0 -2rem 0 -2rem;
 }
+/*SUBPAGE*/
+body.page-child main {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+body.page-child main > section.tabs {
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+}
+body.page-child main > section.content {
+  -webkit-order: 2;
+  -ms-order: 2;
+  order: 2;
+}
+body.page-child main > aside.content {
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+}
 /*=====================
 MENU
 =====================*/

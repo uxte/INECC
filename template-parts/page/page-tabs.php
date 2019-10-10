@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying subpages content in tabs in page.php
+ * Template part for displaying subpages in tabs in page.php
  */
 ?>
 <section class="sub-pages tabs">
@@ -40,7 +40,6 @@
         //Or if is parent page
             $a_class = 'class="selected"';
         }
-
         ?>
         <a <?php echo $a_class; ?> href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
         <?php endwhile; ?>
