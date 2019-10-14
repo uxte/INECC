@@ -49,7 +49,7 @@ a.button span {
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 2.8rem;
+  font-size: 3.3rem;
 }
 /*=====================
 HEADER
@@ -460,7 +460,7 @@ body.home nav.index ul li > a {
   padding-bottom: 0;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 2.8rem;
+  font-size: 3.3rem;
   color: #222222;
   text-transform: uppercase;
   text-decoration: none;
@@ -528,6 +528,26 @@ body.page section.content.subpage {
   padding: 1rem;
   margin: 0 2rem;
 }
+body.page section.content.subpage h1,
+body.page section.content.subpage h2,
+body.page section.content.subpage h3,
+body.page section.content.subpage h4,
+body.page section.content.subpage h5 {
+  color: #1ED261;
+}
+body.page section.content.subpage header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row no-wrap;
+  -ms-flex-flow: row no-wrap;
+  flex-flow: row no-wrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 2rem 0;
+}
 body.page section.content.subpage header h1,
 body.page section.content.subpage header h2 {
   margin: 0;
@@ -535,7 +555,27 @@ body.page section.content.subpage header h2 {
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 2.8rem;
+  font-size: 3.3rem;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+}
+body.page section.content.subpage header img.icon {
+  width: auto;
+  height: 5em;
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+  margin-right: 4rem;
+}
+body.page section.content.subpage > h2 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 3.3rem;
+  margin-top: 4rem;
 }
 body.page section.tabs {
   padding-bottom: 0;
@@ -554,8 +594,10 @@ body.page aside.content.parent h3 {
   padding: 4rem 2rem 0rem 2rem;
   margin: 0 -2rem 0 -2rem;
 }
-/*SUBPAGE*/
-body.page-child main {
+/*=====================
+SUBPAGE
+=====================*/
+body.page-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -564,17 +606,12 @@ body.page-child main {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-body.page-child main > section.tabs {
+body.page-child main {
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
 }
-body.page-child main > section.content {
-  -webkit-order: 2;
-  -ms-order: 2;
-  order: 2;
-}
-body.page-child main > aside.content {
+body.page-child aside.content {
   -webkit-order: 0;
   -ms-order: 0;
   order: 0;
