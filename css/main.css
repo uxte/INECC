@@ -19,6 +19,48 @@ body {
   font-size: 2.7rem;
   line-height: 1.5em;
 }
+body.green h1,
+body.green h2,
+body.green h3,
+body.green h4,
+body.green h5 {
+  color: #1ED261;
+}
+body.green .content.subpage {
+  background: rgba(30, 210, 97, 0.1);
+  border-color: #1ED261;
+}
+body.green .tabs nav.tabs-nav > a.selected {
+  background-color: #1ED261;
+}
+body.yellow h1,
+body.yellow h2,
+body.yellow h3,
+body.yellow h4,
+body.yellow h5 {
+  color: #FFB600;
+}
+body.yellow .content.subpage {
+  background: rgba(255, 182, 0, 0.1);
+  border-color: #FFB600;
+}
+body.yellow .tabs nav.tabs-nav > a.selected {
+  background-color: #FFB600;
+}
+body.blue h1,
+body.blue h2,
+body.blue h3,
+body.blue h4,
+body.blue h5 {
+  color: #0055FF;
+}
+body.blue .content.subpage {
+  background: rgba(0, 85, 255, 0.1);
+  border-color: #0055FF;
+}
+body.blue .tabs nav.tabs-nav > a.selected {
+  background-color: #0055FF;
+}
 a.button {
   text-decoration: none;
   text-transform: uppercase;
@@ -189,18 +231,12 @@ main header.cover a.button {
   margin-right: 0;
 }
 .tabs nav.tabs-nav > a.selected {
-  background-color: #1ED261;
   color: white;
   padding: 3rem 1rem 2.3rem 1rem;
 }
 .tabs nav.tabs-nav > a.selected span {
   border: none;
   padding: 0;
-}
-.tabs .tab {
-  background: rgba(30, 210, 97, 0.1);
-  border-top: #1ED261 0.7rem solid;
-  padding: 1rem;
 }
 /*=====================
 FOOTER
@@ -523,17 +559,10 @@ body.page section {
   padding: 0 2rem;
 }
 body.page section.content.subpage {
-  background: rgba(30, 210, 97, 0.1);
-  border-top: #1ED261 0.7rem solid;
+  border-top-style: solid;
+  border-top-width: 0.7rem;
   padding: 1rem;
   margin: 0 2rem;
-}
-body.page section.content.subpage h1,
-body.page section.content.subpage h2,
-body.page section.content.subpage h3,
-body.page section.content.subpage h4,
-body.page section.content.subpage h5 {
-  color: #1ED261;
 }
 body.page section.content.subpage header {
   display: -webkit-flex;

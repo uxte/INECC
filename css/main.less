@@ -8,6 +8,79 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 2.7rem;
 	line-height: 1.5em;
+
+	&.green {
+		h1, h2, h3, h4, h5 {
+			color: @color-green;
+		}
+
+		.content.subpage {
+			//Look like a tab
+			background: fade(@color-green, 10%);
+			border-color: @color-green;
+		}
+
+		.tabs {
+
+			nav.tabs-nav {
+				> a {
+					&.selected {
+						background-color: @color-green;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&.yellow {
+		h1, h2, h3, h4, h5 {
+			color: @color-yellow;
+		}
+
+		.content.subpage {
+			//Look like a tab
+			background: fade(@color-yellow, 10%);
+			border-color: @color-yellow;
+		}
+
+		.tabs {
+
+			nav.tabs-nav {
+				> a {
+					&.selected {
+						background-color: @color-yellow;
+					}
+				}
+			}
+		}
+	}
+
+
+	&.blue {
+		h1, h2, h3, h4, h5 {
+			color: @color-blue;
+		}
+
+		.content.subpage {
+			//Look like a tab
+			background: fade(@color-blue, 10%);
+			border-color: @color-blue;
+		}
+
+		.tabs {
+
+			nav.tabs-nav {
+				> a {
+					&.selected {
+						background-color: @color-blue;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 a.button {
@@ -170,7 +243,6 @@ main {
 			}
 
 			&.selected {
-				background-color: @color-green;
 				color: white;
 				padding: 3rem 1rem 2.3rem 1rem;
 
@@ -182,11 +254,6 @@ main {
 		}
 	}
 
-	.tab {
-		background: fade(@color-green, 10%);
-		border-top: @color-green 0.7rem solid;
-		padding: 1rem;
-	}
 }
 
 
@@ -524,14 +591,10 @@ body.page {
 
 		&.subpage {
 			//Look like a tab
-			background: fade(@color-green, 10%);
-			border-top: @color-green 0.7rem solid;
+			border-top-style: solid;
+			border-top-width: 0.7rem;
 			padding: 1rem;
 			margin: 0 2rem;
-
-			h1, h2, h3, h4, h5 {
-				color: @color-green;
-			}
 
 			header {
 				.flex-display();

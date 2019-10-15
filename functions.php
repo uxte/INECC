@@ -6,11 +6,13 @@ remove_action('wp_head', 'wp_generator');
 // Add class to body based on page template
 add_filter( 'body_class','my_body_classes' );
 function my_body_classes( $classes ) {
-
+    global $post;
     if ( is_page_template( 'page-menu.php' ) ) {
-
         $classes[] = 'page-menu';
-
+    }
+    // Check if there's a custom body-color from post custom-fields
+    if ( $body_color = get_post_meta( $post->ID, 'body-color', true ) ) {
+        $classes[] = $body_color;
     }
 
     return $classes;
