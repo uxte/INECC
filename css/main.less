@@ -20,13 +20,10 @@ body {
 			border-color: @color-green;
 		}
 
-		.tabs {
-
-			nav.tabs-nav {
-				> a {
-					&.selected {
-						background-color: @color-green;
-					}
+		nav.tabs {
+			> a {
+				&.selected {
+					background-color: @color-green;
 				}
 			}
 		}
@@ -45,13 +42,10 @@ body {
 			border-color: @color-yellow;
 		}
 
-		.tabs {
-
-			nav.tabs-nav {
-				> a {
-					&.selected {
-						background-color: @color-yellow;
-					}
+		nav.tabs {
+			> a {
+				&.selected {
+					background-color: @color-yellow;
 				}
 			}
 		}
@@ -69,16 +63,14 @@ body {
 			border-color: @color-blue;
 		}
 
-		.tabs {
-
-			nav.tabs-nav {
-				> a {
-					&.selected {
-						background-color: @color-blue;
-					}
+		nav.tabs {
+			> a {
+				&.selected {
+					background-color: @color-blue;
 				}
 			}
 		}
+
 	}
 
 }
@@ -114,7 +106,7 @@ a.button {
 
 .title-h2 {
 	.title-h1;
-	font-size: 3.3rem;
+	font-size: 3.1rem;
 }
 
 /*=====================
@@ -210,50 +202,46 @@ main {
 }
 
 /*TABS*/
-.tabs {
+nav.tabs {
+	.flex-display();
+    .flex-flow(row nowrap);
+	.align-items(flex-start);
 
-	nav.tabs-nav {
-		.flex-display();
-        .flex-flow(row nowrap);
-		.align-items(flex-start);
+	> a {
+		background: fade(@color-nav-blue, 20%);
+		color: @color-nav-blue;
+		font-size: 2rem;
+		line-height: 1em;
+		font-weight: bold;
+		text-decoration: none;
 
-		> a {
-			background: fade(@color-nav-blue, 20%);
-			color: @color-nav-blue;
-			font-size: 2rem;
-			line-height: 1em;
-			font-weight: bold;
-			text-decoration: none;
+		padding: 2rem 1rem 1rem 1rem;
+		margin: 0 0.5rem;
+		.flex-grow(1);
 
-			padding: 2rem 1rem 1rem 1rem;
-			margin: 0 0.5rem;
-			.flex-grow(1);
+		span {
+			display: block;
+			border-bottom: @color-nav-blue 0.5rem solid;
+			padding-bottom: 0.5em;
+		}
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&.selected {
+			color: white;
+			padding: 3rem 1rem 2.3rem 1rem;
 
 			span {
-				display: block;
-				border-bottom: @color-nav-blue 0.5rem solid;
-				padding-bottom: 0.5em;
-			}
-
-			&:first-of-type {
-				margin-left: 0;
-			}
-			&:last-of-type {
-				margin-right: 0;
-			}
-
-			&.selected {
-				color: white;
-				padding: 3rem 1rem 2.3rem 1rem;
-
-				span {
-					border: none;
-					padding: 0;
-				}
+				border: none;
+				padding: 0;
 			}
 		}
 	}
-
 }
 
 
@@ -592,7 +580,9 @@ body.page {
 		&.subpage {
 			//Look like a tab
 			border-top-style: solid;
+			border-bottom-style: solid;
 			border-top-width: 0.7rem;
+			border-bottom-width: 0.7rem;
 			padding: 1rem;
 			margin: 0 2rem;
 
@@ -620,12 +610,10 @@ body.page {
 				margin-top: 4rem;
 			}
 		}
-
-
 	}
 
-	section.tabs {
-		padding-bottom: 0;
+	nav.tabs {
+		margin: 0 2rem;
 	}
 
 	aside.content.parent {

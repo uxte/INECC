@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying pages content
+ * Template part for displaying pages parent
  */
 ?>
 <main>
@@ -15,7 +15,6 @@
     </section>
 
     <?php get_template_part( 'template-parts/page/page', 'tabs' ); ?>
-
 
     <?php
     //Show first subpage
@@ -42,6 +41,7 @@
 
         <header>
             <h2><?php the_title(); ?></h2>
+            <?php the_post_thumbnail('full', array('class' => 'icon')); ?>
         </header>
         <?php the_content(); ?>
 

@@ -30,7 +30,7 @@ body.green .content.subpage {
   background: rgba(30, 210, 97, 0.1);
   border-color: #1ED261;
 }
-body.green .tabs nav.tabs-nav > a.selected {
+body.green nav.tabs > a.selected {
   background-color: #1ED261;
 }
 body.yellow h1,
@@ -44,7 +44,7 @@ body.yellow .content.subpage {
   background: rgba(255, 182, 0, 0.1);
   border-color: #FFB600;
 }
-body.yellow .tabs nav.tabs-nav > a.selected {
+body.yellow nav.tabs > a.selected {
   background-color: #FFB600;
 }
 body.blue h1,
@@ -58,7 +58,7 @@ body.blue .content.subpage {
   background: rgba(0, 85, 255, 0.1);
   border-color: #0055FF;
 }
-body.blue .tabs nav.tabs-nav > a.selected {
+body.blue nav.tabs > a.selected {
   background-color: #0055FF;
 }
 a.button {
@@ -91,7 +91,7 @@ a.button span {
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
 }
 /*=====================
 HEADER
@@ -194,7 +194,7 @@ main header.cover a.button {
   margin-bottom: 2rem;
 }
 /*TABS*/
-.tabs nav.tabs-nav {
+nav.tabs {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -206,7 +206,7 @@ main header.cover a.button {
   -ms-align-items: flex-start;
   align-items: flex-start;
 }
-.tabs nav.tabs-nav > a {
+nav.tabs > a {
   background: rgba(99, 148, 171, 0.2);
   color: #6394AB;
   font-size: 2rem;
@@ -219,22 +219,22 @@ main header.cover a.button {
   -ms-flex-grow: 1;
   flex-grow: 1;
 }
-.tabs nav.tabs-nav > a span {
+nav.tabs > a span {
   display: block;
   border-bottom: #6394AB 0.5rem solid;
   padding-bottom: 0.5em;
 }
-.tabs nav.tabs-nav > a:first-of-type {
+nav.tabs > a:first-of-type {
   margin-left: 0;
 }
-.tabs nav.tabs-nav > a:last-of-type {
+nav.tabs > a:last-of-type {
   margin-right: 0;
 }
-.tabs nav.tabs-nav > a.selected {
+nav.tabs > a.selected {
   color: white;
   padding: 3rem 1rem 2.3rem 1rem;
 }
-.tabs nav.tabs-nav > a.selected span {
+nav.tabs > a.selected span {
   border: none;
   padding: 0;
 }
@@ -496,7 +496,7 @@ body.home nav.index ul li > a {
   padding-bottom: 0;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   color: #222222;
   text-transform: uppercase;
   text-decoration: none;
@@ -560,7 +560,9 @@ body.page section {
 }
 body.page section.content.subpage {
   border-top-style: solid;
+  border-bottom-style: solid;
   border-top-width: 0.7rem;
+  border-bottom-width: 0.7rem;
   padding: 1rem;
   margin: 0 2rem;
 }
@@ -584,7 +586,7 @@ body.page section.content.subpage header h2 {
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
@@ -603,11 +605,11 @@ body.page section.content.subpage > h2 {
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   margin-top: 4rem;
 }
-body.page section.tabs {
-  padding-bottom: 0;
+body.page nav.tabs {
+  margin: 0 2rem;
 }
 body.page aside.content.parent {
   padding: 0 2rem;

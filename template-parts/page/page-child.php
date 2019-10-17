@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying subpages content
+ * Template part for displaying page child
  */
 ?>
 <main>
@@ -19,6 +19,8 @@
     </section>
 
     <?php endwhile; endif; ?>
+
+    <?php get_template_part( 'template-parts/page/page', 'tabs' ); ?>
 
 </main>
 
