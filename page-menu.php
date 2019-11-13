@@ -30,15 +30,4 @@ wp_nav_menu( array(
     // );
 ?>
 
-    <!-- <main>
-
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="our-work.html">Our work</a></li>
-            </ul>
-        </nav>
-
-    </main> -->
-
 <?php get_footer(); ?>

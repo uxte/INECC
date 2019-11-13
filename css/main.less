@@ -109,6 +109,33 @@ a.button {
 	font-size: 3.1rem;
 }
 
+.color-green {
+	color: @color-green;
+}
+
+.h-icon {
+	.title-h2;
+
+	.flex-display();
+    .flex-flow(row nowrap);
+	.align-content(center);
+
+	text-transform: uppercase;
+	line-height: 3.1em;
+
+	img {
+		height: 10rem !important;
+		width: 10rem !important;
+		margin-right: 0.5em;
+	}
+
+}
+
+.box {}
+.background-yellow {}
+
+
+
 /*=====================
 HEADER
 =====================*/
@@ -575,6 +602,42 @@ body.page {
 		padding: 0 2rem;
 	}
 
+	main {
+		header.cover {
+			h1 {
+				margin-bottom: -0.08em;
+			}
+		}
+
+		section.content {
+			> h2 {
+				.title-h2;
+				margin-top: 4rem;
+			}
+
+
+		}
+
+		nav.tabs {
+			margin: 0 2rem;
+		}
+	}
+}
+
+
+/*=====================
+PAGE CHILD
+=====================*/
+
+
+
+
+/*=====================
+PAGE OUR-WORK
+=====================*/
+
+body.page-template-page-our-work {
+
 	section.content {
 
 		&.subpage {
@@ -604,16 +667,7 @@ body.page {
 					margin-right: 4rem;
 				}
 			}
-
-			> h2 {
-				.title-h2;
-				margin-top: 4rem;
-			}
 		}
-	}
-
-	nav.tabs {
-		margin: 0 2rem;
 	}
 
 	aside.content.parent {
@@ -631,12 +685,7 @@ body.page {
 
 }
 
-
-/*=====================
-SUBPAGE
-=====================*/
-
-body.page-child {
+body.page-template-page-our-work.page-child {
 
 	//Change order of sections for SEO
 	.flex-display();
@@ -661,6 +710,10 @@ body.page-menu {
 	nav.menu {
 		padding: 0 2rem;
 
+		> ul > li {
+			padding-bottom: 0.5em;
+		}
+
 		ul {
 			list-style-type: none;
 			padding-left: 0;
@@ -669,13 +722,14 @@ body.page-menu {
 				margin-bottom: 0.2em;
 				&:first-child {
 					margin-top: 1rem;
+
 				}
 
 				a {
 					text-decoration: none;
 					text-transform: uppercase;
 					font-weight: bold;
-					font-size: 3rem;
+					font-size: 3.5rem;
 					color: white;
 
 					&:hover {
@@ -695,17 +749,16 @@ body.page-menu {
 					}
 				}
 
-				&.menu-item-home,
 				&.menu-item-has-children {
-					padding-bottom: 0.5em;
 
-					> a {
-						font-size: 3.5rem;
+					ul li a {
+						font-size: 3rem;
 					}
 				}
-
 			}
 		}
+
+
 	}
 }
 

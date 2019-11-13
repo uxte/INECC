@@ -93,6 +93,33 @@ a.button span {
   font-weight: 600;
   font-size: 3.1rem;
 }
+.color-green {
+  color: #1ED261;
+}
+.h-icon {
+  margin: 0;
+  padding-bottom: 0;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 3.1rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+  text-transform: uppercase;
+  line-height: 3.1em;
+}
+.h-icon img {
+  height: 10rem !important;
+  width: 10rem !important;
+  margin-right: 0.5em;
+}
 /*=====================
 HEADER
 =====================*/
@@ -558,7 +585,28 @@ body.page header.main-header h1.logo img {
 body.page section {
   padding: 0 2rem;
 }
-body.page section.content.subpage {
+body.page main header.cover h1 {
+  margin-bottom: -0.08em;
+}
+body.page main section.content > h2 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 3.1rem;
+  margin-top: 4rem;
+}
+body.page main nav.tabs {
+  margin: 0 2rem;
+}
+/*=====================
+PAGE CHILD
+=====================*/
+/*=====================
+PAGE OUR-WORK
+=====================*/
+body.page-template-page-our-work section.content.subpage {
   border-top-style: solid;
   border-bottom-style: solid;
   border-top-width: 0.7rem;
@@ -566,7 +614,7 @@ body.page section.content.subpage {
   padding: 1rem;
   margin: 0 2rem;
 }
-body.page section.content.subpage header {
+body.page-template-page-our-work section.content.subpage header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -579,8 +627,8 @@ body.page section.content.subpage header {
   align-items: center;
   margin: 2rem 0;
 }
-body.page section.content.subpage header h1,
-body.page section.content.subpage header h2 {
+body.page-template-page-our-work section.content.subpage header h1,
+body.page-template-page-our-work section.content.subpage header h2 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
@@ -591,7 +639,7 @@ body.page section.content.subpage header h2 {
   -ms-order: 1;
   order: 1;
 }
-body.page section.content.subpage header img.icon {
+body.page-template-page-our-work section.content.subpage header img.icon {
   width: auto;
   height: 5em;
   -webkit-order: 0;
@@ -599,22 +647,10 @@ body.page section.content.subpage header img.icon {
   order: 0;
   margin-right: 4rem;
 }
-body.page section.content.subpage > h2 {
-  margin: 0;
-  padding-bottom: 0;
-  text-transform: uppercase;
-  font-size: 4.5rem;
-  font-weight: 600;
-  font-size: 3.1rem;
-  margin-top: 4rem;
-}
-body.page nav.tabs {
-  margin: 0 2rem;
-}
-body.page aside.content.parent {
+body.page-template-page-our-work aside.content.parent {
   padding: 0 2rem;
 }
-body.page aside.content.parent h3 {
+body.page-template-page-our-work aside.content.parent h3 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
@@ -625,10 +661,7 @@ body.page aside.content.parent h3 {
   padding: 4rem 2rem 0rem 2rem;
   margin: 0 -2rem 0 -2rem;
 }
-/*=====================
-SUBPAGE
-=====================*/
-body.page-child {
+body.page-template-page-our-work.page-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -637,12 +670,12 @@ body.page-child {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-body.page-child main {
+body.page-template-page-our-work.page-child main {
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
 }
-body.page-child aside.content {
+body.page-template-page-our-work.page-child aside.content {
   -webkit-order: 0;
   -ms-order: 0;
   order: 0;
@@ -655,6 +688,9 @@ body.page-menu {
 }
 body.page-menu nav.menu {
   padding: 0 2rem;
+}
+body.page-menu nav.menu > ul > li {
+  padding-bottom: 0.5em;
 }
 body.page-menu nav.menu ul {
   list-style-type: none;
@@ -670,7 +706,7 @@ body.page-menu nav.menu ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: white;
 }
 body.page-menu nav.menu ul li a:hover {
@@ -685,13 +721,8 @@ body.page-menu nav.menu ul li ul li {
 body.page-menu nav.menu ul li ul li a {
   text-transform: none;
 }
-body.page-menu nav.menu ul li.menu-item-home,
-body.page-menu nav.menu ul li.menu-item-has-children {
-  padding-bottom: 0.5em;
-}
-body.page-menu nav.menu ul li.menu-item-home > a,
-body.page-menu nav.menu ul li.menu-item-has-children > a {
-  font-size: 3.5rem;
+body.page-menu nav.menu ul li.menu-item-has-children ul li a {
+  font-size: 3rem;
 }
 /**/
 /*@media screen and (min-width: 960px) {

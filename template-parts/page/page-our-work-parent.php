@@ -47,6 +47,8 @@
 
     </section>
 
-<?php endwhile; endif; wp_reset_postdata(); ?>
+    <?php endwhile; endif; wp_reset_postdata(); ?>
+
+    <?php get_template_part( 'template-parts/page/page', 'tabs' ); ?>
 
 </main>
