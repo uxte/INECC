@@ -828,6 +828,11 @@ body.page-template-page-our-work.page-child aside.content {
   -ms-order: 0;
   order: 0;
 }
+body.page-template-page-our-work.page-child footer {
+  -webkit-order: 2;
+  -ms-order: 2;
+  order: 2;
+}
 /*=====================
 MENU (PAGE)
 =====================*/

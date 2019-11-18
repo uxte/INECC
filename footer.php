@@ -1,4 +1,4 @@
-<?php if ($post->post_name != "menu") : ?>
+    <?php if ($post->post_name != "menu") : ?>
     <footer class="main-footer">
         <a rel="nofollow" href="#">Back to top</a>
         <hr>
@@ -20,7 +20,7 @@
         <address class="author">Made with love for people and the planet by <br><a rel="author" href="#">Charlene</a> + <a rel="author" href="#">Komuhn</a> </address>
 
     </footer>
-<?php endif; ?>
+    <?php endif; ?>
     <?php wp_footer(); ?>
     </body>
 </html>
