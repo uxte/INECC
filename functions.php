@@ -7,8 +7,8 @@ remove_action('wp_head', 'wp_generator');
 add_filter( 'body_class','my_body_classes' );
 function my_body_classes( $classes ) {
     global $post;
-    if ( is_page_template( 'page-menu.php' ) ) {
-        $classes[] = 'page-menu';
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '-' . $post->post_name;
     }
     // Check if there's a custom body-color from post custom-fields
     if ( $body_color = get_post_meta( $post->ID, 'body-color', true ) ) {
@@ -16,8 +16,8 @@ function my_body_classes( $classes ) {
     }
 
     return $classes;
-
 }
+
 
 //Add custom menu functionality
 function new_custom_menu() {
@@ -25,7 +25,7 @@ function new_custom_menu() {
 }
 add_action( 'init', 'new_custom_menu' );
 
-//Agg featured image functionality
+//Add featured image functionality
 add_theme_support( 'post-thumbnails' );
 
 //
@@ -60,6 +60,16 @@ function open_menu () {
     }
 
     echo $menu_url;
+}
+
+
+//
+function make_class_from_title($title){
+    $title = strtok($title, " ");
+    $title = strtolower($title);
+    $title = preg_replace('/[^a-z0-9 -]+/', '', $title);
+    $title = str_replace(' ', '-', $title);
+    return trim($title, '-');
 }
 
 ?>

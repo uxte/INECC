@@ -27,7 +27,7 @@ $subpages = new WP_Query( $args );
 if ( $subpages -> have_posts() ) :
 ?>
 
-<nav class="tabs">
+<nav class="tabs <?php if ($tabs_sub) { print 'sub'; }; ?>">
     <?php
     while ( $subpages -> have_posts() ) : $subpages -> the_post();
     //Mark anchor selected
@@ -35,13 +35,18 @@ if ( $subpages -> have_posts() ) :
 
     if ( get_the_ID() == get_queried_object_id()) {
     //If tab (page) ID equals main page ID mark anchor selected
-        $a_class = 'class="selected"';
+        $a_class = 'selected ';
     } elseif ( $subpages->current_post == 0 && get_queried_object_id() == $parent_id ) {
     //Or if is parent page
-        $a_class = 'class="selected"';
+        $a_class = 'selected ';
     }
+    if ( $tabs_sub && $a_class == 'selected ' ) {
+    //If the template is located in the bottom ($tabs_sub) and is the selected post don't show it
+        continue;
+    }
+    $a_class .= make_class_from_title( get_the_title() );
     ?>
-    <a <?php echo $a_class; ?> href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
+    <a class="<?php echo $a_class; ?>" href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
     <?php endwhile; ?>
 </nav>
 

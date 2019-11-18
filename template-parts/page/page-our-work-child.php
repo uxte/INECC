@@ -20,7 +20,8 @@
 
     <?php endwhile; endif; ?>
 
-    <?php get_template_part( 'template-parts/page/page', 'tabs' ); ?>
+    <?php set_query_var( 'tabs_sub', true ); get_template_part( 'template-parts/page/page', 'tabs' ); ?>
+    <?php //include( locate_template( 'template-parts/page/page-tabs.php', false, false ) ); ?>
 
 </main>
 
@@ -40,7 +41,9 @@
 
     if ( $parent_page->have_posts() ) : while ( $parent_page->have_posts() ) : $parent_page->the_post(); ?>
 
-    <h3><?php the_title(); ?></h3>
+    <header>
+        <h3><?php the_title(); ?></h3>
+    </header>
 
     <?php the_content(); ?>
 

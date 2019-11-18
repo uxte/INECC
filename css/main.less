@@ -112,6 +112,15 @@ a.button {
 .color-green {
 	color: @color-green;
 }
+.color-blue {
+	color: @color-blue;
+}
+.color-yellow {
+	color: @color-yellow;
+}
+.color-nav-blue {
+	color: @color-nav-blue;
+}
 
 .h-icon {
 	.title-h2;
@@ -131,8 +140,19 @@ a.button {
 
 }
 
-.box {}
-.background-yellow {}
+.box {
+	margin: 0 -@vw-padding;
+	padding: @vw-padding;
+
+	h1, h2, h3, h4 {
+		.title-h2;
+		padding-left: 0;
+	}
+
+	&.yellow {
+		background-color: @color-yellow;
+	}
+}
 
 
 
@@ -141,7 +161,7 @@ HEADER
 =====================*/
 
 header.main-header {
-	padding: 4rem 2rem;
+	padding: 4rem @vw-padding;
 
     .flex-display();
     .flex-flow(row wrap);
@@ -179,7 +199,7 @@ header.main-header {
 
 			position: fixed;
 			top: 4.5rem;
-			right: 2rem;
+			right: @vw-padding;
 			z-index: 9999;
 
 			&:hover {
@@ -205,7 +225,7 @@ main {
 
     header.cover {
 		background-color: @color-green;
-		padding: 4rem 2rem 0rem 2rem;
+		padding: 4rem @vw-padding 0rem @vw-padding;
 
         .flex-display();
         .flex-flow(column wrap);
@@ -213,6 +233,7 @@ main {
 		h1 {
 			.title-h1;
 			color: white;
+			margin-bottom: -0.08em;
 		}
         h2 {
 			font-size: 3rem;
@@ -223,7 +244,7 @@ main {
 		}
 		a.button {
 			.align-self(flex-end);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
 		}
 	}
 }
@@ -237,14 +258,14 @@ nav.tabs {
 	> a {
 		background: fade(@color-nav-blue, 20%);
 		color: @color-nav-blue;
-		font-size: 2rem;
+		font-size: 1.9rem;
 		line-height: 1em;
 		font-weight: bold;
 		text-decoration: none;
 
 		padding: 2rem 1rem 1rem 1rem;
 		margin: 0 0.5rem;
-		.flex-grow(1);
+		.flex(0 0 1);
 
 		span {
 			display: block;
@@ -269,7 +290,69 @@ nav.tabs {
 			}
 		}
 	}
+
+	&.sub {
+
+		> a {
+			.flex-display();
+		    .flex-flow(row nowrap);
+			.align-items(flex-end);
+
+
+			background-color: transparent;
+
+			&::before {
+				content: "";
+				width: 100%; height: 10rem;
+				.flex(0 0 35%);
+				background-image: url('../img/icon-community.svg');
+    			background-size: contain;
+				background-repeat: no-repeat;
+				background-position: left bottom;
+				margin-right: 1rem;
+			}
+
+			span {
+				.flex(0 0 65%);
+			}
+
+			&.resilience {
+				color: @color-green;
+				span {
+					border-bottom-color: @color-green;
+				}
+				&::before {
+					background-image: url('../img/icon-community.svg');
+				}
+			}
+			&.education {
+				color: @color-yellow;
+				span {
+					border-bottom-color: @color-yellow;
+				}
+				&::before {
+					background-image: url('../img/icon-education.svg');
+				}
+			}
+			&.research {
+				color: @color-blue;
+				span {
+					border-bottom-color: @color-blue;
+				}
+				&::before {
+					background-image: url('../img/icon-research.svg');
+				}
+			}
+
+			&:first-of-type {
+				margin-left: -1rem;
+				margin-right: 3rem;
+			}
+
+		}
+	}
 }
+
 
 
 /*=====================
@@ -277,7 +360,7 @@ FOOTER
 =====================*/
 
 footer.main-footer {
-    padding: 4rem 2rem;
+    padding: 4rem @vw-padding;
     text-align: center;
     font-size: 2.2rem;
 
@@ -309,7 +392,7 @@ footer.main-footer {
 
     p.license, address.author {
         line-height: 1.3em;
-        margin: 4rem 2rem;
+        margin: 4rem @vw-padding;
     }
     p.license {
 
@@ -328,7 +411,7 @@ HOME
 body.home {
 
 	section {
-		padding: 4rem 2rem;
+		padding: 4rem @vw-padding;
 
 	    header {
 	        h1 {
@@ -555,7 +638,7 @@ body.home {
 	}
 
 	aside.cta {
-	    padding: 4rem 2rem;
+	    padding: 4rem @vw-padding;
 
 	    .flex-display();
 	    .flex-flow(column wrap);
@@ -599,15 +682,10 @@ body.page {
 	}
 
 	section {
-		padding: 0 2rem;
+		padding: 0 @vw-padding;
 	}
 
 	main {
-		header.cover {
-			h1 {
-				margin-bottom: -0.08em;
-			}
-		}
 
 		section.content {
 			> h2 {
@@ -615,22 +693,83 @@ body.page {
 				margin-top: 4rem;
 			}
 
-
 		}
 
 		nav.tabs {
-			margin: 0 2rem;
+			margin: 0 @vw-padding;
 		}
+	}
+
+	h2, h3, h4, h5 {
+		font-size: 3.1rem;
 	}
 }
 
+
+hr {
+	border-color: fade(@color-nav-blue, 30%);
+	border-width: 2px;
+}
 
 /*=====================
 PAGE CHILD
 =====================*/
 
 
+/*=====================
+PAGE ABOUT-US
+=====================*/
 
+body.page-about-us {
+
+	main {
+
+		section.content {
+			a.button {
+
+			}
+		}
+	}
+}
+
+.team-member {
+	.flex-display();
+	.flex-flow(row nowrap);
+	.align-items(center);
+
+	margin-bottom: 3rem;
+
+	figure {
+		border-radius: 50%;
+		overflow: hidden;
+		width: 40vw;
+
+		img {
+
+		}
+	}
+
+	.wp-block-media-text__content {
+		padding: 0;
+		padding-left: @vw-padding;
+
+		h2, h3, h4, h5, h6 {
+			padding: 0;
+			margin: 0;
+		}
+
+		h6 {
+			font-size: 2.7rem;
+			font-weight: normal;
+		}
+
+		p {
+			margin: 0;
+			font-size: 2rem;
+			line-height: normal;
+		}
+	}
+}
 
 /*=====================
 PAGE OUR-WORK
@@ -647,11 +786,11 @@ body.page-template-page-our-work {
 			border-top-width: 0.7rem;
 			border-bottom-width: 0.7rem;
 			padding: 1rem;
-			margin: 0 2rem;
+			margin: 0 @vw-padding;
 
 			header {
 				.flex-display();
-			    .flex-flow(row no-wrap);
+			    .flex-flow(row nowrap);
 				.align-items(center);
 				margin: 2rem 0;
 
@@ -672,15 +811,21 @@ body.page-template-page-our-work {
 
 	aside.content.parent {
 		//Look like main content
-		padding: 0 2rem;
+		padding: 0 @vw-padding;
 
-		h3 {
-			.title-h1;
-			color: white;
+		header {
 			background-color: @color-green;
-			padding: 4rem 2rem 0rem 2rem;
-			margin: 0 -2rem 0 -2rem;
+			padding: 4rem @vw-padding 0rem @vw-padding;
+			margin: 0 -@vw-padding 0 -@vw-padding;
+			.flex-display();
+
+			h3 {
+				.title-h1;
+				color: white;
+				margin-bottom: -0.08em;
+			}
 		}
+
 	}
 
 }
@@ -701,14 +846,14 @@ body.page-template-page-our-work.page-child {
 
 
 /*=====================
-MENU
+MENU (PAGE)
 =====================*/
 
 body.page-menu {
 	background-color: @color-green;
 
 	nav.menu {
-		padding: 0 2rem;
+		padding: 0 @vw-padding;
 
 		> ul > li {
 			padding-bottom: 0.5em;

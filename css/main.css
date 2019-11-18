@@ -7,6 +7,7 @@
 .clearfix:after {
   content: " ";
   display: table;
+  line-height: 0;
 }
 .clearfix:after {
   clear: both;
@@ -96,6 +97,15 @@ a.button span {
 .color-green {
   color: #1ED261;
 }
+.color-blue {
+  color: #0055FF;
+}
+.color-yellow {
+  color: #FFB600;
+}
+.color-nav-blue {
+  color: #6394AB;
+}
 .h-icon {
   margin: 0;
   padding-bottom: 0;
@@ -120,11 +130,30 @@ a.button span {
   width: 10rem !important;
   margin-right: 0.5em;
 }
+.box {
+  margin: 0 -3rem;
+  padding: 3rem;
+}
+.box h1,
+.box h2,
+.box h3,
+.box h4 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-size: 3.1rem;
+  padding-left: 0;
+}
+.box.yellow {
+  background-color: #FFB600;
+}
 /*=====================
 HEADER
 =====================*/
 header.main-header {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -173,7 +202,7 @@ header.main-header nav.main-nav a.menu {
   border-radius: 50%;
   position: fixed;
   top: 4.5rem;
-  right: 2rem;
+  right: 3rem;
   z-index: 9999;
 }
 header.main-header nav.main-nav a.menu:hover {
@@ -191,7 +220,7 @@ header.main-header nav.main-nav a.menu.open {
 /*MAIN */
 main header.cover {
   background-color: #1ED261;
-  padding: 4rem 2rem 0rem 2rem;
+  padding: 4rem 3rem 0rem 3rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -207,6 +236,7 @@ main header.cover h1 {
   font-size: 4.5rem;
   font-weight: 600;
   color: white;
+  margin-bottom: -0.08em;
 }
 main header.cover h2 {
   font-size: 3rem;
@@ -218,7 +248,7 @@ main header.cover a.button {
   -webkit-align-self: flex-end;
   -ms-align-self: flex-end;
   align-self: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 /*TABS*/
 nav.tabs {
@@ -236,15 +266,15 @@ nav.tabs {
 nav.tabs > a {
   background: rgba(99, 148, 171, 0.2);
   color: #6394AB;
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1em;
   font-weight: bold;
   text-decoration: none;
   padding: 2rem 1rem 1rem 1rem;
   margin: 0 0.5rem;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
+  -webkit-flex: 0 0 1;
+  -ms-flex: 0 0 1;
+  flex: 0 0 1;
 }
 nav.tabs > a span {
   display: block;
@@ -265,11 +295,73 @@ nav.tabs > a.selected span {
   border: none;
   padding: 0;
 }
+nav.tabs.sub > a {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  background-color: transparent;
+}
+nav.tabs.sub > a::before {
+  content: "";
+  width: 100%;
+  height: 10rem;
+  -webkit-flex: 0 0 35%;
+  -ms-flex: 0 0 35%;
+  flex: 0 0 35%;
+  background-image: url('../img/icon-community.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-right: 1rem;
+}
+nav.tabs.sub > a span {
+  -webkit-flex: 0 0 65%;
+  -ms-flex: 0 0 65%;
+  flex: 0 0 65%;
+}
+nav.tabs.sub > a.resilience {
+  color: #1ED261;
+}
+nav.tabs.sub > a.resilience span {
+  border-bottom-color: #1ED261;
+}
+nav.tabs.sub > a.resilience::before {
+  background-image: url('../img/icon-community.svg');
+}
+nav.tabs.sub > a.education {
+  color: #FFB600;
+}
+nav.tabs.sub > a.education span {
+  border-bottom-color: #FFB600;
+}
+nav.tabs.sub > a.education::before {
+  background-image: url('../img/icon-education.svg');
+}
+nav.tabs.sub > a.research {
+  color: #0055FF;
+}
+nav.tabs.sub > a.research span {
+  border-bottom-color: #0055FF;
+}
+nav.tabs.sub > a.research::before {
+  background-image: url('../img/icon-research.svg');
+}
+nav.tabs.sub > a:first-of-type {
+  margin-left: -1rem;
+  margin-right: 3rem;
+}
 /*=====================
 FOOTER
 =====================*/
 footer.main-footer {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
   text-align: center;
   font-size: 2.2rem;
 }
@@ -305,7 +397,7 @@ footer.main-footer a.button.sitemap {
 footer.main-footer p.license,
 footer.main-footer address.author {
   line-height: 1.3em;
-  margin: 4rem 2rem;
+  margin: 4rem 3rem;
 }
 footer.main-footer address.author {
   font-style: normal;
@@ -314,7 +406,7 @@ footer.main-footer address.author {
 HOME
 =====================*/
 body.home section {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
 }
 body.home section header h1 {
   margin: 0;
@@ -546,7 +638,7 @@ body.home nav.index ul li > img {
   flex: 0 0 16rem;
 }
 body.home aside.cta {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -583,10 +675,7 @@ body.page header.main-header h1.logo img {
   width: 10rem;
 }
 body.page section {
-  padding: 0 2rem;
-}
-body.page main header.cover h1 {
-  margin-bottom: -0.08em;
+  padding: 0 3rem;
 }
 body.page main section.content > h2 {
   margin: 0;
@@ -598,11 +687,63 @@ body.page main section.content > h2 {
   margin-top: 4rem;
 }
 body.page main nav.tabs {
-  margin: 0 2rem;
+  margin: 0 3rem;
+}
+body.page h2,
+body.page h3,
+body.page h4,
+body.page h5 {
+  font-size: 3.1rem;
+}
+hr {
+  border-color: rgba(99, 148, 171, 0.3);
+  border-width: 2px;
 }
 /*=====================
 PAGE CHILD
 =====================*/
+/*=====================
+PAGE ABOUT-US
+=====================*/
+.team-member {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.team-member figure {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40vw;
+}
+.team-member .wp-block-media-text__content {
+  padding: 0;
+  padding-left: 3rem;
+}
+.team-member .wp-block-media-text__content h2,
+.team-member .wp-block-media-text__content h3,
+.team-member .wp-block-media-text__content h4,
+.team-member .wp-block-media-text__content h5,
+.team-member .wp-block-media-text__content h6 {
+  padding: 0;
+  margin: 0;
+}
+.team-member .wp-block-media-text__content h6 {
+  font-size: 2.7rem;
+  font-weight: normal;
+}
+.team-member .wp-block-media-text__content p {
+  margin: 0;
+  font-size: 2rem;
+  line-height: normal;
+}
 /*=====================
 PAGE OUR-WORK
 =====================*/
@@ -612,16 +753,16 @@ body.page-template-page-our-work section.content.subpage {
   border-top-width: 0.7rem;
   border-bottom-width: 0.7rem;
   padding: 1rem;
-  margin: 0 2rem;
+  margin: 0 3rem;
 }
 body.page-template-page-our-work section.content.subpage header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-flow: row no-wrap;
-  -ms-flex-flow: row no-wrap;
-  flex-flow: row no-wrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
@@ -648,18 +789,25 @@ body.page-template-page-our-work section.content.subpage header img.icon {
   margin-right: 4rem;
 }
 body.page-template-page-our-work aside.content.parent {
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
-body.page-template-page-our-work aside.content.parent h3 {
+body.page-template-page-our-work aside.content.parent header {
+  background-color: #1ED261;
+  padding: 4rem 3rem 0rem 3rem;
+  margin: 0 -3rem 0 -3rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+body.page-template-page-our-work aside.content.parent header h3 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
   color: white;
-  background-color: #1ED261;
-  padding: 4rem 2rem 0rem 2rem;
-  margin: 0 -2rem 0 -2rem;
+  margin-bottom: -0.08em;
 }
 body.page-template-page-our-work.page-child {
   display: -webkit-flex;
@@ -681,13 +829,13 @@ body.page-template-page-our-work.page-child aside.content {
   order: 0;
 }
 /*=====================
-MENU
+MENU (PAGE)
 =====================*/
 body.page-menu {
   background-color: #1ED261;
 }
 body.page-menu nav.menu {
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 body.page-menu nav.menu > ul > li {
   padding-bottom: 0.5em;

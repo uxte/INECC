@@ -220,6 +220,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/Sustainability diagram.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54426,
+		"inputAbbreviatedPath": "\/img\/Sustainability diagram.png",
+		"outputAbbreviatedPath": "\/img\/Sustainability diagram.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/timeline-visual.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16107,
+		"inputAbbreviatedPath": "\/img\/timeline-visual.png",
+		"outputAbbreviatedPath": "\/img\/timeline-visual.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
