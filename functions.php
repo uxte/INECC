@@ -3,7 +3,7 @@ define("THEME_DIR", get_template_directory_uri());
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
-// Add class to body based on page template
+// Add classes to body
 add_filter( 'body_class','my_body_classes' );
 function my_body_classes( $classes ) {
     global $post;
