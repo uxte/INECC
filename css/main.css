@@ -62,6 +62,9 @@ body.blue .content.subpage {
 body.blue nav.tabs > a.selected {
   background-color: #0055FF;
 }
+a {
+  color: #222222;
+}
 a.button {
   text-decoration: none;
   text-transform: uppercase;
@@ -72,7 +75,7 @@ a.button {
   color: #0055FF;
   line-height: 1em;
   padding-bottom: 0.2em;
-  border-bottom: #0055FF 0.4em solid;
+  border-bottom: #0055FF 0.3em solid;
   display: inline-block;
 }
 a.button span {
@@ -126,13 +129,13 @@ a.button span {
   line-height: 3.1em;
 }
 .h-icon img {
-  height: 10rem !important;
-  width: 10rem !important;
+  height: 8rem !important;
+  width: 8rem !important;
   margin-right: 0.5em;
 }
 .box {
-  margin: 0 -3rem;
-  padding: 3rem;
+  margin: 5rem -3rem;
+  padding: 3rem 3rem 2rem 3rem;
 }
 .box h1,
 .box h2,
@@ -144,7 +147,7 @@ a.button span {
   font-size: 4.5rem;
   font-weight: 600;
   font-size: 3.1rem;
-  padding-left: 0;
+  margin-bottom: 0.5em;
 }
 .box.yellow {
   background-color: #FFB600;
@@ -174,7 +177,7 @@ header.main-header h1.logo span {
   display: none;
 }
 header.main-header h1.logo img {
-  width: 30rem;
+  width: 24rem;
   height: auto;
 }
 header.main-header nav.main-nav {
@@ -185,15 +188,37 @@ header.main-header nav.main-nav {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+}
+header.main-header nav.main-nav a.donate {
+  color: #6394AB;
+  margin-right: 10rem;
+  padding-right: 5rem;
+  background: transparent url("../img/icon-donate.svg") no-repeat right top;
+  background-size: 2em;
+  height: 2em;
+  display: table;
+  padding-bottom: 0;
+  border: 0;
+}
+header.main-header nav.main-nav a.donate span {
+  border-bottom: #6394AB 0.3em solid;
+  letter-spacing: normal;
+  padding-bottom: 0.2em;
+  margin-top: -0.5em;
+  display: table-cell;
+  vertical-align: bottom;
 }
 header.main-header nav.main-nav a.menu {
-  background: white url("../img/icon-menu.svg") no-repeat 0 0;
-  background-size: 4rem;
+  background: rgba(255, 255, 255, 0.5) url("../img/icon-menu.svg") no-repeat 0 0;
+  background-size: 3.5rem;
   background-position: center;
   color: transparent;
   font-size: 0;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   padding: 1.6rem;
   overflow: hidden;
   -webkit-align-self: center;
@@ -201,7 +226,7 @@ header.main-header nav.main-nav a.menu {
   align-self: center;
   border-radius: 50%;
   position: fixed;
-  top: 4.5rem;
+  top: 6.1rem;
   right: 3rem;
   z-index: 9999;
 }
@@ -216,11 +241,13 @@ header.main-header nav.main-nav a.menu.open {
   background-color: #1ED261;
   background-image: url("../img/icon-cross.svg");
   position: absolute;
+  top: 4.3rem;
 }
 /*MAIN */
 main header.cover {
   background-color: #1ED261;
   padding: 4rem 3rem 0rem 3rem;
+  margin-bottom: 4rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -674,6 +701,9 @@ PAGE
 body.page header.main-header h1.logo img {
   width: 10rem;
 }
+body.page header.main-header nav.main-nav a.menu {
+  top: 5.8rem;
+}
 body.page section {
   padding: 0 3rem;
 }
@@ -684,7 +714,14 @@ body.page main section.content > h2 {
   font-size: 4.5rem;
   font-weight: 600;
   font-size: 3.1rem;
-  margin-top: 4rem;
+  margin-bottom: 0.5em;
+}
+body.page main section.content > h3 {
+  margin: 0;
+  padding: 0;
+}
+body.page main section.content p {
+  margin-top: 0;
 }
 body.page main nav.tabs {
   margin: 0 3rem;
@@ -698,6 +735,7 @@ body.page h5 {
 hr {
   border-color: rgba(99, 148, 171, 0.3);
   border-width: 2px;
+  margin: 5rem auto;
 }
 /*=====================
 PAGE CHILD
@@ -766,7 +804,7 @@ body.page-template-page-our-work section.content.subpage header {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem 0;
 }
 body.page-template-page-our-work section.content.subpage header h1,
 body.page-template-page-our-work section.content.subpage header h2 {

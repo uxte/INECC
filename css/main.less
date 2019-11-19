@@ -75,6 +75,10 @@ body {
 
 }
 
+a {
+	color: @color-black;
+}
+
 a.button {
 	text-decoration: none;
 	text-transform: uppercase;
@@ -85,7 +89,7 @@ a.button {
 	color: @color-blue;
 	line-height: 1em;
     padding-bottom: 0.2em;
-    border-bottom: @color-blue 0.4em solid;
+    border-bottom: @color-blue 0.3em solid;
     display: inline-block;
 
     span {
@@ -133,20 +137,20 @@ a.button {
 	line-height: 3.1em;
 
 	img {
-		height: 10rem !important;
-		width: 10rem !important;
+		height: 8rem !important;
+		width: 8rem !important;
 		margin-right: 0.5em;
 	}
 
 }
 
 .box {
-	margin: 0 -@vw-padding;
-	padding: @vw-padding;
+	margin: 5rem -@vw-padding;
+	padding: @vw-padding @vw-padding 2rem @vw-padding;
 
 	h1, h2, h3, h4 {
 		.title-h2;
-		padding-left: 0;
+		margin-bottom: 0.5em;
 	}
 
 	&.yellow {
@@ -175,7 +179,7 @@ header.main-header {
 			display: none;
 		}
 		img {
-			width: 30rem;
+			width: 24rem;
 			height: auto;
 		}
 	}
@@ -184,21 +188,45 @@ header.main-header {
 	nav.main-nav {
 		.flex-display();
 	    .flex-flow(row wrap);
+		.align-items(flex-end);
+
+		a.donate {
+			color: @color-nav-blue;
+			margin-right: 10rem;
+			padding-right: 5rem;
+			background: transparent url("../img/icon-donate.svg") no-repeat right top;
+			background-size: 2em;
+			height: 2em;
+			display: table;
+
+			//Reset
+			padding-bottom: 0;
+			border: 0;
+
+			span {
+				border-bottom: @color-nav-blue 0.3em solid;
+				letter-spacing: normal;
+				padding-bottom: 0.2em;
+				margin-top: -0.5em;
+				display: table-cell;
+				vertical-align: bottom;
+			}
+		}
 
 		a.menu {
-			background: white url("../img/icon-menu.svg") no-repeat 0 0;
-			background-size: 4rem;
+			background: fade(#fff, 50%) url("../img/icon-menu.svg") no-repeat 0 0;
+			background-size: 3.5rem;
 			background-position: center;
 			color: transparent;
 			font-size: 0;
-			.icon-size(4rem);
+			.icon-size(5rem);
 			padding: 1.6rem;
 			overflow: hidden;
 			.align-self(center);
 			border-radius: 50%;
 
 			position: fixed;
-			top: 4.5rem;
+			top: 6.1rem;
 			right: @vw-padding;
 			z-index: 9999;
 
@@ -214,6 +242,7 @@ header.main-header {
 				background-color: @color-green;
 				background-image: url("../img/icon-cross.svg");
 				position: absolute;
+				top: 4.3rem;
 			}
 		}
 	}
@@ -226,6 +255,7 @@ main {
     header.cover {
 		background-color: @color-green;
 		padding: 4rem @vw-padding 0rem @vw-padding;
+		margin-bottom: 4rem;
 
         .flex-display();
         .flex-flow(column wrap);
@@ -242,6 +272,7 @@ main {
 			color: white;
 
 		}
+
 		a.button {
 			.align-self(flex-end);
             margin-bottom: 3rem;
@@ -679,6 +710,13 @@ body.page {
 				width: 10rem;
 			}
 		}
+
+		nav.main-nav {
+
+			a.menu {
+				top: 5.8rem;
+			}
+		}
 	}
 
 	section {
@@ -690,7 +728,14 @@ body.page {
 		section.content {
 			> h2 {
 				.title-h2;
-				margin-top: 4rem;
+				margin-bottom: 0.5em;
+			}
+			> h3 {
+				margin: 0;
+				padding: 0;
+			}
+			p {
+				margin-top: 0;
 			}
 
 		}
@@ -709,6 +754,7 @@ body.page {
 hr {
 	border-color: fade(@color-nav-blue, 30%);
 	border-width: 2px;
+	margin: 5rem auto;
 }
 
 /*=====================
@@ -792,7 +838,7 @@ body.page-template-page-our-work {
 				.flex-display();
 			    .flex-flow(row nowrap);
 				.align-items(center);
-				margin: 2rem 0;
+				margin: 2rem 0 4rem 0;
 
 				h1, h2 {
 					.title-h2;
