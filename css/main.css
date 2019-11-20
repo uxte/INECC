@@ -86,16 +86,17 @@ a.button span {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
 }
 .title-h2 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
+  line-height: normal;
 }
 .color-green {
   color: #1ED261;
@@ -112,9 +113,10 @@ a.button span {
 .h-icon {
   margin: 0;
   padding-bottom: 0;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
+  line-height: normal;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -144,9 +146,10 @@ a.button span {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
+  line-height: normal;
   margin-bottom: 0.5em;
 }
 .box.yellow {
@@ -260,7 +263,7 @@ main header.cover h1 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
   color: white;
   margin-bottom: -0.08em;
@@ -272,9 +275,9 @@ main header.cover h2 {
   color: white;
 }
 main header.cover a.button {
-  -webkit-align-self: flex-end;
-  -ms-align-self: flex-end;
-  align-self: flex-end;
+  -webkit-align-self: flex-start;
+  -ms-align-self: flex-start;
+  align-self: flex-start;
   margin-bottom: 3rem;
 }
 /*TABS*/
@@ -432,14 +435,40 @@ footer.main-footer address.author {
 /*=====================
 HOME
 =====================*/
+body.home main header.cover {
+  background: #1ED261 url("../img/cover_960x640_green_1.jpg") center center no-repeat;
+  background-size: cover;
+  padding-bottom: 4rem;
+  position: relative;
+}
+body.home main header.cover h2 {
+  color: #0055FF;
+}
+body.home main header.cover a.sw {
+  background: transparent url("../img/icon-sustainable-website.svg") 0 0 no-repeat;
+  background-size: contain;
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  bottom: -4.5rem;
+  right: 3rem;
+}
+body.home main header.cover a.sw span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+  overflow: hidden;
+}
 body.home section {
-  padding: 4rem 3rem;
+  padding: 0 3rem;
 }
 body.home section header h1 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
 }
 body.home section header h2 {
@@ -451,14 +480,18 @@ body.home section > h1 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
+}
+body.home section.our-work header {
+  margin-bottom: 4rem;
 }
 body.home section.our-work header h1 {
   color: #1ED261;
 }
 body.home section.our-reach {
   background-color: rgba(39, 58, 67, 0.1);
+  margin: 5rem 0;
 }
 body.home section.our-reach header h1 {
   color: #0055FF;
@@ -620,12 +653,12 @@ body.home section.testimonials blockquote footer figure img {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-body.home nav.index ul {
+body.home ul.index {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-body.home nav.index ul li {
+body.home ul.index li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -633,20 +666,21 @@ body.home nav.index ul li {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  margin-top: 2em;
   background: transparent url("../img/icon-arrow.svg") no-repeat center right;
   background-size: 6rem;
 }
-body.home nav.index ul li > a {
+body.home ul.index li > a {
   margin: 0;
   padding-bottom: 0;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
+  line-height: normal;
   color: #222222;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 1.3em;
+  margin-left: 1.5em;
+  margin-right: 8rem;
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
@@ -654,15 +688,27 @@ body.home nav.index ul li > a {
   -ms-align-self: center;
   align-self: center;
 }
-body.home nav.index ul li > img {
-  width: 16rem;
-  height: 16rem;
+body.home ul.index li > img {
+  width: 13rem;
+  height: 13rem;
   -webkit-order: 0;
   -ms-order: 0;
   order: 0;
-  -webkit-flex: 0 0 16rem;
-  -ms-flex: 0 0 16rem;
-  flex: 0 0 16rem;
+  -webkit-flex: 0 0 13rem;
+  -ms-flex: 0 0 13rem;
+  flex: 0 0 13rem;
+}
+body.home ul.index li.green > a {
+  color: #1ED261;
+}
+body.home ul.index li.yellow > a {
+  color: #FFB600;
+}
+body.home ul.index li.blue > a {
+  color: #0055FF;
+}
+body.home ul.index hr:last-of-type {
+  display: none;
 }
 body.home aside.cta {
   padding: 4rem 3rem;
@@ -678,7 +724,7 @@ body.home aside.cta > h1 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
 }
 body.home aside.cta > h1 span {
@@ -711,9 +757,10 @@ body.page main section.content > h2 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
+  line-height: normal;
   margin-bottom: 0.5em;
 }
 body.page main section.content > h3 {
@@ -811,9 +858,10 @@ body.page-template-page-our-work section.content.subpage header h2 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
+  line-height: normal;
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
@@ -842,7 +890,7 @@ body.page-template-page-our-work aside.content.parent header h3 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 600;
   color: white;
   margin-bottom: -0.08em;

@@ -2,32 +2,62 @@
 
 	<main>
 		<header class="cover">
-			<h2>INECC works to bring climate change and sustainable development concerns of the marginalised majority into policy dialogues</h2>
+			<h2><?php print get_bloginfo( 'description' ); ?></h2>
 			<a class="button" href="http://">Know <span>more</span></a>
+			<a class="sw" title="Learn more" href="#"><span>This is a sustainable website</span></a>
 		</header>
 
 		<section class="our-work">
+
+			<?php
+			//Get our-work page and children
+			$page = get_page_by_path('our-work');
+			$parent_id = $page->ID;
+
+			if ( $parent_id == 0 ) { //If it's the parent page
+			    $parent_id = get_queried_object_id();
+			}
+			?>
+
 			<header>
-				<h1>Our work</h1>
-				<h2>INECC works within three large areas</h2>
+				<h1><?php print get_the_title($parent_id); ?></h1>
+				<h2>INECC works within three main areas</h2>
 			</header>
 
-			<nav class="index">
-				<ul>
-					<li>
-						<a href="our-work.html">Community <br>Resilience to <br>Climate Change</a>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-community.svg" alt="Community icon" />
-					</li>
-					<li>
-						<a href="http://">Education and <br>Communication</a>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-education.svg" alt="Community icon" />
-					</li>
-					<li>
-						<a href="http://">Research, Policy <br>and Advocacy</a>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-research.svg" alt="Community icon" />
-					</li>
-				</ul>
-			</nav>
+			<?php
+			// WP_Query arguments
+			$args = array(
+			    'post_parent'            => $parent_id,
+			    'post_type'              => 'page',
+			    'post_status'            => 'publish',
+			    'order'                  => 'ASC',
+			    'orderby'                => 'menu_order',
+			);
+
+			// The Query
+			$subpages = new WP_Query( $args );
+
+			// The Loop
+			if ( $subpages -> have_posts() ) :
+
+			?>
+
+			<ul class="index">
+				<?php
+				while ( $subpages -> have_posts() ) : $subpages -> the_post();
+				$class = get_post_meta( $post->ID, 'body-color', true );
+				?>
+
+				<li class="<?php echo $class ?>">
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					<?php the_post_thumbnail(); ?>
+				</li>
+
+				<hr>
+
+				<?php endwhile; ?>
+			</ul>
+			<?php endif; wp_reset_postdata(); ?>
 
 		</section>
 

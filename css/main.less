@@ -104,13 +104,14 @@ a.button {
 	margin: 0;
 	padding-bottom: 0;
 	text-transform: uppercase;
-	font-size: 4.5rem;
+	font-size: 4.2rem;
 	font-weight: 600;
 }
 
 .title-h2 {
 	.title-h1;
-	font-size: 3.1rem;
+	font-size: 2.8rem;
+	line-height: normal;
 }
 
 .color-green {
@@ -145,8 +146,8 @@ a.button {
 }
 
 .box {
-	margin: 5rem -@vw-padding;
-	padding: @vw-padding @vw-padding 2rem @vw-padding;
+	margin: @vh-spacing -@vw-spacing;
+	padding: @vw-spacing @vw-spacing 2rem @vw-spacing;
 
 	h1, h2, h3, h4 {
 		.title-h2;
@@ -165,7 +166,7 @@ HEADER
 =====================*/
 
 header.main-header {
-	padding: 4rem @vw-padding;
+	padding: 4rem @vw-spacing;
 
     .flex-display();
     .flex-flow(row wrap);
@@ -227,7 +228,7 @@ header.main-header {
 
 			position: fixed;
 			top: 6.1rem;
-			right: @vw-padding;
+			right: @vw-spacing;
 			z-index: 9999;
 
 			&:hover {
@@ -254,7 +255,7 @@ main {
 
     header.cover {
 		background-color: @color-green;
-		padding: 4rem @vw-padding 0rem @vw-padding;
+		padding: 4rem @vw-spacing 0rem @vw-spacing;
 		margin-bottom: 4rem;
 
         .flex-display();
@@ -274,7 +275,7 @@ main {
 		}
 
 		a.button {
-			.align-self(flex-end);
+			.align-self(flex-start);
             margin-bottom: 3rem;
 		}
 	}
@@ -391,7 +392,7 @@ FOOTER
 =====================*/
 
 footer.main-footer {
-    padding: 4rem @vw-padding;
+    padding: 4rem @vw-spacing;
     text-align: center;
     font-size: 2.2rem;
 
@@ -423,7 +424,7 @@ footer.main-footer {
 
     p.license, address.author {
         line-height: 1.3em;
-        margin: 4rem @vw-padding;
+        margin: 4rem @vw-spacing;
     }
     p.license {
 
@@ -441,8 +442,41 @@ HOME
 
 body.home {
 
+	main {
+		header.cover {
+			background: @color-green url("../img/cover_960x640_green_1.jpg") center center no-repeat;
+			background-size: cover;
+			padding-bottom: 4rem;
+			position: relative;
+
+			h2 {
+				color: @color-blue;
+			}
+
+			a.sw {
+				background: transparent url("../img/icon-sustainable-website.svg") 0 0 no-repeat;
+				background-size: contain;
+				width: 16rem;
+				height: 16rem;
+
+				position: absolute;
+				bottom: -4.5rem;
+				right: @vw-spacing;
+
+				span {
+					display: inline-block;
+					width: 0;
+					height: 0;
+					visibility: hidden;
+					font-size: 0;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
 	section {
-		padding: 4rem @vw-padding;
+		padding: 0 @vw-spacing;
 
 	    header {
 	        h1 {
@@ -461,6 +495,8 @@ body.home {
 	    &.our-work {
 
 	        header {
+				margin-bottom: 4rem;
+
 	            h1 {
 	                color: @color-green;
 	            }
@@ -471,13 +507,13 @@ body.home {
 	    &.our-reach {
 
 	        background-color: rgba(39, 58, 67, 0.1);
+			margin: @vh-spacing 0;
 
 	        header {
 	            h1 {
 	                color: @color-blue;
 	            }
 	        }
-
 	    }
 
 	    &.events {
@@ -632,44 +668,61 @@ body.home {
 	    }
 	}
 
-	nav.index {
-	    ul {
-	        list-style-type: none;
-	        margin: 0; padding: 0;
+    ul.index {
+        list-style-type: none;
+        margin: 0; padding: 0;
 
-	        li {
-	            .flex-display();
-	            .flex-flow(row nowrap);
-	            margin-top: 2em;
-				background: transparent url("../img/icon-arrow.svg") no-repeat center right;
-				background-size: 6rem;
+        li {
+            .flex-display();
+            .flex-flow(row nowrap);
+			background: transparent url("../img/icon-arrow.svg") no-repeat center right;
+			background-size: 6rem;
 
-	            > a {
-					.title-h2;
-					color: @color-black;
-					text-transform: uppercase;
-	                text-decoration: none;
-	                margin-left: 1.3em;
+            > a {
+				.title-h2;
+				color: @color-black;
+				text-transform: uppercase;
+                text-decoration: none;
+                margin-left: 1.5em;
+				margin-right: 8rem;
 
-	                .flex-order(1);
-	                .align-self(center);
+                .flex-order(1);
+                .align-self(center);
 
-	            }
+            }
 
-	            > img {
-	                .icon-size (16rem);
+            > img {
+                .icon-size (13rem);
+                .flex-order(0);
+                .flex( 0 0 13rem );
 
-	                .flex-order(0);
-	                .flex( 0 0 16rem );
+                // background: red;
+            }
 
-	                // background: red;
-	            }
-	        }
-	    }
-	}
+			&.green {
+				> a {
+					color: @color-green;
+				}
+			}
+			&.yellow {
+				> a {
+					color: @color-yellow;
+				}
+			}
+			&.blue {
+				> a {
+					color: @color-blue;
+				}
+			}
+        }
+
+		hr:last-of-type {
+			display: none;
+		}
+    }
 
 	aside.cta {
-	    padding: 4rem @vw-padding;
+	    padding: 4rem @vw-spacing;
 
 	    .flex-display();
 	    .flex-flow(column wrap);
@@ -720,7 +773,7 @@ body.page {
 	}
 
 	section {
-		padding: 0 @vw-padding;
+		padding: 0 @vw-spacing;
 	}
 
 	main {
@@ -741,7 +794,7 @@ body.page {
 		}
 
 		nav.tabs {
-			margin: 0 @vw-padding;
+			margin: 0 @vw-spacing;
 		}
 	}
 
@@ -754,7 +807,7 @@ body.page {
 hr {
 	border-color: fade(@color-nav-blue, 30%);
 	border-width: 2px;
-	margin: 5rem auto;
+	margin: @vh-spacing auto;
 }
 
 /*=====================
@@ -797,7 +850,7 @@ body.page-about-us {
 
 	.wp-block-media-text__content {
 		padding: 0;
-		padding-left: @vw-padding;
+		padding-left: @vw-spacing;
 
 		h2, h3, h4, h5, h6 {
 			padding: 0;
@@ -832,7 +885,7 @@ body.page-template-page-our-work {
 			border-top-width: 0.7rem;
 			border-bottom-width: 0.7rem;
 			padding: 1rem;
-			margin: 0 @vw-padding;
+			margin: 0 @vw-spacing;
 
 			header {
 				.flex-display();
@@ -857,12 +910,12 @@ body.page-template-page-our-work {
 
 	aside.content.parent {
 		//Look like main content
-		padding: 0 @vw-padding;
+		padding: 0 @vw-spacing;
 
 		header {
 			background-color: @color-green;
-			padding: 4rem @vw-padding 0rem @vw-padding;
-			margin: 0 -@vw-padding 0 -@vw-padding;
+			padding: 4rem @vw-spacing 0rem @vw-spacing;
+			margin: 0 -@vw-spacing 0 -@vw-spacing;
 			.flex-display();
 
 			h3 {
@@ -902,7 +955,7 @@ body.page-menu {
 	background-color: @color-green;
 
 	nav.menu {
-		padding: 0 @vw-padding;
+		padding: 0 @vw-spacing;
 
 		> ul > li {
 			padding-bottom: 0.5em;
