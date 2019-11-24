@@ -31,7 +31,7 @@
             </a>
 		</h1>
 		<nav class="main-nav">
-            <a class="button donate" href="#"><span>Donate</span></a>
+            <a class="button icon donate" href="#"><span>Donate</span></a>
             <?php if ( is_page( 'menu' ) ) : ?>
 			<a class="menu open" href="<?php open_menu(); ?>">Menu</a>
             <?php else : ?>

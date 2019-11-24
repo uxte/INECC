@@ -66,26 +66,11 @@
 				<h1>Our reach</h1>
 				<h2>INECC works with the most vulnerable across India</h2>
 			</header>
-			<figure><img src="" alt="" /></figure>
 			<a class="button" href="http://">Know <span>more</span></a>
 		</section>
 
 		<section class="events">
-			<h1>Upcoming events</h1>
-
-			<article class="event">
-				<h1>Name of event</h1>
-				<p>Description of event in two or three lines continuations of event in two or three lines of event in two or three lines</p>
-                <div class="wrapper">
-                    <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" /></figure>
-    				<footer>
-    					<time datetime="2019-07-01" pubdate="pubdate">July 01, 2019</time>
-    					<address>Place/City</address>
-    					<a href="http://">Facebook event</a>
-    				</footer>
-                </div>
-			</article>
-
+			<?php get_template_part( 'template-parts/upcoming', 'events' ); ?>
 		</section>
 
         <section class="co-create">
