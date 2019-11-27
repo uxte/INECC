@@ -74,33 +74,26 @@
 		</section>
 
         <section class="co-create">
-            <h1>Co-create with us...</h1>
-            <h2>A better dialogue</h2>
-            <p>Contribute to a more democratic and informed climate change dialogue our blog EcoEthic at ecoethic@inecc.net</p>
-            <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" /></figure>
-            <h2>A better dialogue</h2>
-            <p>Help create a better life for the marginalized with your donations.</p>
-            <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" /></figure>
-            <p>If you have any questions about where your money is going, contact us at info@inecc.net</p>
+            <h1>Co-create with us</h1>
+            <h2>Create meaningful dialogues</h2>
+            <p>Contribute to a more democratic and informed climate change dialogue our blog <strong>EcoEthic</strong> at <a href="mailto:ecoethic@inecc.net">ecoethic@inecc.net</a></p>
+            <figure class="logo-ecoethic"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-ecoethic-white.svg" alt="EcoEthic" /></figure>
+            <h2>Create a better quality of life</h2>
+            <p>Help create a better life for marginalized communities with your <strong>donations</strong>. <br>
+			If you have any questions about where your money is going, contact us at <a href="mailto:info@inecc.net">info@inecc.net</a></p>
+            <figure class="icon-donate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-donate-yellow.svg" alt="Donate icon" /></figure>
+			<span class="button"><a class="button" href="#">Donate</a></span>
         </section>
 
         <aside class="cta eco-website">
-            <h1><span>inecc.net is an</span> eco-conscious website</h1>
+            <h1>Climate-conscious <br>on and off-line</h1>
+			<h2>We work towards reducing our digital carbon footprint and more.</h2>
             <a class="button" href="#">Know <span>more</span></a>
         </aside>
 
         <section class="testimonials">
-            <blockquote>
-                <p>INECC workshop helped me in conceptually understanding the climate discourse and its link with the education and gender work I was involved with. I have been able to build on the learnings and strengthen our engagement with women SHGs and young girls on energy and climate in Varanasi. I owe this to INECC.</p>
-                <footer>
-                    <cite class="author">Ranjana Gaur</cite>
-                    <cite class="title">Secretary, Social Action and Research Centre; Varanasi</cite>
-                    <figure>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumb.svg" alt="Thumb" />
-                    </figure>
-                </footer>
-
-            </blockquote>
+			<?php get_template_part( 'template-parts/testimonials' ); ?>
+            
         </section>
 
 	</main>

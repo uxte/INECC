@@ -2,26 +2,46 @@
     <h1>Upcoming events</h1>
 </header>
 
+<?php
+
+// WP_Query arguments
+$args = array(
+    'category_name'          => 'event',
+    'post_type'              => 'post',
+    'post_status'            => 'publish',
+    'order'                  => 'ASC'
+);
+
+// The Query
+$posts = new WP_Query( $args );
+
+// The Loop
+if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the_post();
+
+?>
+
 <article class="event">
-    <h1>Name of event</h1>
+    <h1><?php the_title(); ?></h1>
     <div class="wrapper">
-        <time datetime="2019-07-01" pubdate="pubdate">July 01, 2019</time>
-        <div class="img"></div>
+        <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php print get_the_date('M \<\s\p\a\n\>d\<\/\s\p\a\n\>');  ?></time>
+        <div class="img"><?php print get_the_post_thumbnail( $post, 'medium' ); ?></div>
         <!-- <figure><img src="/img/thumb.svg" alt="Thumb" /></figure> -->
     </div>
     <div class="wrapper">
-        <address>Place/City</address>
-        <p>Description of event in two or three lines continuations of event in two or three lines of event in two or three lines</p>
+        <address><?php print $post->event_place; ?></address>
+        <?php the_excerpt(); ?>
     </div>
     <footer>
         <div class="wrapper">
-            <a class="button icon calendar" href="http://">Add to my <span>calendar</span></a>
+            <a class="button icon calendar" href="<?php echo make_cal_link($post); ?>" target="_blank">Add to my <span>calendar</span></a>
         </div>
         <div class="wrapper">
-            <a class="button icon facebook" rel="noreferrer nofollow" href="http://">Find out <span>more on</span></a>
+            <a class="button icon facebook" rel="noreferrer nofollow" href="<?php print $post->event_fb; ?>">Find out <span>more on</span></a>
         </div>
     </footer>
 </article>
+
+<?php endwhile; endif; wp_reset_postdata(); ?>
 
 <nav class="prev-next">
     <a href="#" rel="prev">Previous</a>
