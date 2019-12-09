@@ -3,6 +3,24 @@ define("THEME_DIR", get_template_directory_uri());
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
+/**
+ * Add custom CSS and JS
+ */
+function my_load_scripts($hook) {
+
+    // create my own version codes
+    //$my_js_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'js/custom.js' ));
+    //$my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ));
+
+    wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
+    //wp_enqueue_script( 'custom_js', plugins_url( 'js/custom.js', __FILE__ ), array(), $my_js_ver );
+    //wp_register_style( 'my_css',    plugins_url( 'style.css',    __FILE__ ), false,   $my_css_ver );
+    //wp_enqueue_style ( 'my_css' );
+
+}
+add_action('wp_enqueue_scripts', 'my_load_scripts');
+
+
 // Add classes to body
 add_filter( 'body_class','my_body_classes' );
 function my_body_classes( $classes ) {
@@ -32,6 +50,55 @@ add_action( 'init', 'new_custom_menu' );
 
 //Add featured image functionality
 add_theme_support( 'post-thumbnails' );
+
+//Add custom colors to post palette
+function mytheme_setup_theme_supported_features() {
+    add_theme_support( 'editor-color-palette', array(
+        array(
+            'name' => __( 'Blue', 'INECC' ),
+            'slug' => 'blue',
+            'color' => '#0055FF',
+        ),
+        array(
+            'name' => __( 'Green', 'INECC' ),
+            'slug' => 'green',
+            'color' => '#1ED261',
+        ),
+        array(
+            'name' => __( 'Orange', 'INECC' ),
+            'slug' => 'orange',
+            'color' => '#FF892F',
+        ),
+        array(
+            'name' => __( 'Yellow', 'INECC' ),
+            'slug' => 'yellow',
+            'color' => '#FFB600',
+        ),
+        array(
+            'name' => __( 'Yellow Light', 'INECC' ),
+            'slug' => 'yellow-light',
+            'color' => '#FFD600',
+        ),
+        array(
+            'name' => __( 'Black', 'INECC' ),
+            'slug' => 'black',
+            'color' => '#222222',
+        ),
+        array(
+            'name' => __( 'Blue Nav', 'INECC' ),
+            'slug' => 'blue-nav',
+            'color' => '#6394AB',
+        ),
+        array(
+            'name' => __( 'Blue Nav Light', 'INECC' ),
+            'slug' => 'blue-nav-light',
+            'color' => '#F0F5F7',
+        ),
+    ) );
+}
+
+add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
+add_theme_support( 'disable-custom-colors' );
 
 //
 // function show_post($path) {

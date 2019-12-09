@@ -65,7 +65,11 @@ body.blue nav.tabs > a.selected {
 a {
   color: #222222;
 }
-a.button {
+a.button,
+.button > a {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -78,24 +82,37 @@ a.button {
   border-bottom: #0055FF 0.3em solid;
   display: inline-block;
 }
-a.button span {
+a.button span,
+.button > a span {
   display: block;
   letter-spacing: 0.05em;
 }
-a.button.icon {
+a.button:hover,
+.button > a:hover,
+a.button:visited,
+.button > a:visited,
+a.button:focus,
+.button > a:focus {
+  color: #0055FF;
+}
+a.button.icon,
+.button > a.icon {
   padding-right: 5rem;
   background-color: transparent;
   background-position: right top;
   background-repeat: no-repeat;
   background-size: 4rem;
 }
-a.button.donate {
+a.button.donate,
+.button > a.donate {
   background-image: url("../img/icon-donate.svg");
 }
-a.button.calendar {
+a.button.calendar,
+.button > a.calendar {
   background-image: url("../img/icon-calendar-add.svg");
 }
-a.button.facebook {
+a.button.facebook,
+.button > a.facebook {
   background-image: url("../img/icon-fb.svg");
 }
 a.back-to-top {
@@ -111,19 +128,8 @@ a.back-to-top {
   padding: 3em 0 0 0;
   display: block;
 }
-nav.prev-next {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-}
-nav.prev-next a {
+nav.prev-next a,
+.prev-next a {
   font-size: 2rem;
   text-decoration: none;
   color: #6394AB;
@@ -135,18 +141,32 @@ nav.prev-next a {
   -ms-flex: 1;
   flex: 1;
 }
-nav.prev-next a[rel="prev"] {
+nav.prev-next a[rel="prev"],
+.prev-next a[rel="prev"] {
   background-image: url("../img/icon-prev.svg");
   background-position: right center;
   margin-right: 1em;
   padding-right: 6rem;
   text-align: right;
 }
-nav.prev-next a[rel="next"] {
+nav.prev-next a[rel="next"],
+.prev-next a[rel="next"] {
   background-image: url("../img/icon-next.svg");
   background-position: left center;
   margin-left: 1em;
   padding-left: 6rem;
+}
+nav.prev-next {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
 }
 .title-h1 {
   margin: 0;
@@ -164,17 +184,43 @@ nav.prev-next a[rel="next"] {
   font-size: 2.8rem;
   line-height: normal;
 }
-.color-green {
+.color-green,
+.has-green-color {
   color: #1ED261;
 }
-.color-blue {
+.color-blue,
+.has-blue-color {
   color: #0055FF;
 }
-.color-yellow {
+.color-yellow,
+.has-yellow-color {
   color: #FFB600;
 }
-.color-nav-blue {
+.color-nav-blue,
+.has-blue-nav-color {
   color: #6394AB;
+}
+.color-nav-blue-light,
+.has-blue-nav-light-color {
+  color: #F0F5F7;
+}
+.has-blue-background-color {
+  background-color: #0055FF;
+}
+.has-green-background-color {
+  background-color: #1ED261;
+}
+.has-yellow-background-color {
+  background-color: #FFB600;
+}
+.has-yellow-light-background-color {
+  background-color: #FFD600;
+}
+.has-blue-nav-background-color {
+  background-color: #6394AB;
+}
+.has-blue-nav-light-background-color {
+  background-color: #F0F5F7;
 }
 .h-icon {
   margin: 0;
@@ -217,9 +263,6 @@ nav.prev-next a[rel="next"] {
   font-size: 2.8rem;
   line-height: normal;
   margin-bottom: 0.5em;
-}
-.box.yellow {
-  background-color: #FFB600;
 }
 /*=====================
 HEADER
@@ -1010,7 +1053,21 @@ PAGE CHILD
 /*=====================
 PAGE ABOUT-US
 =====================*/
-.team-member {
+.team h2,
+.team h3,
+.team h4,
+.team h5,
+.team h6 {
+  padding: 0;
+  margin: 0;
+}
+.team > div:first-of-type > h2,
+.team > div:first-of-type > h3,
+.team > div:first-of-type > h4,
+.team > div:first-of-type > h5 {
+  margin-bottom: 1em;
+}
+.team .team-member {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1023,31 +1080,99 @@ PAGE ABOUT-US
   align-items: center;
   margin-bottom: 3rem;
 }
-.team-member figure {
+.team .team-member p {
+  margin: 0;
+  font-size: 2rem;
+  line-height: normal;
+}
+.team .team-member.hide {
+  visibility: hidden;
+  max-height: 0;
+}
+.team.executive-committee .team-member figure {
   border-radius: 50%;
   overflow: hidden;
   width: 40vw;
 }
-.team-member .wp-block-media-text__content {
+.team.executive-committee .team-member .wp-block-media-text__content {
   padding: 0;
   padding-left: 3rem;
 }
-.team-member .wp-block-media-text__content h2,
-.team-member .wp-block-media-text__content h3,
-.team-member .wp-block-media-text__content h4,
-.team-member .wp-block-media-text__content h5,
-.team-member .wp-block-media-text__content h6 {
-  padding: 0;
-  margin: 0;
-}
-.team-member .wp-block-media-text__content h6 {
+.team.executive-committee .team-member .wp-block-media-text__content h6 {
   font-size: 2.7rem;
   font-weight: normal;
 }
-.team-member .wp-block-media-text__content p {
+.our-history {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.our-history h2,
+.our-history h3,
+.our-history h4,
+.our-history h5,
+.our-history h6 {
+  padding: 0;
   margin: 0;
-  font-size: 2rem;
-  line-height: normal;
+}
+.our-history .phase {
+  padding: 3rem;
+}
+.our-history .phase .header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.our-history .phase .date {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: #6394AB 1px solid;
+  padding-bottom: 0.5em;
+}
+.our-history .phase h4 {
+  font-size: 3rem;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+.our-history .phase ul {
+  list-style-type: none;
+}
+.our-history .phase ul li::before {
+  content: "\2022";
+  color: #FFB600;
+  font-weight: bold;
+  display: inline-block;
+  width: 0.6em;
+  margin-left: -0.5em;
+}
+.our-history .phase.hide {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.our-history .prev-next a {
+  width: 1em;
+  height: 5rem;
+  overflow: hidden;
+  font-size: 0;
+  display: block;
+  position: absolute;
+  top: 4rem;
+}
+.our-history .prev-next a[rel="prev"] {
+  background-image: url("../img/icon-prev.svg");
+  background-position: right center;
+  margin-right: 1em;
+  padding-right: 6rem;
+  text-align: right;
+  left: 2rem;
+}
+.our-history .prev-next a[rel="next"] {
+  background-image: url("../img/icon-next.svg");
+  background-position: left center;
+  margin-left: 1em;
+  padding-left: 6rem;
+  right: 2rem;
 }
 /*=====================
 PAGE OUR-WORK
