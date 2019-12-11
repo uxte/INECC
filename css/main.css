@@ -819,7 +819,7 @@ body.home section.testimonials blockquote.hide {
   margin: 0;
   overflow: hidden;
 }
-body.home section.testimonials blockquote p {
+body.home section.testimonials blockquote .content {
   margin: 0;
   padding: 0;
   margin-left: 1.5em;
@@ -828,19 +828,19 @@ body.home section.testimonials blockquote p {
   order: 1;
   position: relative;
 }
-body.home section.testimonials blockquote p:before,
-body.home section.testimonials blockquote p:after {
+body.home section.testimonials blockquote .content:before,
+body.home section.testimonials blockquote .content:after {
   font-weight: bold;
   font-size: 8em;
   color: #0055FF;
   position: absolute;
 }
-body.home section.testimonials blockquote p:before {
+body.home section.testimonials blockquote .content:before {
   content: open-quote;
   top: -20px;
   left: -130px;
 }
-body.home section.testimonials blockquote p:after {
+body.home section.testimonials blockquote .content:after {
   content: close-quote;
   bottom: 0px;
   right: 0;

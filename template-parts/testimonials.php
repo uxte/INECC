@@ -21,7 +21,9 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
     }
 ?>
 <blockquote class="testimonial slide <?php echo $class_hide;?>">
-    <?php the_content(); ?>
+    <div class="content">
+        <?php the_content(); ?>
+    </div>
     <footer>
         <cite class="author"><?php the_title(); ?></cite>
         <cite class="title"><?php print $post->testimonial_title; ?></cite>
