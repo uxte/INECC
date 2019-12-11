@@ -62,23 +62,23 @@ function bindSeeMoreButtons() {
 bindSeeMoreButtons();
 
 
-//Simple carousell
+//Simple carousell/slider
 var slideIndex = 0;
-function prevNext(container, prevOrNext) {
-    var slides = container.getElementsByClassName('slide');
+function prevNext(slider, rel) {
+    var slides = slider.getElementsByClassName('slide');
 
     for ( var i = 0; i < slides.length; i++ ) {
         slides[i].classList.add('hide');
     }
 
-    if ( prevOrNext === 'prev' ) {
+    if ( rel === 'prev' ) {
         if ( slideIndex <= 0 ) {
             slideIndex = slides.length - 1;
         } else {
             slideIndex -= 1;
         }
 
-    } else if (prevOrNext === 'next' ) {
+    } else if (rel === 'next' ) {
         if ( slideIndex >= slides.length - 1 ) {
             slideIndex = 0;
         } else {
@@ -92,16 +92,25 @@ function prevNext(container, prevOrNext) {
 
 }
 
-function bindPrevNextButtons() {
+function startSlider(slider) {
+
+    slider = document.getElementById(slider);
+
     function bindClick() {
         return function() {
-            prevNext( this.parentNode.parentNode, this.childNodes[0].attributes.rel.value );
+            prevNext( slider, this.attributes.rel.value );
         };
     }
 
-    var buttons = document.getElementsByClassName('button prev-next');
-    for ( var i = 0; i < buttons.length; i++ ) {
-        buttons[i].addEventListener("click", bindClick(i));
+    if ( typeof(slider) !== 'undefined' && slider !== null ) {
+
+        var buttonsArray = slider.getElementsByClassName('prev-next')[0].getElementsByTagName('A');
+        for ( var i = 0; i < buttonsArray.length; i++ ) {
+            buttonsArray[i].addEventListener("click", bindClick(i));
+        }
     }
 }
-bindPrevNextButtons();
+
+startSlider('events');
+startSlider('testimonials');
+startSlider('our-history');

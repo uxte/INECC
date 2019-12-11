@@ -12,10 +12,15 @@ $args = array(
 $posts = new WP_Query( $args );
 
 // The Loop
-if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the_post();
+if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
+    $posts -> the_post();
 
+    $class_hide = '';
+    if ( $posts->current_post >= 1 ) {
+        $class_hide = 'hide';
+    }
 ?>
-<blockquote>
+<blockquote class="testimonial slide <?php echo $class_hide;?>">
     <?php the_content(); ?>
     <footer>
         <cite class="author"><?php the_title(); ?></cite>

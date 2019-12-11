@@ -16,11 +16,17 @@ $args = array(
 $posts = new WP_Query( $args );
 
 // The Loop
-if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the_post();
+if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
+    $posts -> the_post();
+
+    $class_hide = '';
+    if ( $posts->current_post >= 1 ) {
+        $class_hide = 'hide';
+    }
 
 ?>
 
-<article class="event">
+<article class="event slide <?php echo $class_hide;?>">
     <h1><?php the_title(); ?></h1>
     <div class="wrapper">
         <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php print get_the_date('M \<\s\p\a\n\>d\<\/\s\p\a\n\>');  ?></time>

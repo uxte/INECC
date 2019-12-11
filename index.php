@@ -69,7 +69,7 @@
 			<a class="button" href="http://">Know <span>more</span></a>
 		</section>
 
-		<section class="events">
+		<section class="events" id="events">
 			<?php get_template_part( 'template-parts/upcoming', 'events' ); ?>
 		</section>
 
@@ -91,9 +91,8 @@
             <a class="button" href="#">Know <span>more</span></a>
         </aside>
 
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials">
 			<?php get_template_part( 'template-parts/testimonials' ); ?>
-            
         </section>
 
 	</main>

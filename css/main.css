@@ -649,10 +649,6 @@ body.home section.events header h1 {
   color: #FF892F;
 }
 body.home section.events .event {
-  margin: 1em 0;
-  display: none;
-}
-body.home section.events .event:nth-of-type(1) {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -660,6 +656,12 @@ body.home section.events .event:nth-of-type(1) {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  margin: 1em 0;
+}
+body.home section.events .event.hide {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
 }
 body.home section.events .event > h1 {
   margin: 0;
@@ -811,6 +813,11 @@ body.home section.testimonials blockquote {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+}
+body.home section.testimonials blockquote.hide {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
 }
 body.home section.testimonials blockquote p {
   margin: 0;
