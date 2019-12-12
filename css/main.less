@@ -88,8 +88,7 @@ a.button,
 
 	text-decoration: none;
 	text-transform: uppercase;
-    letter-spacing: 0.03em;
-    text-align: center;
+    text-align: left;
     font-size: 2.2rem;
 	font-weight: 600;
 	color: @color-blue;
@@ -130,12 +129,12 @@ a.back-to-top {
 	text-transform: uppercase;
     letter-spacing: 0.03em;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
 	font-weight: 600;
 	color: @color-nav-blue;
 	background: transparent url("../img/icon-top.svg") center top no-repeat;
-	background-size: 2.5em;
-	padding: 3em 0 0 0;
+	background-size: 2.3em;
+	padding: 2.3em 0 0 0;
 	display: block;
 }
 
@@ -318,12 +317,9 @@ header.main-header {
 			right: @vw-spacing;
 			z-index: 9999;
 
-			&:hover {
-				background-color: @color-green;
-			}
-
-			&:active, &.active {
-				background-color: @color-green;
+			&:hover, &:active, &.active {
+				background-color: fade(#fff, 90%);
+				background-image: url("../img/icon-menu-green.svg");
 			}
 
 			&.open {
@@ -524,25 +520,25 @@ footer.main-footer {
 		}
 
 		&[title="Facebook"] {
-			background-image: url("../img/icon-fb-green.svg");
+			background-image: url("../img/icon-fb-black.svg");
 		}
 		&[title="Messenger"] {
-			background-image: url("../img/icon-messenger-green.svg");
+			background-image: url("../img/icon-messenger-black.svg");
 		}
 		&[title="Instagram"] {
-			background-image: url("../img/icon-instagram-green.svg");
+			background-image: url("../img/icon-instagram-black.svg");
 		}
 		&[title="Twitter"] {
-			background-image: url("../img/icon-twitter-green.svg");
+			background-image: url("../img/icon-twitter-black.svg");
 		}
 		&[title="Email"] {
-			background-image: url("../img/icon-email-green.svg");
+			background-image: url("../img/icon-email-black.svg");
 		}
 		&[title="Map"] {
-			background-image: url("../img/icon-pin-green.svg");
+			background-image: url("../img/icon-pin-black.svg");
 		}
 		&[title="Phone"] {
-			background-image: url("../img/icon-phone-green.svg");
+			background-image: url("../img/icon-phone-black.svg");
 		}
 	}
 }
@@ -921,7 +917,7 @@ body.home {
 				text-transform: uppercase;
                 text-decoration: none;
                 margin-left: 1.5em;
-				margin-right: 8rem;
+				padding-right: 8rem;
 
                 .flex-order(1);
                 .align-self(center);
@@ -1292,6 +1288,18 @@ body.page-template-page-our-work.page-child {
 	}
 }
 
+
+/*=====================
+PAGE CONTACT US
+=====================*/
+
+body.page-contact-us {
+	section.content {
+		h3 {
+			font-size: 2.7rem;
+		}
+	}
+}
 
 /*=====================
 MENU (PAGE)

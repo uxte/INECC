@@ -3,8 +3,8 @@
 	<main>
 		<header class="cover">
 			<h2><?php print get_bloginfo( 'description' ); ?></h2>
-			<a class="button" href="http://">Know <span>more</span></a>
-			<a class="sw" title="Learn more" href="#"><span>This is a sustainable website</span></a>
+			<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>">Know <span>more</span></a>
+			<a class="sw" title="Learn more" href=""><span>This is a sustainable website</span></a>
 		</header>
 
 		<section class="our-work">
@@ -66,7 +66,7 @@
 				<h1>Our reach</h1>
 				<h2>INECC works with the most vulnerable across India</h2>
 			</header>
-			<a class="button" href="http://">Know <span>more</span></a>
+			<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Our reach' ) ) ); ?>">Know <span>more</span></a>
 		</section>
 
 		<section class="events" id="events">
