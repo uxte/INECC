@@ -18,6 +18,7 @@ $args = array(
     'post_status'            => 'publish',
     'order'                  => 'ASC',
     'orderby'                => 'menu_order',
+    'posts_per_page'         => 3
 );
 
 // The Query

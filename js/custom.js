@@ -1,51 +1,15 @@
 
 //Show hidden elements on button click
 function showElements(container) {
-    //console.log('click');
-    // alert('bar');
-    //console.log( el.parentNode.querySelectorAll('.team-member').length );
-    //el.parentNode.querySelectorAll('.team-member').classList.remove('hide');
 
-    //var parent = el.parentNode;
-    //var hidden = container.querySelectorAll('.hide');
-    var hidden = container.getElementsByClassName('hide');
+    // console.log( container.querySelectorAll('.hide').length );
 
-    //Array.from( parent.querySelectorAll('.team-member') );
+    container.querySelectorAll('.hide').forEach(function(el) {
+        el.classList.remove('hide');
+        event.preventDefault();
+    });
 
-    // console.log(children.length);
-
-    for ( var i = 0; i < hidden.length; i++ ) {
-        if ( hidden[i].classList.contains('hide') ) {
-          hidden[i].classList.remove('hide');
-          event.preventDefault();
-          break;
-        }
-    }
-
-
-
-
-    // children.map(child => {
-    //     if(child.classList.contains('hide')) {
-    //         child.classList.remove('hide')
-    //     }
-    //
-    // });
-
-    // if (el.classList) {
-    //     el.classList.remove('hide');
-    // }
-
-    // if (el.classList) {
-    //     el.classList.remove('hide');
-    // } else {
-    //     el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    // }
 }
-
-// document.getElementById('executive-committee').getElementsByClassName('button')[0].addEventListener('click', function(){
-//     showElements( this.parentNode.parentNode );
-// }, false);
 
 function bindSeeMoreButtons() {
     function bindClick() {
