@@ -1093,6 +1093,7 @@ PAGE ABOUT-US
 .team .team-member.hide {
   visibility: hidden;
   max-height: 0;
+  margin: 0;
 }
 .team.executive-committee .team-member figure {
   border-radius: 50%;
