@@ -246,14 +246,14 @@ nav.prev-next {
   width: 8rem !important;
   margin-right: 0.5em;
 }
-.box {
+.inecc-box {
   margin: 5rem -3rem;
   padding: 3rem 3rem 2rem 3rem;
 }
-.box h1,
-.box h2,
-.box h3,
-.box h4 {
+.inecc-box h1,
+.inecc-box h2,
+.inecc-box h3,
+.inecc-box h4 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
@@ -1276,6 +1276,65 @@ PAGE CONTACT US
 =====================*/
 body.page-contact-us section.content h3 {
   font-size: 2.7rem;
+}
+/*=====================
+PAGE DONATE
+=====================*/
+body.page-donate section.content .cover.donate {
+  margin: -4rem -3rem 4rem -3rem;
+  width: auto;
+}
+body.page-donate section.content .cover.donate h2 {
+  text-transform: uppercase;
+  padding: 0 1em;
+  margin-bottom: 0;
+}
+body.page-donate section.content .cover.donate p {
+  margin-bottom: 0.5em;
+}
+body.page-donate section.content .cover.donate figure {
+  margin-top: 0;
+}
+.inecc-dropdown h1,
+.inecc-dropdown h2,
+.inecc-dropdown h3 {
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4.2rem;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: normal;
+  padding: 1em 0;
+}
+.inecc-dropdown h2:first-of-type {
+  margin-top: -1em;
+  border-bottom: #6394AB 1px solid;
+}
+.inecc-dropdown .block {
+  border-bottom: #6394AB 1px solid;
+}
+.inecc-dropdown .block h3:first-of-type {
+  background: transparent url("../img/icon+.svg") right center no-repeat;
+  background-size: 5rem;
+  padding-right: 6rem;
+  cursor: pointer;
+}
+.inecc-dropdown .block .content {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.inecc-dropdown .block .content figure {
+  margin: 0;
+}
+.inecc-dropdown .block.active h3:first-of-type {
+  background-image: url("../img/icon-.svg");
+}
+.inecc-dropdown .block.active .content {
+  visibility: visible;
+  height: auto;
 }
 /*=====================
 MENU (PAGE)

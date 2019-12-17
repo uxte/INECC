@@ -78,3 +78,35 @@ function startSlider(slider) {
 startSlider('events');
 startSlider('testimonials');
 startSlider('our-history');
+
+//Dropdown blocks
+function openDropDown( block ) {
+    // console.log(block);
+    if ( block.classList.contains('active') ) {
+        block.classList.remove('active');
+    } else {
+        block.classList.add('active');
+    }
+
+}
+
+function startDropdown(dropdown) {
+
+    dropdown = document.getElementById(dropdown);
+
+    function bindClick() {
+        return function() {
+            openDropDown( this.closest('.block') );
+        };
+    }
+
+    if ( typeof(dropdown) !== 'undefined' && dropdown !== null ) {
+
+        var buttonsArray = dropdown.getElementsByClassName('block-header');
+        for ( var i = 0; i < buttonsArray.length; i++ ) {
+            buttonsArray[i].addEventListener("click", bindClick(i));
+        }
+    }
+}
+
+startDropdown('faq');

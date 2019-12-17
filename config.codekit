@@ -185,6 +185,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/cover-donate-1920x1080-blue.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 194905,
+		"inputAbbreviatedPath": "\/img\/cover-donate-1920x1080-blue.jpg",
+		"outputAbbreviatedPath": "\/img\/cover-donate-1920x1080-blue.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/cover_960x640_green_1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -203,6 +214,17 @@
 		"initialSize": 2757,
 		"inputAbbreviatedPath": "\/img\/icon-community.png",
 		"outputAbbreviatedPath": "\/img\/icon-community.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icon-donate-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7523,
+		"inputAbbreviatedPath": "\/img\/icon-donate-white.png",
+		"outputAbbreviatedPath": "\/img\/icon-donate-white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -258,6 +280,28 @@
 		"initialSize": 9678,
 		"inputAbbreviatedPath": "\/img\/icon-vision.png",
 		"outputAbbreviatedPath": "\/img\/icon-vision.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/INECC-education.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 844971,
+		"inputAbbreviatedPath": "\/img\/INECC-education.jpg",
+		"outputAbbreviatedPath": "\/img\/INECC-education.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/INECC-resilience.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/INECC-resilience.jpg",
+		"outputAbbreviatedPath": "\/img\/INECC-resilience.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

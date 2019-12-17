@@ -235,7 +235,7 @@ nav.prev-next {
 
 }
 
-.box {
+.inecc-box {
 	margin: @vh-spacing -@vw-spacing;
 	padding: @vw-spacing @vw-spacing 2rem @vw-spacing;
 
@@ -1302,6 +1302,80 @@ body.page-contact-us {
 		}
 	}
 }
+
+
+/*=====================
+PAGE DONATE
+=====================*/
+
+body.page-donate {
+	section.content {
+		.cover.donate {
+			margin: -4rem -@vw-spacing 4rem -@vw-spacing;
+			width: auto;
+
+
+			h2 {
+				text-transform: uppercase;
+				padding: 0 1em;
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 0.5em;
+			}
+			figure {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.inecc-dropdown {
+	h1, h2, h3 {
+		.title-h2;
+		padding: 1em 0;
+	}
+	h2:first-of-type { //Dropdown header
+		margin-top: -1em;
+		border-bottom: @color-nav-blue 1px solid;
+	}
+
+	.block {
+		border-bottom: @color-nav-blue 1px solid;
+
+		h3:first-of-type { //Block header
+			background: transparent url("../img/icon+.svg") right center no-repeat;
+			background-size: 5rem;
+			padding-right: 6rem;
+			cursor: pointer;
+
+		}
+
+		.content {
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+			margin: 0;
+
+			figure {
+				margin: 0;
+			}
+		}
+
+		&.active {
+			h3:first-of-type { //Block header
+				background-image: url("../img/icon-.svg");
+			}
+
+			.content {
+				visibility: visible;
+				height: auto;
+			}
+		}
+
+	}
+}
+
 
 /*=====================
 MENU (PAGE)
