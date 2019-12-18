@@ -117,6 +117,10 @@ a.button.facebook,
   color: #FFB600;
   border-bottom-color: #FFB600;
 }
+.button.has-green-color a {
+  color: #1ED261;
+  border-bottom-color: #1ED261;
+}
 a.back-to-top {
   text-decoration: none;
   text-transform: uppercase;
@@ -265,6 +269,27 @@ nav.prev-next {
   font-size: 2.8rem;
   line-height: normal;
   margin-bottom: 0.5em;
+}
+.inecc-center > div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+  margin-bottom: 1em;
+}
+.inecc-center > div p {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.1em 0.7em 0.5em 0.7em;
 }
 /*=====================
 HEADER

@@ -131,6 +131,17 @@ a.button,
 			border-bottom-color: @color-yellow;
 		}
 	}
+	&.has-green-color {
+		a {
+			color: @color-green;
+			border-bottom-color: @color-green;
+		}
+	}
+	&.has-background {
+		// display: inline-block;
+		// margin: 0 auto;
+		// text-align: center;
+	}
 }
 
 
@@ -255,7 +266,20 @@ nav.prev-next {
 	}
 }
 
+.inecc-center > div {
+	.flex-display();
+	.flex-flow(row nowrap);
+	.align-items(center);
+	.align-content(center);
 
+	margin-bottom: 1em;
+
+	p {
+		text-align: center;
+		margin: 0 auto;
+		padding: 0.1em 0.7em 0.5em 0.7em;
+	}
+}
 
 /*=====================
 HEADER
