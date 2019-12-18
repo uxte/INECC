@@ -32,7 +32,7 @@
 		</h1>
 		<nav class="main-nav">
             <?php if ( !is_page_template( 'page-menu.php' ) ) : ?>
-            <a class="button icon donate" href="#"><span>Donate</span></a>
+            <a class="button icon donate" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>"><span>Donate</span></a>
             <?php endif; ?>
             <?php if ( is_page( 'menu' ) ) : ?>
 			<a class="menu open" href="<?php open_menu(); ?>">Menu</a>

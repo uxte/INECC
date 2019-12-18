@@ -5,8 +5,9 @@
 
 <?php
 wp_nav_menu( array(
-    'container_class' => 'menu',
+    'menu'            => 'menu-page',
     'container'       => 'nav',
+    'container_class' => 'menu'
 ));
 
     // $defaults = array(

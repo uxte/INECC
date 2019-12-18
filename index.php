@@ -4,7 +4,7 @@
 		<header class="cover">
 			<h2><?php print get_bloginfo( 'description' ); ?></h2>
 			<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>">Know <span>more</span></a>
-			<a class="sw" title="Learn more" href=""><span>This is a sustainable website</span></a>
+			<a class="sw" title="Learn more" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>#sustainability"><span>This is a sustainable website</span></a>
 		</header>
 
 		<section class="our-work">
@@ -32,6 +32,7 @@
 			    'post_status'            => 'publish',
 			    'order'                  => 'ASC',
 			    'orderby'                => 'menu_order',
+			    'posts_per_page'         => 3
 			);
 
 			// The Query
@@ -82,13 +83,13 @@
             <p>Help create a better life for marginalized communities with your <strong>donations</strong>. <br>
 			If you have any questions about where your money is going, contact us at <a href="mailto:info@inecc.net">info@inecc.net</a></p>
             <figure class="icon-donate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-donate-yellow.svg" alt="Donate icon" /></figure>
-			<span class="button"><a class="button" href="#">Donate</a></span>
+			<span class="button"><a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>">Donate</a></span>
         </section>
 
         <aside class="cta eco-website">
             <h1>Climate-conscious <br>on and off-line</h1>
 			<h2>We work towards reducing our digital carbon footprint and more.</h2>
-            <a class="button" href="#">Know <span>more</span></a>
+            <a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>#sustainability">Know <span>more</span></a>
         </aside>
 
         <section class="testimonials" id="testimonials">

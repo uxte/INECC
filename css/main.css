@@ -84,7 +84,6 @@ a.button,
 a.button span,
 .button > a span {
   display: block;
-  letter-spacing: 0.05em;
 }
 a.button:hover,
 .button > a:hover,
@@ -840,7 +839,7 @@ body.home section.testimonials blockquote .content:before {
 }
 body.home section.testimonials blockquote .content:after {
   content: close-quote;
-  bottom: 0px;
+  bottom: -50px;
   right: 0;
 }
 body.home section.testimonials blockquote footer {
