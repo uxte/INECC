@@ -113,6 +113,10 @@ a.button.facebook,
 .button > a.facebook {
   background-image: url("../img/icon-fb.svg");
 }
+.button.has-yellow-color a {
+  color: #FFB600;
+  border-bottom-color: #FFB600;
+}
 a.back-to-top {
   text-decoration: none;
   text-transform: uppercase;
