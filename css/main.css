@@ -831,7 +831,6 @@ body.home section.testimonials blockquote {
   padding: 0;
   font-size: 2rem;
   line-height: 1.3em;
-  margin-bottom: -30px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -868,7 +867,7 @@ body.home section.testimonials blockquote .content:before {
 }
 body.home section.testimonials blockquote .content:after {
   content: close-quote;
-  bottom: -50px;
+  bottom: -100px;
   right: 0;
 }
 body.home section.testimonials blockquote footer {
