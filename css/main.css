@@ -65,8 +65,7 @@ body.blue nav.tabs > a.selected {
 a {
   color: #222222;
 }
-a.button,
-.button > a {
+.button {
   background-color: transparent;
   border-radius: 0;
   padding: 0;
@@ -81,19 +80,70 @@ a.button,
   border-bottom: #0055FF 0.3em solid;
   display: inline-block;
 }
-a.button span,
+.button span {
+  display: block;
+}
+.button:hover,
+.button:visited,
+.button:focus {
+  color: #0055FF;
+}
+.button.icon {
+  padding-right: 5rem;
+  background-color: transparent;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 4rem;
+}
+.button.icon.donate {
+  background-image: url("../img/icon-donate.svg");
+}
+.button.icon.calendar {
+  background-image: url("../img/icon-calendar-add.svg");
+}
+.button.icon.facebook {
+  background-image: url("../img/icon-fb.svg");
+  padding-right: 4rem;
+}
+.button.icon.see-more {
+  background-image: url("../img/icon+.svg");
+}
+.button.icon.see-more.active {
+  background-image: url("../img/icon-.svg");
+}
+.button.has-yellow-color a {
+  color: #FFB600;
+  border-bottom-color: #FFB600;
+}
+.button.has-green-color a {
+  color: #1ED261;
+  border-bottom-color: #1ED261;
+}
+.button > a {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0055FF;
+  line-height: 1em;
+  padding-bottom: 0.2em;
+  border-bottom: #0055FF 0.3em solid;
+  display: inline-block;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
 .button > a span {
   display: block;
 }
-a.button:hover,
 .button > a:hover,
-a.button:visited,
 .button > a:visited,
-a.button:focus,
 .button > a:focus {
   color: #0055FF;
 }
-a.button.icon,
 .button > a.icon {
   padding-right: 5rem;
   background-color: transparent;
@@ -101,23 +151,27 @@ a.button.icon,
   background-repeat: no-repeat;
   background-size: 4rem;
 }
-a.button.donate,
-.button > a.donate {
+.button > a.icon.donate {
   background-image: url("../img/icon-donate.svg");
 }
-a.button.calendar,
-.button > a.calendar {
+.button > a.icon.calendar {
   background-image: url("../img/icon-calendar-add.svg");
 }
-a.button.facebook,
-.button > a.facebook {
+.button > a.icon.facebook {
   background-image: url("../img/icon-fb.svg");
+  padding-right: 4rem;
 }
-.button.has-yellow-color a {
+.button > a.icon.see-more {
+  background-image: url("../img/icon+.svg");
+}
+.button > a.icon.see-more.active {
+  background-image: url("../img/icon-.svg");
+}
+.button > a.has-yellow-color a {
   color: #FFB600;
   border-bottom-color: #FFB600;
 }
-.button.has-green-color a {
+.button > a.has-green-color a {
   color: #1ED261;
   border-bottom-color: #1ED261;
 }

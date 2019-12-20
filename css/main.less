@@ -79,8 +79,7 @@ a {
 	color: @color-black;
 }
 
-a.button,
-.button > a {
+.button {
 	//Reset
 	background-color: transparent;
 	border-radius: 0;
@@ -112,16 +111,25 @@ a.button,
 		background-position: right top;
 		background-repeat: no-repeat;
 		background-size: 4rem;
+
+		&.donate {
+			background-image: url("../img/icon-donate.svg");
+		}
+		&.calendar {
+			background-image: url("../img/icon-calendar-add.svg");
+		}
+		&.facebook {
+			background-image: url("../img/icon-fb.svg");
+			padding-right: 4rem;
+		}
+		&.see-more {
+			background-image: url("../img/icon+.svg");
+			&.active {
+				background-image: url("../img/icon-.svg");
+			}
+		}
 	}
-	&.donate {
-		background-image: url("../img/icon-donate.svg");
-	}
-	&.calendar {
-		background-image: url("../img/icon-calendar-add.svg");
-	}
-	&.facebook {
-		background-image: url("../img/icon-fb.svg");
-	}
+
 }
 
 .button {
@@ -141,6 +149,15 @@ a.button,
 		// display: inline-block;
 		// margin: 0 auto;
 		// text-align: center;
+	}
+}
+
+//For button containers
+.button {
+	> a {
+		.button;
+		border-bottom: 0;
+		padding-bottom: 0;
 	}
 }
 

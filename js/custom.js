@@ -1,20 +1,44 @@
+// SEE MORE
+// Show hidden elements on button click
+function showElements(button, container) {
 
-//Show hidden elements on button click
-function showElements(container) {
+    // console.log();
 
-    // console.log( container.querySelectorAll('.hide').length );
+    var buttonText = button.innerHTML;
 
-    container.querySelectorAll('.hide').forEach(function(el) {
-        el.classList.remove('hide');
-        event.preventDefault();
-    });
+    var elements = container.querySelectorAll('.block');
+
+    if ( button.classList.contains('active') ) {
+
+        elements.forEach(function(el) {
+
+            if ( !el.classList.contains('show') ) {
+                el.classList.add('hide');
+            }
+
+        });
+
+        button.innerHTML = buttonText.replace("less", "more");
+
+    } else {
+
+        elements.forEach(function(el) {
+            el.classList.remove('hide');
+        });
+
+        button.innerHTML = buttonText.replace("more", "less");
+
+    }
+
+    button.classList.toggle('active');
+    event.preventDefault();
 
 }
 
 function bindSeeMoreButtons() {
     function bindClick() {
         return function() {
-            showElements( this.parentNode.parentNode );
+            showElements(this, this.parentNode.parentNode );
         };
     }
 
@@ -26,7 +50,7 @@ function bindSeeMoreButtons() {
 bindSeeMoreButtons();
 
 
-//Simple carousell/slider
+// SIMPLE SLIDER
 var slideIndex = 0;
 function prevNext(slider, rel) {
     var slides = slider.getElementsByClassName('slide');
@@ -79,7 +103,7 @@ startSlider('events');
 startSlider('testimonials');
 startSlider('our-history');
 
-//Dropdown blocks
+// DROPDOWN BLOCKS
 function openDropDown( block ) {
     // console.log(block);
     if ( block.classList.contains('active') ) {
