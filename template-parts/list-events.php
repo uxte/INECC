@@ -22,8 +22,8 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
 
 ?>
 
-<article class="event slide <?php echo $class_hide;?>">
-    <h1><?php the_title(); ?></h1>
+<article class="event slide <?php echo $class_hide;?>" id="<?php echo $post->post_name?>">
+    <h1><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'INECC Events' ) ) ) . "#" . $post->post_name ?>"><?php the_title(); ?></a></h1>
     <div class="row">
         <div class="col">
             <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php print get_the_date('M \<\s\p\a\n\>d\<\/\s\p\a\n\>');  ?></time>
@@ -44,12 +44,12 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
         </div>
     </footer>
 
-    
+
 </article>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
-<?php if ( is_front_page() ) : ?>
+<?php if ( is_front_page() && $posts->post_count >= 2 ) : ?>
 <nav class="prev-next">
     <a href="#" rel="prev">Previous</a>
     <a href="#" rel="next">Next</a>

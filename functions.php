@@ -42,6 +42,12 @@ function mytheme_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
+//Filter the excerpt "read more" string.
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
 //Add custom menu functionality
 function new_custom_menu() {
   register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));

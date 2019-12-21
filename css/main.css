@@ -1129,6 +1129,9 @@ section.events .event > h1 {
   font-size: 3rem;
   color: #222222;
 }
+section.events .event > h1 a {
+  text-decoration: none;
+}
 section.events .event .row {
   display: -webkit-flex;
   display: -ms-flexbox;
