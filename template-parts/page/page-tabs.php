@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying subpages in tabs in page.php
+ * Template part for displaying subpages in tabs
  */
 ?>
 
@@ -56,4 +56,4 @@ if ( $subpages -> have_posts() ) :
     <?php endwhile; ?>
 </nav>
 
-<?php endif; ?>
+<?php endif; wp_reset_postdata(); ?>

@@ -1118,15 +1118,6 @@ TEMPLATE EVENTS
 section.events {
   padding: 0;
 }
-section.events .event {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
 section.events .event.hide {
   height: 0;
   margin: 0;
@@ -1137,20 +1128,23 @@ section.events .event > h1 {
   margin-bottom: 0.5em;
   font-size: 3rem;
   color: #222222;
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
 }
-section.events .event .wrapper {
-  -webkit-flex: 0 0 43vw;
-  -ms-flex: 0 0 43vw;
-  flex: 0 0 43vw;
+section.events .event .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   position: relative;
   font-size: 2rem;
   line-height: normal;
 }
-section.events .event .wrapper:nth-of-type(2) {
-  padding-left: 2rem;
+section.events .event .row > .col {
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 section.events .event time {
   position: absolute;
@@ -1169,8 +1163,8 @@ section.events .event time span {
 section.events .event .img {
   background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
   background-size: 3em;
-  width: 43vw;
-  height: calc(24.1875vw);
+  width: 25rem;
+  height: calc(14.0625rem);
   overflow: hidden;
 }
 section.events .event .img img {
@@ -1369,6 +1363,7 @@ body.page-template-page-our-work-search section.content.subpage header h2 {
   font-weight: 600;
   font-size: 2.8rem;
   line-height: normal;
+  line-height: 1.1em;
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
@@ -1435,11 +1430,17 @@ body.page-template-page-our-work-search section.content.subpage header {
 }
 body.page-template-page-our-work-search section.content.subpage header h1,
 body.page-template-page-our-work-search section.content.subpage header h2 {
-  padding-right: 10em;
+  max-width: 5em;
 }
 body.page-template-page-our-work-search section.content.subpage header img.icon {
   height: 3em;
   margin-right: 3rem;
+}
+body.page-template-page-our-work-search section.content.subpage .event .img {
+  margin-left: -2rem;
+}
+body.page-template-page-our-work-search section.content.subpage .event time {
+  left: -2rem;
 }
 /*=====================
 PAGE CONTACT US
