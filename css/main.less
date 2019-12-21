@@ -1103,7 +1103,7 @@ hr {
 
 
 /*=====================
-TEMPLATE EVENTS
+TEMPLATE LIST EVENTS
 =====================*/
 
 section.events {
@@ -1117,7 +1117,8 @@ section.events {
 			overflow: hidden;
 		}
 
-		> h1 {
+		> h1,
+		> h2 {
 			margin: 0;
 			margin-bottom: 0.5em;
 			font-size: 3rem;
@@ -1199,6 +1200,27 @@ section.events {
 			border-bottom-color: @color-orange;
 		}
 
+	}
+}
+
+/*=====================
+TEMPLATE LIST PRESS
+=====================*/
+section.press {
+	padding: 0;
+
+	article {
+		h2 {
+			font-size: inherit;
+			margin-bottom: auto;
+		}
+		time {
+			font-size: 2rem;
+		}
+	}
+
+	hr {
+		margin: 2rem auto;
 	}
 }
 

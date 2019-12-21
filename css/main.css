@@ -1113,7 +1113,7 @@ hr {
   margin: 5rem auto;
 }
 /*=====================
-TEMPLATE EVENTS
+TEMPLATE LIST EVENTS
 =====================*/
 section.events {
   padding: 0;
@@ -1123,13 +1123,15 @@ section.events .event.hide {
   margin: 0;
   overflow: hidden;
 }
-section.events .event > h1 {
+section.events .event > h1,
+section.events .event > h2 {
   margin: 0;
   margin-bottom: 0.5em;
   font-size: 3rem;
   color: #222222;
 }
-section.events .event > h1 a {
+section.events .event > h1 a,
+section.events .event > h2 a {
   text-decoration: none;
 }
 section.events .event .row {
@@ -1199,6 +1201,22 @@ section.events .event footer {
 section.events .event .button {
   color: #FF892F;
   border-bottom-color: #FF892F;
+}
+/*=====================
+TEMPLATE LIST PRESS
+=====================*/
+section.press {
+  padding: 0;
+}
+section.press article h2 {
+  font-size: inherit;
+  margin-bottom: auto;
+}
+section.press article time {
+  font-size: 2rem;
+}
+section.press hr {
+  margin: 2rem auto;
 }
 /*=====================
 PAGE CHILD

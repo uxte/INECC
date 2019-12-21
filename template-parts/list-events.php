@@ -23,7 +23,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
 ?>
 
 <article class="event slide <?php echo $class_hide;?>" id="<?php echo $post->post_name?>">
-    <h1><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'INECC Events' ) ) ) . "#" . $post->post_name ?>"><?php the_title(); ?></a></h1>
+    <h2><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'INECC Events' ) ) ) . "#" . $post->post_name ?>"><?php the_title(); ?></a></h2>
     <div class="row">
         <div class="col">
             <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php print get_the_date('M \<\s\p\a\n\>d\<\/\s\p\a\n\>');  ?></time>
@@ -40,7 +40,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
             <a class="button icon calendar" href="<?php echo make_cal_link($post); ?>" target="_blank">Add to my <span>calendar</span></a>
         </div>
         <div class="col">
-            <a class="button icon facebook" rel="noreferrer nofollow" href="<?php print $post->event_fb; ?>">Find out <span>more on</span></a>
+            <a class="button icon facebook" rel="noreferrer nofollow" href="<?php echo $post->event_fb; ?>">Find out <span>more on</span></a>
         </div>
     </footer>
 

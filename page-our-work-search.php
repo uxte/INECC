@@ -17,10 +17,19 @@
         </header>
 
         <?php endwhile; endif; wp_reset_postdata(); ?>
-        
+
+        <?php if ( is_page('INECC Events') ) : ?>
         <section class="events">
 			<?php get_template_part( 'template-parts/list', 'events' ); ?>
 		</section>
+        <?php endif; ?>
+
+        <?php if ( is_page('INECC Press') ) : ?>
+        <section class="press">
+			<?php get_template_part( 'template-parts/list', 'press' ); ?>
+		</section>
+        <?php endif; ?>
+
 
     </section>
 
