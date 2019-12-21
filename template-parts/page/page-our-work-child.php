@@ -21,7 +21,6 @@
     <?php endwhile; endif; ?>
 
     <?php set_query_var( 'tabs_sub', true ); get_template_part( 'template-parts/page/page', 'tabs' ); ?>
-    <?php //include( locate_template( 'template-parts/page/page-tabs.php', false, false ) ); ?>
 
 </main>
 

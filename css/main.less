@@ -9,6 +9,7 @@ body {
 	font-size: 2.7rem;
 	line-height: 1.5em;
 
+	//Color settings
 	&.green {
 		h1, h2, h3, h4, h5 {
 			color: @color-green;
@@ -28,8 +29,6 @@ body {
 			}
 		}
 	}
-
-
 
 	&.yellow {
 		h1, h2, h3, h4, h5 {
@@ -71,6 +70,66 @@ body {
 			}
 		}
 
+	}
+
+	&.orange {
+		h1, h2, h3, h4, h5 {
+			color: @color-orange;
+		}
+
+		.content.subpage {
+			//Look like a tab
+			background: fade(@color-orange, 10%);
+			border-color: @color-orange;
+		}
+
+		nav.tabs {
+			> a {
+				&.selected {
+					background-color: @color-orange;
+				}
+			}
+		}
+	}
+
+	&.green-dark {
+		h1, h2, h3, h4, h5 {
+			color: @color-green-dark;
+		}
+
+		.content.subpage {
+			//Look like a tab
+			background: fade(@color-green-dark, 10%);
+			border-color: @color-green-dark;
+		}
+
+		nav.tabs {
+			> a {
+				&.selected {
+					background-color: @color-green-dark;
+				}
+			}
+		}
+	}
+
+	&.blue-dark {
+		h1, h2, h3, h4, h5 {
+			color: @color-blue-dark;
+		}
+
+		.content.subpage {
+			//Look like a tab
+			background: fade(@color-blue-dark, 10%);
+			border-color: @color-blue-dark;
+		}
+
+		nav.tabs {
+			> a {
+				&.selected {
+					background-color: @color-blue-dark;
+				}
+			}
+		}
 	}
 
 }
@@ -145,7 +204,7 @@ a {
 	&.has-green-color {
 		color: @color-green;
 		border-bottom-color: @color-green;
-		
+
 		a {
 			color: @color-green;
 			border-bottom-color: @color-green;
@@ -304,6 +363,8 @@ nav.prev-next {
 	}
 }
 
+
+
 /*=====================
 HEADER
 =====================*/
@@ -336,7 +397,7 @@ header.main-header {
 
 		a.donate {
 			color: @color-nav-blue;
-			margin-right: 10rem;
+			margin-right: 8rem;
 			padding-right: 5rem;
 			background: transparent url("../img/icon-donate.svg") no-repeat right top;
 			background-size: 2em;
@@ -371,7 +432,7 @@ header.main-header {
 
 			position: fixed;
 			top: 6.1rem;
-			right: @vw-spacing;
+			right: 0.7rem;
 			z-index: 9999;
 
 			&:hover {
@@ -425,7 +486,7 @@ main {
 nav.tabs {
 	.flex-display();
     .flex-flow(row nowrap);
-	.align-items(flex-start);
+	.align-items(stretch);
 
 	> a {
 		background: fade(@color-nav-blue, 20%);
@@ -435,14 +496,20 @@ nav.tabs {
 		font-weight: bold;
 		text-decoration: none;
 
-		padding: 2rem 1rem 1rem 1rem;
-		margin: 0 0.5rem;
-		.flex(0 0 1);
+		padding: 1.5rem 1rem 1rem 1rem;
+		margin: 0 0.5rem 1rem 0.5rem;
+
+		.flex(0 0 ((100vw / 3) - (@vw-spacing * 2) - (0.5rem * 3) - 0.1rem) );
+		.flex-display();
+		.flex-flow(row nowrap);
 
 		span {
 			display: block;
 			border-bottom: @color-nav-blue 0.5rem solid;
 			padding-bottom: 0.5em;
+
+			.align-self(flex-end);
+			.flex(0 0 100%);
 		}
 
 		&:first-of-type {
@@ -454,7 +521,9 @@ nav.tabs {
 
 		&.selected {
 			color: white;
-			padding: 3rem 1rem 2.3rem 1rem;
+			// padding: 3rem 1rem 2.3rem 1rem;
+			padding-bottom: 4rem;
+			margin-bottom: -0.5rem;
 
 			span {
 				border: none;
@@ -464,28 +533,26 @@ nav.tabs {
 	}
 
 	&.sub {
+		//When tabs are shown in the bottom
+		.align-items(auto);
 
 		> a {
-			.flex-display();
-		    .flex-flow(row nowrap);
-			.align-items(flex-end);
-
 
 			background-color: transparent;
 
-			&::before {
+			&::before { //Add icon
 				content: "";
 				width: 100%; height: 10rem;
-				.flex(0 0 35%);
 				background-image: url('../img/icon-community.svg');
     			background-size: contain;
 				background-repeat: no-repeat;
 				background-position: left bottom;
 				margin-right: 1rem;
+				.flex(0 0 50%);
 			}
 
 			span {
-				.flex(0 0 65%);
+
 			}
 
 			&.resilience {
@@ -518,7 +585,7 @@ nav.tabs {
 
 			&:first-of-type {
 				margin-left: -1rem;
-				margin-right: 3rem;
+				margin-right: 12rem;
 			}
 
 		}
@@ -697,94 +764,99 @@ body.home {
 				background: transparent url("../img/icon-calendar.svg") left center no-repeat;
 				background-size: contain;
 				padding: 1.3rem 3.5em;
+				margin-bottom: 1em;
 				line-height: 1.2em;
 				color: @color-orange;
 	        }
 
-	        .event {
-				.flex-display();
-				.flex-flow(row wrap);
-	            margin: 1em 0;
+			nav.prev-next {
+				margin-top: 2rem;
+			}
 
-				&.hide {
-					height: 0;
-					margin: 0;
-					overflow: hidden;
-				}
-
-	            > h1 {
-	                margin: 0;
-					margin-bottom: 0.5em;
-	                font-size: 3rem;
-					.flex(0 0 100%);
-	            }
-
-				.wrapper {
-					.flex(0 0 43vw);
-					position: relative;
-					font-size: 2rem;
-					line-height: normal;
-
-					&:nth-of-type(2) {
-						padding-left: 2rem;
-					}
-	            }
-
-				time {
-					position: absolute;
-					background-color: fade(#000, 60%);
-					color: #fff;
-					text-align: center;
-					text-transform: uppercase;
-					padding: 0.3em 0.6em 0.5em 0.6em;
-					font-size: 0.8em;
-					line-height: 1.4em;
-
-					span {
-						display: block;
-						font-size: 1.5em;
-					}
-
-				}
-				.img {
-					background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
-					background-size: 3em;
-					width: 43vw;
-					height:  calc(43vw * 0.5625); // 16:9 proportion
-					overflow: hidden;
-
-					img {
-						width: 100%;
-						height: auto;
-					}
-				}
-
-				address {
-					background: transparent url("../img/icon-place.svg") left center no-repeat;
-					background-size: contain;
-					padding-left: 1.5em;
-					line-height: 1.3em;
-					margin-bottom: 0.5em;
-					font-style: normal;
-				}
-	            p {
-	                margin: 0;
-	                padding-bottom: 1em;
-	            }
-
-	            footer {
-					.flex-display();
-					.flex-flow(row nowrap);
-					margin: 2rem 0;
-	            }
-
-				.button {
-					color: @color-orange;
-					border-bottom-color: @color-orange;
-				}
-
-
-	        }
+	        // .event {
+			// 	.flex-display();
+			// 	.flex-flow(row wrap);
+	        //     margin: 1em 0;
+			//
+			// 	&.hide {
+			// 		height: 0;
+			// 		margin: 0;
+			// 		overflow: hidden;
+			// 	}
+			//
+	        //     > h1 {
+	        //         margin: 0;
+			// 		margin-bottom: 0.5em;
+	        //         font-size: 3rem;
+			// 		.flex(0 0 100%);
+	        //     }
+			//
+			// 	.wrapper {
+			// 		.flex(0 0 43vw);
+			// 		position: relative;
+			// 		font-size: 2rem;
+			// 		line-height: normal;
+			//
+			// 		&:nth-of-type(2) {
+			// 			padding-left: 2rem;
+			// 		}
+	        //     }
+			//
+			// 	time {
+			// 		position: absolute;
+			// 		background-color: fade(#000, 60%);
+			// 		color: #fff;
+			// 		text-align: center;
+			// 		text-transform: uppercase;
+			// 		padding: 0.3em 0.6em 0.5em 0.6em;
+			// 		font-size: 0.8em;
+			// 		line-height: 1.4em;
+			//
+			// 		span {
+			// 			display: block;
+			// 			font-size: 1.5em;
+			// 		}
+			//
+			// 	}
+			// 	.img {
+			// 		background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
+			// 		background-size: 3em;
+			// 		width: 43vw;
+			// 		height:  calc(43vw * 0.5625); // 16:9 proportion
+			// 		overflow: hidden;
+			//
+			// 		img {
+			// 			width: 100%;
+			// 			height: auto;
+			// 		}
+			// 	}
+			//
+			// 	address {
+			// 		background: transparent url("../img/icon-place.svg") left center no-repeat;
+			// 		background-size: contain;
+			// 		padding-left: 1.5em;
+			// 		line-height: 1.3em;
+			// 		margin-bottom: 0.5em;
+			// 		font-style: normal;
+			// 	}
+	        //     p {
+	        //         margin: 0;
+	        //         padding-bottom: 1em;
+	        //     }
+			//
+	        //     footer {
+			// 		.flex-display();
+			// 		.flex-flow(row nowrap);
+			// 		margin: 2rem 0;
+	        //     }
+			//
+			// 	.button {
+			// 		color: @color-orange;
+			// 		border-bottom-color: @color-orange;
+			// 	}
+			//
+			//
+	        // }
 
 	    }
 
@@ -1059,7 +1131,7 @@ body.home {
 PAGE
 =====================*/
 
-body.page {
+.page {
 
 	header.main-header {
 		h1.logo {
@@ -1112,6 +1184,102 @@ hr {
 	border-color: fade(@color-nav-blue, 30%);
 	border-width: 2px;
 	margin: @vh-spacing auto;
+}
+
+
+
+/*=====================
+TEMPLATE EVENTS
+=====================*/
+
+section.events {
+	padding: 0;
+
+	.event {
+		.flex-display();
+		.flex-flow(row wrap);
+
+		&.hide {
+			height: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		> h1 {
+			margin: 0;
+			margin-bottom: 0.5em;
+			font-size: 3rem;
+			color: @color-black;
+			.flex(0 0 100%);
+		}
+
+		.wrapper {
+			.flex(0 0 43vw);
+			position: relative;
+			font-size: 2rem;
+			line-height: normal;
+
+			&:nth-of-type(2) {
+				padding-left: 2rem;
+			}
+		}
+
+		time {
+			position: absolute;
+			background-color: fade(#000, 60%);
+			color: #fff;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 0.3em 0.6em 0.5em 0.6em;
+			font-size: 0.8em;
+			line-height: 1.4em;
+
+			span {
+				display: block;
+				font-size: 1.5em;
+			}
+
+		}
+		.img {
+			background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
+			background-size: 3em;
+			width: 43vw;
+			height:  calc(43vw * 0.5625); // 16:9 proportion
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		address {
+			background: transparent url("../img/icon-place.svg") left center no-repeat;
+			background-size: contain;
+			padding-left: 1.5em;
+			line-height: 1.3em;
+			margin-bottom: 0.5em;
+			font-style: normal;
+		}
+		p {
+			margin: 0;
+			padding-bottom: 1em;
+		}
+
+		footer {
+			.flex-display();
+			.flex-flow(row nowrap);
+			margin: 2rem 0;
+		}
+
+		.button {
+			color: @color-orange;
+			border-bottom-color: @color-orange;
+		}
+
+
+	}
+
 }
 
 /*=====================
@@ -1275,7 +1443,8 @@ body.page-about-us {
 PAGE OUR-WORK
 =====================*/
 
-body.page-template-page-our-work {
+body.page-template-page-our-work,
+body.page-template-page-our-work-search {
 
 	section.content {
 
@@ -1285,14 +1454,14 @@ body.page-template-page-our-work {
 			border-bottom-style: solid;
 			border-top-width: 0.7rem;
 			border-bottom-width: 0.7rem;
-			padding: 1rem;
+			padding: 2rem;
 			margin: 0 @vw-spacing;
 
 			header {
 				.flex-display();
 			    .flex-flow(row nowrap);
 				.align-items(center);
-				margin: 2rem 0 4rem 0;
+				margin: 0 0 4rem 0;
 
 				h1, h2 {
 					.title-h2;
@@ -1325,9 +1494,7 @@ body.page-template-page-our-work {
 				margin-bottom: -0.08em;
 			}
 		}
-
 	}
-
 }
 
 body.page-template-page-our-work.page-child {
@@ -1347,6 +1514,27 @@ body.page-template-page-our-work.page-child {
 	}
 }
 
+body.page-template-page-our-work-search {
+
+	section.content {
+
+		&.subpage {
+
+			header {
+				margin-bottom: 1em;
+				
+				h1, h2 {
+					padding-right: 10em;
+				}
+
+				img.icon {
+					height: 3em;
+					margin-right: 3rem;
+				}
+			}
+		}
+	}
+}
 
 /*=====================
 PAGE CONTACT US

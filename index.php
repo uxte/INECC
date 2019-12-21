@@ -71,7 +71,10 @@
 		</section>
 
 		<section class="events" id="events">
-			<?php get_template_part( 'template-parts/upcoming', 'events' ); ?>
+			<header>
+			    <h1>Upcoming events</h1>
+			</header>
+			<?php get_template_part( 'template-parts/list', 'events' ); ?>
 		</section>
 
         <section class="co-create">

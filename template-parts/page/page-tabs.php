@@ -6,9 +6,13 @@
 
 <?php
 $parent_id = $post -> post_parent;
+$offset = 0;
 
 if ( $parent_id == 0 ) { //If it's the parent page
     $parent_id = get_queried_object_id();
+}
+if ( $post -> menu_order >= 3 ) { //If page order is higher than 3 show the next 3 tabs
+    $offset = 3;
 }
 
 // WP_Query arguments
@@ -18,6 +22,7 @@ $args = array(
     'post_status'            => 'publish',
     'order'                  => 'ASC',
     'orderby'                => 'menu_order',
+    'offset'                 => $offset,
     'posts_per_page'         => 3
 );
 

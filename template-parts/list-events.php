@@ -1,7 +1,3 @@
-<header>
-    <h1>Upcoming events</h1>
-</header>
-
 <?php
 
 // WP_Query arguments
@@ -20,7 +16,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
     $posts -> the_post();
 
     $class_hide = '';
-    if ( $posts->current_post >= 1 ) {
+    if ( $posts->current_post >= 1 && is_front_page() ) {
         $class_hide = 'hide';
     }
 
@@ -49,7 +45,9 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
+<?php if ( is_front_page() ) : ?>
 <nav class="prev-next">
     <a href="#" rel="prev">Previous</a>
     <a href="#" rel="next">Next</a>
 </nav>
+<?php endif; ?>
