@@ -111,9 +111,17 @@ a {
 .button.icon.see-more.active {
   background-image: url("../img/icon-.svg");
 }
+.button.has-yellow-color {
+  color: #FFB600;
+  border-bottom-color: #FFB600;
+}
 .button.has-yellow-color a {
   color: #FFB600;
   border-bottom-color: #FFB600;
+}
+.button.has-green-color {
+  color: #1ED261;
+  border-bottom-color: #1ED261;
 }
 .button.has-green-color a {
   color: #1ED261;
@@ -167,9 +175,17 @@ a {
 .button > a.icon.see-more.active {
   background-image: url("../img/icon-.svg");
 }
+.button > a.has-yellow-color {
+  color: #FFB600;
+  border-bottom-color: #FFB600;
+}
 .button > a.has-yellow-color a {
   color: #FFB600;
   border-bottom-color: #FFB600;
+}
+.button > a.has-green-color {
+  color: #1ED261;
+  border-bottom-color: #1ED261;
 }
 .button > a.has-green-color a {
   color: #1ED261;
@@ -423,9 +439,7 @@ header.main-header nav.main-nav a.menu {
   right: 3rem;
   z-index: 9999;
 }
-header.main-header nav.main-nav a.menu:hover,
-header.main-header nav.main-nav a.menu:active,
-header.main-header nav.main-nav a.menu.active {
+header.main-header nav.main-nav a.menu:hover {
   background-color: rgba(255, 255, 255, 0.9);
   background-image: url("../img/icon-menu-green.svg");
 }

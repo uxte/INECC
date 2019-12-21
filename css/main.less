@@ -134,12 +134,18 @@ a {
 
 .button {
 	&.has-yellow-color {
+		color: @color-yellow;
+		border-bottom-color: @color-yellow;
+
 		a {
 			color: @color-yellow;
 			border-bottom-color: @color-yellow;
 		}
 	}
 	&.has-green-color {
+		color: @color-green;
+		border-bottom-color: @color-green;
+		
 		a {
 			color: @color-green;
 			border-bottom-color: @color-green;
@@ -368,7 +374,7 @@ header.main-header {
 			right: @vw-spacing;
 			z-index: 9999;
 
-			&:hover, &:active, &.active {
+			&:hover {
 				background-color: fade(#fff, 90%);
 				background-image: url("../img/icon-menu-green.svg");
 			}
