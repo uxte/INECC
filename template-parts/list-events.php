@@ -5,7 +5,7 @@ $args = array(
     'category_name'          => 'event',
     'post_type'              => 'post',
     'post_status'            => 'publish',
-    'order'                  => 'ASC'
+    'order'                  => 'DESC'
 );
 
 // The Query
