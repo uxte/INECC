@@ -1218,6 +1218,53 @@ section.press article time {
 section.press hr {
   margin: 2rem auto;
 }
+/*=======================
+TEMPLATE LIST PUBLICATIONS
+========================*/
+section.publications {
+  padding: 0;
+}
+section.publications article h2 {
+  font-size: inherit;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+section.publications article .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+section.publications article figure {
+  background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
+  background-size: 3em;
+  margin: 0;
+  margin-right: 0.5em;
+  width: 30rem;
+  overflow: hidden;
+}
+section.publications article figure img {
+  height: 100%;
+  width: auto;
+}
+section.publications article .content {
+  font-size: 2rem;
+  line-height: normal;
+}
+section.publications article .content time {
+  font-weight: bold;
+  display: block;
+  margin: -0.5em 0 1em 0;
+}
+section.publications article .content .button {
+  font-size: 2rem;
+}
+section.publications hr {
+  margin: 2rem auto;
+}
 /*=====================
 PAGE CHILD
 =====================*/

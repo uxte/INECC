@@ -30,6 +30,14 @@
 		</section>
         <?php endif; ?>
 
+        <?php if ( is_page('INECC Publications') ) : ?>
+        <?php the_content(); ?>
+
+        <section class="publications">
+			<?php get_template_part( 'template-parts/list', 'publications' ); ?>
+		</section>
+        <?php endif; ?>
+
 
     </section>
 

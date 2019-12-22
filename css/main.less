@@ -1224,6 +1224,67 @@ section.press {
 	}
 }
 
+
+/*=======================
+TEMPLATE LIST PUBLICATIONS
+========================*/
+section.publications {
+	padding: 0;
+
+	article {
+
+		h2 {
+			font-size: inherit;
+			color: inherit;
+			margin-bottom: 0.5em;
+		}
+
+		.row {
+			.flex-display();
+			.flex-flow(row nowrap);
+
+			.col {
+
+			}
+		}
+
+		figure {
+			background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
+			background-size: 3em;
+
+			margin: 0;
+			margin-right: 0.5em;
+			width: 30rem;
+			overflow: hidden;
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+
+		.content {
+			font-size: 2rem;
+			line-height: normal;
+
+			time {
+				font-weight: bold;
+				display: block;
+				margin: -0.5em 0 1em 0;
+			}
+
+			.button {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	hr {
+		margin: 2rem auto;
+	}
+}
+
+
 /*=====================
 PAGE CHILD
 =====================*/
