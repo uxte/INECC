@@ -246,6 +246,10 @@ a.back-to-top {
   padding: 2.3em 0 0 0;
   display: block;
 }
+.hide {
+  display: none !important;
+  visibility: hidden;
+}
 nav.prev-next a,
 .prev-next a {
   font-size: 2rem;
@@ -872,11 +876,6 @@ body.home section.testimonials blockquote {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
-body.home section.testimonials blockquote.hide {
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-}
 body.home section.testimonials blockquote .content {
   margin: 0;
   padding: 0;
@@ -1118,11 +1117,6 @@ TEMPLATE LIST EVENTS
 section.events {
   padding: 0;
 }
-section.events .event.hide {
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-}
 section.events .event > h1,
 section.events .event > h2 {
   margin: 0;
@@ -1303,11 +1297,6 @@ PAGE ABOUT-US
   font-size: 2rem;
   line-height: normal;
 }
-.team .team-member.hide {
-  visibility: hidden;
-  max-height: 0;
-  margin: 0;
-}
 .team.executive-committee .team-member figure {
   border-radius: 50%;
   overflow: hidden;
@@ -1365,10 +1354,8 @@ PAGE ABOUT-US
   margin-left: -0.5em;
 }
 .our-history .phase.hide {
-  max-height: 0;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 .our-history .prev-next a {
   width: 1em;

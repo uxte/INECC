@@ -49,8 +49,11 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
-<?php if ( is_front_page() && $posts->post_count >= 2 ) : ?>
-<nav class="prev-next">
+<?php if ( is_front_page() ) : 
+    if ( $posts->post_count <= 1 ) {
+        $navClass = 'hide';
+    }?>
+<nav class="prev-next <?php echo $navClass ?>">
     <a href="#" rel="prev">Previous</a>
     <a href="#" rel="next">Next</a>
 </nav>

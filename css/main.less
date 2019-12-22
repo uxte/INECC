@@ -241,6 +241,19 @@ a.back-to-top {
 	display: block;
 }
 
+.hide {
+	display: none !important;
+	visibility: hidden;
+    // height: 0;
+    // width: 0;
+    // max-height: 0;
+    // padding: 0;
+    // margin: 0;
+    // overflow: hidden;
+    // border: 0;
+    // clip: rect(0 0 0 0);
+}
+
 nav.prev-next a,
 .prev-next a {
 	font-size: 2rem;
@@ -850,12 +863,6 @@ body.home {
 	            .flex-display();
 	            .flex-flow(row nowrap);
 
-				&.hide {
-					height: 0;
-					margin: 0;
-					overflow: hidden;
-				}
-
 				.content {
 					margin: 0; padding: 0;
 	                margin-left: 1.5em;
@@ -1111,12 +1118,6 @@ section.events {
 
 	.event {
 
-		&.hide {
-			height: 0;
-			margin: 0;
-			overflow: hidden;
-		}
-
 		> h1,
 		> h2 {
 			margin: 0;
@@ -1332,11 +1333,6 @@ body.page-about-us {
 			line-height: normal;
 		}
 
-		&.hide {
-			visibility: hidden;
-			max-height: 0;
-			margin: 0;
-		}
 	}
 
 	&.executive-committee {
@@ -1406,11 +1402,7 @@ body.page-about-us {
 		}
 
 		&.hide {
-			// visibility: hidden;
-			max-height: 0;
-			padding: 0;
-			margin: 0;
-			overflow: hidden;
+			.hide;
 		}
 	}
 

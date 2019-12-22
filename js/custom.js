@@ -81,7 +81,7 @@ function prevNext(slider, rel) {
 }
 
 function startSlider(slider) {
-
+    
     slider = document.getElementById(slider);
 
     function bindClick() {
@@ -93,6 +93,7 @@ function startSlider(slider) {
     if ( typeof(slider) !== 'undefined' && slider !== null ) {
 
         var buttonsArray = slider.getElementsByClassName('prev-next')[0].getElementsByTagName('A');
+
         for ( var i = 0; i < buttonsArray.length; i++ ) {
             buttonsArray[i].addEventListener("click", bindClick(i));
         }
