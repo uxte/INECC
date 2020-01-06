@@ -30,6 +30,8 @@
                 <?php endif; ?>
             </a>
 		</h1>
+
+        <?php if ( wp_is_mobile() ) : ?>
 		<nav class="main-nav">
             <?php if ( !is_page_template( 'page-menu.php' ) ) : ?>
             <a class="button icon donate" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>"><span>Donate</span></a>
@@ -40,4 +42,13 @@
             <a class="menu" href="<?php open_menu(); ?>">Menu</a>
             <?php endif; ?>
 		</nav>
+        <?php else :
+            wp_nav_menu( array(
+                'menu'            => 'top-menu',
+                'container'       => 'nav',
+                'container_class' => 'main-nav'
+            ));
+        ?>
+        <?php endif; ?>
+
 	</header>

@@ -43,13 +43,11 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
             <a class="button icon facebook" rel="noreferrer nofollow" href="<?php echo $post->event_fb; ?>">Find out <span>more on</span></a>
         </div>
     </footer>
-
-
 </article>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
-<?php if ( is_front_page() ) : 
+<?php if ( is_front_page() ) :
     if ( $posts->post_count <= 1 ) {
         $navClass = 'hide';
     }?>

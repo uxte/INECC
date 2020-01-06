@@ -1,3 +1,102 @@
+@import "variables";
+@import "mixins";
+
 body {
-    // font-size: 1.1rem;
+
+}
+
+/*=====================
+HEADER
+=====================*/
+header.main-header {
+    padding: 1rem @vw-spacing;
+
+    h1.logo {
+        img {
+            width: 10rem;
+            height: auto;
+        }
+    }
+
+    nav.main-nav {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            .flex-display();
+    	    .flex-flow(row wrap);
+    		.align-items(flex-end);
+
+            li {
+                a {
+                    color: @color-nav-blue;
+                    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    letter-spacing: 0.04em;
+                    margin-left: 2em;
+
+                    &:hover {
+                        border-bottom: @color-nav-blue 5px solid;
+                    }
+                }
+
+                &:last-of-type {
+                    background: transparent url("../img/icon-donate.svg") no-repeat right center;
+        			background-size: 0.8em;
+                    padding-right: 2.5rem;
+
+                    a {
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/*=====================
+HOME
+=====================*/
+
+body.home {
+
+	main {
+		header.cover {
+
+			h2 {
+
+			}
+
+			a.sw-tab {
+                background-image: url("../img/icon-sw.svg"), url("../img/sustainble-website-tab-top.svg");
+                background-position: 4.5rem 1.3rem, center center;
+                background-size: 3rem, contain;
+
+                font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.2em;
+                letter-spacing: 0.01em;
+
+                width: 10rem;
+				height: 10rem;
+
+                top: -2.09rem;
+
+                > span {
+					bottom: 2.4rem;
+					left: 2rem;
+
+					span {
+						font-size: 0.7rem;
+					}
+				}
+            }
+        }
+    }
 }
