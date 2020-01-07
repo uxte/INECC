@@ -154,11 +154,11 @@ a {
   background-image: url("../img/icon-.svg");
 }
 .has-yellow-color {
-  color: #FFB600;
+  color: #FFB600 !important;
   border-bottom-color: #FFB600;
 }
 .has-yellow-color a {
-  color: #FFB600;
+  color: #FFB600 !important;
   border-bottom-color: #FFB600;
 }
 .has-green-color {

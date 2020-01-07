@@ -3,6 +3,11 @@ define("THEME_DIR", get_template_directory_uri());
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
+function theme_slug_setup() {
+   add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+
 /**
  * Add custom CSS and JS
  */
