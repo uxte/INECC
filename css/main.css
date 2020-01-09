@@ -1181,12 +1181,23 @@ section.publications article .row {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
+section.publications article .row .col {
+  -webkit-flex: 1 1 35%;
+  -ms-flex: 1 1 35%;
+  flex: 1 1 35%;
+}
+section.publications article .row .col.content {
+  -webkit-flex: 2 1 65%;
+  -ms-flex: 2 1 65%;
+  flex: 2 1 65%;
+}
 section.publications article figure {
   background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
   background-size: 3em;
   margin: 0;
   margin-right: 0.5em;
-  width: 30rem;
+  max-height: 20rem;
+  max-width: 100%;
   overflow: hidden;
 }
 section.publications article figure img {

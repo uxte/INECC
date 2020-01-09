@@ -1248,7 +1248,11 @@ section.publications {
 			.flex-flow(row nowrap);
 
 			.col {
+				.flex(1 1 35%);
 
+				&.content {
+					.flex(2 1 65%);
+				}
 			}
 		}
 
@@ -1258,7 +1262,7 @@ section.publications {
 
 			margin: 0;
 			margin-right: 0.5em;
-			width: 30rem;
+			max-height: 20rem; max-width: 100%;
 			overflow: hidden;
 
 			img {
