@@ -1,11 +1,16 @@
 <?php
 
 // WP_Query arguments
+$posts_per_page = 10;
+if ( $_GET['posts_per_page'] ) {
+    $posts_per_page = $_GET['posts_per_page'];
+}
 $args = array(
-    'category_name'          => 'publication',
-    'post_type'              => 'post',
-    'post_status'            => 'publish',
-    'order'                  => 'DESC'
+    'category_name'         => 'publication',
+    'post_type'             => 'post',
+    'post_status'           => 'publish',
+    'order'                 => 'DESC',
+    'posts_per_page'        => $posts_per_page
 );
 
 // The Query
@@ -31,3 +36,9 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the
 <hr>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
+
+<?php if ( $posts->found_posts >= 11 && $posts_per_page != -1 ) : //If query has more than 10 posts add a "Show all" button ?>
+<nav class="pagination">
+    <a class="button icon show-all" href="<?php wp_guess_url(); ?>?posts_per_page=-1"> See more <span>content</span></a>
+</nav>
+<?php endif; ?>

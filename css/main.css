@@ -147,10 +147,12 @@ a {
   background-image: url("../img/icon-fb.svg");
   padding-right: 4rem;
 }
-.button.icon.see-more {
+.button.icon.see-more,
+.button.icon.show-all {
   background-image: url("../img/icon+.svg");
 }
-.button.icon.see-more.active {
+.button.icon.see-more.active,
+.button.icon.show-all.active {
   background-image: url("../img/icon-.svg");
 }
 .has-yellow-color {
@@ -1219,9 +1221,23 @@ section.publications article .content .button {
 section.publications hr {
   margin: 2rem auto;
 }
-/*=====================
-PAGE CHILD
-=====================*/
+nav.pagination {
+  text-align: right;
+  margin: 1em 0;
+}
+nav.pagination .button {
+  color: #6394AB;
+  border-color: #6394AB;
+}
+nav.pagination .button.show-all {
+  background-image: url("../img/icon+_nav-blue.svg");
+}
+nav.pagination .button.show-all.active {
+  background-image: url("../img/icon-_nav-blue.svg");
+}
+nav.pagination .button.show-all > span {
+  letter-spacing: 0.06em;
+}
 /*=====================
 PAGE ABOUT-US
 =====================*/

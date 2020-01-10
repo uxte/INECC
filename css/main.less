@@ -181,7 +181,7 @@ a {
 			background-image: url("../img/icon-fb.svg");
 			padding-right: 4rem;
 		}
-		&.see-more {
+		&.see-more, &.show-all {
 			background-image: url("../img/icon+.svg");
 			&.active {
 				background-image: url("../img/icon-.svg");
@@ -1293,9 +1293,25 @@ section.publications {
 }
 
 
-/*=====================
-PAGE CHILD
-=====================*/
+nav.pagination {
+	text-align: right;
+	margin: 1em 0;
+	.button {
+		color: @color-nav-blue;
+		border-color: @color-nav-blue;
+		&.show-all {
+			background-image: url("../img/icon+_nav-blue.svg");
+			&.active {
+				background-image: url("../img/icon-_nav-blue.svg");
+			}
+
+			> span {
+				letter-spacing: 0.06em;
+			}
+		}
+	}
+}
+
 
 
 /*=====================
