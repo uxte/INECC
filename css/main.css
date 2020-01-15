@@ -1458,7 +1458,8 @@ body.page-template-page-our-work-search aside.content.parent header h3 {
   color: white;
   margin-bottom: -0.08em;
 }
-body.page-template-page-our-work.page-child {
+body.page-template-page-our-work.page-child,
+body.page-template-page-our-work-search {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1467,17 +1468,20 @@ body.page-template-page-our-work.page-child {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-body.page-template-page-our-work.page-child main {
+body.page-template-page-our-work.page-child main,
+body.page-template-page-our-work-search main {
   -webkit-order: 1;
   -ms-order: 1;
   order: 1;
 }
-body.page-template-page-our-work.page-child aside.content {
+body.page-template-page-our-work.page-child aside.content,
+body.page-template-page-our-work-search aside.content {
   -webkit-order: 0;
   -ms-order: 0;
   order: 0;
 }
-body.page-template-page-our-work.page-child footer {
+body.page-template-page-our-work.page-child footer,
+body.page-template-page-our-work-search footer {
   -webkit-order: 2;
   -ms-order: 2;
   order: 2;
