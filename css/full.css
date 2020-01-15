@@ -30,9 +30,9 @@ header.main-header nav.main-nav ul {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-align-items: flex-end;
   -ms-align-items: flex-end;
   align-items: flex-end;
@@ -45,15 +45,77 @@ header.main-header nav.main-nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.04em;
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 header.main-header nav.main-nav ul li a:hover {
-  border-bottom: #6394AB 5px solid;
+  color: #222222;
+  border-bottom: #222222 5px solid;
+}
+header.main-header nav.main-nav ul li.current-menu-item a,
+header.main-header nav.main-nav ul li.current-menu-parent a {
+  color: #1ED261;
+  border-bottom: #1ED261 5px solid;
 }
 header.main-header nav.main-nav ul li:last-of-type {
   background: transparent url("../img/icon-donate.svg") no-repeat right center;
   background-size: 0.8em;
   padding-right: 2.5rem;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children {
+  position: relative;
+  overflow: hidden;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu {
+  visibility: hidden;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  left: 2rem;
+  top: 3.5rem;
+  z-index: 9999;
+  background-color: #F0F5F7;
+  border-bottom: #222222 5px solid;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a {
+  color: #222222;
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  min-width: 9em;
+  border-bottom: 0;
+  margin-left: 0;
+  padding: 0.5rem 2rem;
+  line-height: 1.5em;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a:hover {
+  font-weight: 666;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li.current-menu-item > a {
+  color: #1ED261;
+  font-weight: 500;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children:hover {
+  overflow: visible;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children:hover ul.sub-menu {
+  visibility: visible;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children:hover > a {
+  color: #222222;
+  border-bottom: #222222 5px solid;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children#menu-item-359 ul.sub-menu li.current-menu-item a {
+  color: inherit;
+  font-weight: inherit;
 }
 /*=====================
 HOME
@@ -77,4 +139,10 @@ body.home main header.cover a.sw-tab > span {
 }
 body.home main header.cover a.sw-tab > span span {
   font-size: 0.7rem;
+}
+/*=====================
+PAGE
+=====================*/
+.page header.main-header h1.logo img {
+  width: 5rem;
 }

@@ -396,9 +396,9 @@ header.main-header nav.main-nav {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-align-items: flex-end;
   -ms-align-items: flex-end;
   align-items: flex-end;
