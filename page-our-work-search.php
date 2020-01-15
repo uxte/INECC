@@ -16,6 +16,8 @@
             <?php the_post_thumbnail('full', array('class' => 'icon')); ?>
         </header>
 
+        <?php the_content(); ?>
+
         <?php endwhile; endif; wp_reset_postdata(); ?>
 
         <?php if ( is_page('INECC Events') ) : ?>
@@ -31,13 +33,11 @@
         <?php endif; ?>
 
         <?php if ( is_page('INECC Publications') ) : ?>
-        <?php the_content(); ?>
 
         <section class="publications">
 			<?php get_template_part( 'template-parts/list', 'publications' ); ?>
 		</section>
         <?php endif; ?>
-
 
     </section>
 
