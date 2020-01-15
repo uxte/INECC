@@ -19,6 +19,12 @@ body {
 			//Look like a tab
 			background: fade(@color-green, 10%);
 			border-color: @color-green;
+
+			ul {
+				li::before  {
+					color: @color-green;
+				}
+			}
 		}
 
 		nav.tabs {
@@ -39,6 +45,12 @@ body {
 			//Look like a tab
 			background: fade(@color-yellow, 10%);
 			border-color: @color-yellow;
+
+			ul {
+				li::before  {
+					color: @color-yellow;
+				}
+			}
 		}
 
 		nav.tabs {
@@ -60,6 +72,12 @@ body {
 			//Look like a tab
 			background: fade(@color-blue, 10%);
 			border-color: @color-blue;
+
+			ul {
+				li::before  {
+					color: @color-blue;
+				}
+			}
 		}
 
 		nav.tabs {
@@ -81,6 +99,12 @@ body {
 			//Look like a tab
 			background: fade(@color-orange, 10%);
 			border-color: @color-orange;
+
+			ul {
+				li::before  {
+					color: @color-orange;
+				}
+			}
 		}
 
 		nav.tabs {
@@ -101,6 +125,12 @@ body {
 			//Look like a tab
 			background: fade(@color-green-dark, 10%);
 			border-color: @color-green-dark;
+
+			ul {
+				li::before  {
+					color: @color-green-dark;
+				}
+			}
 		}
 
 		nav.tabs {
@@ -121,6 +151,12 @@ body {
 			//Look like a tab
 			background: fade(@color-blue-dark, 10%);
 			border-color: @color-blue-dark;
+
+			ul {
+				li::before  {
+					color: @color-blue-dark;
+				}
+			}
 		}
 
 		nav.tabs {
@@ -1091,6 +1127,26 @@ PAGE
 				margin-top: 0;
 			}
 
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin-left: 2.5rem;
+					position: relative;
+				}
+
+				li::before  {
+					content: "\2022";
+					font-size: 1.5em;
+					font-weight: bold;
+
+					position: absolute;
+					left: -2.5rem;
+				}
+			}
+
 		}
 
 		nav.tabs {
@@ -1413,14 +1469,8 @@ body.page-about-us {
 		}
 
 		ul {
-			list-style-type: none;
 			li::before  {
-				content: "\2022";
 				color: @color-yellow;
-				font-weight: bold;
-				display: inline-block;
-				width: 0.6em;
-				margin-left: -0.5em;
 			}
 		}
 

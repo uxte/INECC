@@ -81,7 +81,7 @@
             <p>Help create a better life for marginalized communities with your <strong>donations</strong>. <br>
 			If you have any questions about where your money is going, contact us at <a href="mailto:info@inecc.net">info@inecc.net</a></p>
             <figure class="icon-donate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-donate-yellow.svg" alt="Donate icon" /></figure>
-			<span><a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>">Donate</a></span>
+			<span><a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>">Donate</a></span>
         </section>
 
         <aside class="cta eco-website">

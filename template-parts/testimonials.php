@@ -35,6 +35,6 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
 <nav class="prev-next">
-    <a href="#" rel="prev">Previous</a>
+    <a href="#" rel="prev">Prev</a>
     <a href="#" rel="next">Next</a>
 </nav>
