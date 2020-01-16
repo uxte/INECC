@@ -22,10 +22,28 @@ header.main-header h1.logo img {
   width: 10rem;
   height: auto;
 }
-header.main-header nav.main-nav ul {
-  list-style-type: none;
-  margin: 0;
+header.main-header > a.donate {
+  display: none;
+}
+header.main-header nav.main-nav {
+  position: relative;
+  right: auto;
+  top: auto;
+  width: auto;
+  min-height: inherit;
+  background: none;
   padding: 0;
+}
+header.main-header nav.main-nav > ul > li {
+  padding-bottom: 0;
+}
+header.main-header nav.main-nav ul li {
+  margin-bottom: 0;
+}
+header.main-header nav.main-nav ul li:first-child {
+  margin-top: 0;
+}
+header.main-header nav.main-nav ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -50,6 +68,7 @@ header.main-header nav.main-nav ul li a {
 header.main-header nav.main-nav ul li a:hover {
   color: #222222;
   border-bottom: #222222 5px solid;
+  text-decoration: none;
 }
 header.main-header nav.main-nav ul li.current-menu-item a,
 header.main-header nav.main-nav ul li.current-menu-parent a {
@@ -66,6 +85,7 @@ header.main-header nav.main-nav ul li.menu-item-has-children {
   overflow: hidden;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu {
+  padding-left: 0;
   visibility: hidden;
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
@@ -78,7 +98,7 @@ header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu {
   position: absolute;
   left: 2rem;
   top: 3.5rem;
-  z-index: 9999;
+  z-index: 999;
   background-color: #F0F5F7;
   border-bottom: #222222 5px solid;
 }
@@ -89,6 +109,7 @@ header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li {
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a {
   color: #222222;
+  font-size: 1.1rem;
   font-weight: 400;
   text-transform: none;
   display: block;
@@ -118,6 +139,10 @@ header.main-header nav.main-nav ul li.menu-item-has-children:hover > a {
 header.main-header nav.main-nav ul li.menu-item-has-children#menu-item-359 ul.sub-menu li.current-menu-item a {
   color: inherit;
   font-weight: inherit;
+}
+header.main-header nav.main-nav div.social-links,
+header.main-header nav.main-nav div.buttons {
+  display: none;
 }
 /*=====================
 HOME

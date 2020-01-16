@@ -1,3 +1,25 @@
+// MENU
+function openMenu(menu, button) {
+
+    menu.classList.toggle('open');
+    button.classList.toggle('open');
+    event.preventDefault();
+}
+function setMenu() {
+
+    var menu = document.getElementById("main-nav");
+    var button = menu.querySelector("a.menu");
+
+    function bindClick() {
+        return function() {
+            openMenu( menu, button );
+        };
+    }
+
+    button.addEventListener("click", bindClick());
+}
+setMenu();
+
 // SEE MORE
 // Show hidden elements on button click
 function showElements(button, container) {
@@ -81,7 +103,7 @@ function prevNext(slider, rel) {
 }
 
 function startSlider(slider) {
-    
+
     slider = document.getElementById(slider);
 
     function bindClick() {

@@ -391,66 +391,140 @@ header.main-header h1.logo img {
   width: 24rem;
   height: auto;
 }
+header.main-header > a.donate {
+  border-bottom: 0;
+  background-size: 4rem;
+  background-position: center;
+  margin-right: 10rem;
+}
 header.main-header nav.main-nav {
+  position: absolute;
+  right: -100000px;
+  top: -100000px;
+  overflow: visible;
+  padding: 3rem;
+  background-color: #1ED261;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-align-items: flex-end;
-  -ms-align-items: flex-end;
-  align-items: flex-end;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
-header.main-header nav.main-nav a.donate {
-  color: #6394AB;
-  margin-right: 8rem;
-  padding-right: 5rem;
-  background: transparent url("../img/icon-donate.svg") no-repeat right top;
-  background-size: 2em;
-  height: 2em;
-  display: table;
-  padding-bottom: 0;
+header.main-header nav.main-nav > ul > li {
+  padding-bottom: 0.5em;
+}
+header.main-header nav.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+}
+header.main-header nav.main-nav ul li {
+  margin-bottom: 0.2em;
+}
+header.main-header nav.main-nav ul li:first-child {
+  margin-top: 1rem;
+}
+header.main-header nav.main-nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: white;
+}
+header.main-header nav.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+header.main-header nav.main-nav ul li ul {
+  padding-left: 1em;
+}
+header.main-header nav.main-nav ul li ul li {
   border: 0;
 }
-header.main-header nav.main-nav a.donate span {
-  border-bottom: #6394AB 0.3em solid;
-  letter-spacing: normal;
-  padding-bottom: 0.2em;
-  margin-top: -0.5em;
-  display: table-cell;
-  vertical-align: bottom;
-  display: none;
+header.main-header nav.main-nav ul li ul li a {
+  text-transform: none;
 }
-header.main-header nav.main-nav a.menu {
+header.main-header nav.main-nav ul li.menu-item-has-children ul li a {
+  font-size: 3rem;
+}
+header.main-header nav.main-nav ul li.menu-item-360 {
+  overflow: visible;
+}
+header.main-header nav.main-nav ul li.menu-item-360 > a {
+  background: transparent url("../img/icon-donate-white.svg") no-repeat right center;
+  background-size: contain;
+  padding-right: 1.5em;
+}
+header.main-header nav.main-nav .social-links {
+  margin: 2rem 0 8rem 0;
+  -webkit-order: 2;
+  -ms-order: 2;
+  order: 2;
+}
+header.main-header nav.main-nav .social-links a[title="Facebook"] {
+  background-image: url("../img/icon-fb-white.svg");
+}
+header.main-header nav.main-nav .social-links a[title="Google Groups"] {
+  background-image: url("../img/icon-messenger-white.svg");
+}
+header.main-header nav.main-nav .social-links a[title="Instagram"] {
+  background-image: url("../img/icon-instagram-white.svg");
+}
+header.main-header nav.main-nav .social-links a[title="Twitter"] {
+  background-image: url("../img/icon-twitter-white.svg");
+}
+header.main-header nav.main-nav .social-links a[title="Email"] {
+  background-image: url("../img/icon-email-white.svg");
+}
+header.main-header nav.main-nav .social-links a[title="Map"] {
+  background-image: url("../img/icon-pin-white.svg");
+}
+header.main-header nav.main-nav .social-links a[title="Phone"] {
+  background-image: url("../img/icon-phone-white.svg");
+}
+header.main-header nav.main-nav div.buttons {
+  -webkit-order: 0;
+  -ms-order: 0;
+  order: 0;
+  padding: 1rem 0 2rem 0;
+}
+header.main-header nav.main-nav div.buttons > a {
+  display: inline-block;
+}
+header.main-header nav.main-nav div.buttons a.logo img {
+  width: 10rem;
+}
+header.main-header nav.main-nav div.buttons a.menu {
   background: rgba(255, 255, 255, 0.5) url("../img/icon-menu.svg") no-repeat 0 0;
-  background-size: 3.5rem;
+  background-size: 4rem;
   background-position: center;
   color: transparent;
   font-size: 0;
-  width: 5rem;
-  height: 5rem;
-  padding: 1.6rem;
+  width: 8rem;
+  height: 8rem;
   overflow: hidden;
-  -webkit-align-self: center;
-  -ms-align-self: center;
-  align-self: center;
   border-radius: 50%;
   position: fixed;
-  top: 6.1rem;
-  right: 0.7rem;
-  z-index: 9999;
+  right: 3rem;
+  top: 4rem;
+  z-index: 999999;
 }
-header.main-header nav.main-nav a.menu:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  background-image: url("../img/icon-menu-green.svg");
-}
-header.main-header nav.main-nav a.menu.open {
+header.main-header nav.main-nav div.buttons a.menu.open {
   background-color: #1ED261;
   background-image: url("../img/icon-cross.svg");
-  position: absolute;
-  top: 4.3rem;
+}
+header.main-header nav.main-nav.open {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: scroll;
 }
 /*MAIN */
 main header.cover {
@@ -619,7 +693,7 @@ footer.main-footer address.author {
 footer.main-footer address.author {
   font-style: normal;
 }
-.social-media {
+.social-links {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -631,7 +705,7 @@ footer.main-footer address.author {
   -ms-justify-content: space-around;
   justify-content: space-around;
 }
-.social-media a {
+.social-links a {
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -641,28 +715,28 @@ footer.main-footer address.author {
   width: 5rem;
   height: 5rem;
 }
-.social-media a img {
+.social-links a img {
   width: 2.3em;
 }
-.social-media a[title="Facebook"] {
+.social-links a[title="Facebook"] {
   background-image: url("../img/icon-fb-black.svg");
 }
-.social-media a[title="Google Groups"] {
+.social-links a[title="Google Groups"] {
   background-image: url("../img/icon-messenger-black.svg");
 }
-.social-media a[title="Instagram"] {
+.social-links a[title="Instagram"] {
   background-image: url("../img/icon-instagram-black.svg");
 }
-.social-media a[title="Twitter"] {
+.social-links a[title="Twitter"] {
   background-image: url("../img/icon-twitter-black.svg");
 }
-.social-media a[title="Email"] {
+.social-links a[title="Email"] {
   background-image: url("../img/icon-email-black.svg");
 }
-.social-media a[title="Map"] {
+.social-links a[title="Map"] {
   background-image: url("../img/icon-pin-black.svg");
 }
-.social-media a[title="Phone"] {
+.social-links a[title="Phone"] {
   background-image: url("../img/icon-phone-black.svg");
 }
 /*=====================
@@ -1042,9 +1116,6 @@ PAGE
 =====================*/
 .page header.main-header h1.logo img {
   width: 10rem;
-}
-.page header.main-header nav.main-nav a.menu {
-  top: 5.8rem;
 }
 .page section {
   padding: 0 3rem;
@@ -1626,28 +1697,28 @@ body.page-menu nav.menu ul li ul li a {
 body.page-menu nav.menu ul li.menu-item-has-children ul li a {
   font-size: 3rem;
 }
-body.page-menu .social-media {
+body.page-menu .social-links {
   margin-top: -5rem;
 }
-body.page-menu .social-media a[title="Facebook"] {
+body.page-menu .social-links a[title="Facebook"] {
   background-image: url("../img/icon-fb-white.svg");
 }
-body.page-menu .social-media a[title="Google Groups"] {
+body.page-menu .social-links a[title="Google Groups"] {
   background-image: url("../img/icon-messenger-white.svg");
 }
-body.page-menu .social-media a[title="Instagram"] {
+body.page-menu .social-links a[title="Instagram"] {
   background-image: url("../img/icon-instagram-white.svg");
 }
-body.page-menu .social-media a[title="Twitter"] {
+body.page-menu .social-links a[title="Twitter"] {
   background-image: url("../img/icon-twitter-white.svg");
 }
-body.page-menu .social-media a[title="Email"] {
+body.page-menu .social-links a[title="Email"] {
   background-image: url("../img/icon-email-white.svg");
 }
-body.page-menu .social-media a[title="Map"] {
+body.page-menu .social-links a[title="Map"] {
   background-image: url("../img/icon-pin-white.svg");
 }
-body.page-menu .social-media a[title="Phone"] {
+body.page-menu .social-links a[title="Phone"] {
   background-image: url("../img/icon-phone-white.svg");
 }
 /**/
