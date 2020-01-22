@@ -140,6 +140,9 @@ a {
   border-bottom: #0055FF 0.3em solid;
   display: inline-block;
 }
+.button a {
+  text-decoration: none;
+}
 .button span {
   display: block;
 }
@@ -451,10 +454,7 @@ header.main-header nav.main-nav ul li ul li a {
 header.main-header nav.main-nav ul li.menu-item-has-children ul li a {
   font-size: 3rem;
 }
-header.main-header nav.main-nav ul li.menu-item-360 {
-  overflow: visible;
-}
-header.main-header nav.main-nav ul li.menu-item-360 > a {
+header.main-header nav.main-nav ul li.menu-item-356 > a {
   background: transparent url("../img/icon-donate-white.svg") no-repeat right center;
   background-size: contain;
   padding-right: 1.5em;
@@ -1227,8 +1227,8 @@ section.events .event .img img {
   height: auto;
 }
 section.events .event address {
-  background: transparent url("../img/icon-place.svg") left center no-repeat;
-  background-size: contain;
+  background: transparent url("../img/icon-place.svg") left top no-repeat;
+  background-size: 1.4em;
   padding-left: 1.5em;
   line-height: 1.3em;
   margin-bottom: 0.5em;
@@ -1246,11 +1246,14 @@ section.events .event footer {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 section.events .event .button {
   color: #FF892F;
   border-bottom-color: #FF892F;
+}
+section.events hr {
+  margin: 4rem 0 3rem 0;
 }
 /*=====================
 TEMPLATE LIST PRESS
@@ -1274,6 +1277,9 @@ TEMPLATE LIST PUBLICATIONS
 section.publications {
   padding: 0;
 }
+section.publications article {
+  margin-bottom: 3rem;
+}
 section.publications article h2 {
   font-size: inherit;
   color: inherit;
@@ -1289,22 +1295,21 @@ section.publications article .row {
   flex-flow: row nowrap;
 }
 section.publications article .row .col {
-  -webkit-flex: 1 1 35%;
-  -ms-flex: 1 1 35%;
-  flex: 1 1 35%;
+  -webkit-flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+  flex: 1 1 30%;
 }
 section.publications article .row .col.content {
-  -webkit-flex: 2 1 65%;
-  -ms-flex: 2 1 65%;
-  flex: 2 1 65%;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
 }
 section.publications article figure {
   background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
   background-size: 3em;
+  height: 21.3rem;
   margin: 0;
   margin-right: 0.5em;
-  max-height: 20rem;
-  max-width: 100%;
   overflow: hidden;
 }
 section.publications article figure img {
@@ -1322,6 +1327,8 @@ section.publications article .content time {
 }
 section.publications article .content .button {
   font-size: 2rem;
+  color: #00318B;
+  border-color: #00318B;
 }
 section.publications hr {
   margin: 2rem auto;
@@ -1597,6 +1604,9 @@ PAGE ECOETHIC
 /*=====================
 PAGE DONATE
 =====================*/
+body.page-donate section.content {
+  color: #6394AB;
+}
 body.page-donate section.content .cover.donate {
   margin: -4rem -3rem 4rem -3rem;
   width: auto;
@@ -1632,7 +1642,7 @@ body.page-donate section.content .cover.donate figure {
   border-bottom: #6394AB 1px solid;
 }
 .inecc-dropdown .block h3:first-of-type {
-  background: transparent url("../img/icon+_nav-blue.svg") right center no-repeat;
+  background: transparent url("../img/icon+_nav-blue-light.svg") right center no-repeat;
   background-size: 5rem;
   padding-right: 6rem;
   cursor: pointer;
@@ -1647,7 +1657,7 @@ body.page-donate section.content .cover.donate figure {
   margin: 0;
 }
 .inecc-dropdown .block.active h3:first-of-type {
-  background-image: url("../img/icon-_nav-blue.svg");
+  background-image: url("../img/icon-_nav-blue-light.svg");
 }
 .inecc-dropdown .block.active .content {
   visibility: visible;

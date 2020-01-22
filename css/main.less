@@ -191,6 +191,10 @@ a {
     border-bottom: @color-blue 0.3em solid;
     display: inline-block;
 
+	a {
+		text-decoration: none;
+	}
+
     span {
         display: block;
         // letter-spacing: 0.05em;
@@ -492,8 +496,7 @@ header.main-header {
 					}
 				}
 
-				&.menu-item-360 {
-					overflow: visible;
+				&.menu-item-356 {
 					> a {
 						background: transparent url("../img/icon-donate-white.svg") no-repeat right center;
 	        			background-size: contain;
@@ -1389,8 +1392,8 @@ section.events {
 		}
 
 		address {
-			background: transparent url("../img/icon-place.svg") left center no-repeat;
-			background-size: contain;
+			background: transparent url("../img/icon-place.svg") left top no-repeat;
+			background-size: 1.4em;
 			padding-left: 1.5em;
 			line-height: 1.3em;
 			margin-bottom: 0.5em;
@@ -1404,7 +1407,7 @@ section.events {
 		footer {
 			.flex-display();
 			.flex-flow(row nowrap);
-			margin: 2rem 0;
+			margin: 1rem 0;
 		}
 
 		.button {
@@ -1412,6 +1415,10 @@ section.events {
 			border-bottom-color: @color-orange;
 		}
 
+	}
+
+	hr {
+		margin: 4rem 0 3rem 0;
 	}
 }
 
@@ -1444,6 +1451,7 @@ section.publications {
 	padding: 0;
 
 	article {
+		margin-bottom: 3rem;
 
 		h2 {
 			font-size: inherit;
@@ -1456,10 +1464,10 @@ section.publications {
 			.flex-flow(row nowrap);
 
 			.col {
-				.flex(1 1 35%);
+				.flex(1 1 30%);
 
 				&.content {
-					.flex(2 1 65%);
+					.flex(1 1 70%);
 				}
 			}
 		}
@@ -1468,9 +1476,9 @@ section.publications {
 			background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
 			background-size: 3em;
 
+			height: 21.3rem; //A4 proportion
 			margin: 0;
 			margin-right: 0.5em;
-			max-height: 20rem; max-width: 100%;
 			overflow: hidden;
 
 			img {
@@ -1491,6 +1499,8 @@ section.publications {
 
 			.button {
 				font-size: 2rem;
+				color: @color-blue-dark;
+				border-color: @color-blue-dark;
 			}
 		}
 	}
@@ -1805,10 +1815,11 @@ PAGE DONATE
 
 body.page-donate {
 	section.content {
+		color: @color-nav-blue;
+		
 		.cover.donate {
 			margin: -4rem -@vw-spacing 4rem -@vw-spacing;
 			width: auto;
-
 
 			h2 {
 				text-transform: uppercase;
@@ -1839,7 +1850,7 @@ body.page-donate {
 		border-bottom: @color-nav-blue 1px solid;
 
 		h3:first-of-type { //Block header
-			background: transparent url("../img/icon+_nav-blue.svg") right center no-repeat;
+			background: transparent url("../img/icon+_nav-blue-light.svg") right center no-repeat;
 			background-size: 5rem;
 			padding-right: 6rem;
 			cursor: pointer;
@@ -1859,7 +1870,7 @@ body.page-donate {
 
 		&.active {
 			h3:first-of-type { //Block header
-				background-image: url("../img/icon-_nav-blue.svg");
+				background-image: url("../img/icon-_nav-blue-light.svg");
 			}
 
 			.content {

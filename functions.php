@@ -3,6 +3,8 @@ define("THEME_DIR", get_template_directory_uri());
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
+define( 'WP_POST_REVISIONS', 4 ); //This code will limit WordPress to only save your last 4 revisions of each post or page, and discard older revisions automatically.
+
 function theme_slug_setup() {
    add_theme_support( 'title-tag' );
 }

@@ -4,7 +4,7 @@
 $args = array(
     'category_name'          => 'event',
     'post_type'              => 'post',
-    'post_status'            => 'publish',
+    'post_status'            => 'publish, future',
     'order'                  => 'DESC'
 );
 
@@ -44,6 +44,8 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
         </div>
     </footer>
 </article>
+
+<hr>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
