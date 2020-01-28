@@ -2,8 +2,15 @@
 @import "mixins";
 
 body {
-
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
+.button {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom-width: 0.2em;
+}
+
 
 /*=====================
 HEADER
@@ -51,7 +58,6 @@ header.main-header {
             li {
                 a {
                     color: @color-nav-blue;
-                    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
                     font-size: 1.1rem;
                     font-weight: 500;
                     text-transform: uppercase;
@@ -73,13 +79,32 @@ header.main-header {
                     }
                 }
 
-                &.menu-item-356 {
+                &.menu-item-356 { //Donate button
                     background: transparent url("../img/icon-donate.svg") no-repeat right center;
         			background-size: 0.8em;
                     padding-right: 2.5rem;
                     > a {
                         background: none;
                         padding-right: 0;
+                    }
+
+                    &:hover {
+                        background-image: url("../img/icon-donate-black.svg");
+
+                        a {
+                            color: @color-black;
+                            border-bottom: @color-black 5px solid;
+                        }
+                    }
+
+                    &.current_page_item {
+                        background-image: url("../img/icon-donate-green.svg");
+                        &:hover {
+                            a {
+                                color: @color-green;
+                                border-bottom: @color-green 5px solid;
+                            }
+                        }
                     }
 
                 }
@@ -95,8 +120,10 @@ header.main-header {
                     visibility: hidden;
             	    .flex-flow(column wrap);
                     .align-items(flex-start);
-                    max-height: 10rem;
-                    min-width: 40rem;
+
+                    //Sub-menu dimensions
+                    max-height: 13rem;
+                    min-width: 27rem;
 
                     position: absolute;
                     left: 2rem;
@@ -164,6 +191,15 @@ header.main-header {
     }
 }
 
+
+/*MAIN */
+main {
+
+    header.cover {
+		margin-bottom: 2rem;
+    }
+}
+
 /*=====================
 HOME
 =====================*/
@@ -174,7 +210,8 @@ body.home {
 		header.cover {
 
 			h2 {
-
+                font-size: 2.3rem;
+                max-width: 780px;
 			}
 
 			a.sw-tab {
@@ -182,7 +219,6 @@ body.home {
                 background-position: 4.5rem 1.3rem, center center;
                 background-size: 3rem, contain;
 
-                font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
                 font-weight: 500;
                 font-size: 1rem;
                 line-height: 1.2em;
@@ -202,6 +238,85 @@ body.home {
 					}
 				}
             }
+        }
+
+        section {
+            > header {
+                h1 {
+                    font-size: 2.2rem;
+                    line-height: normal;
+                }
+                h2 {
+                    font-size: 1.4rem;
+                    line-height: normal;
+                }
+            }
+
+            &.our-work {
+                padding: 0;
+
+                header {
+                    margin-left: @vw-spacing;
+                    margin-bottom: 2rem;
+                }
+
+                ul.index {
+                    .flex-display();
+                    .flex-flow(row nowrap);
+                    margin-left: @vw-spacing;
+
+                    li {
+                        background: none;
+                        .flex(1);
+                        .flex-flow(column nowrap);
+                        .align-items(center);
+                        padding-bottom: 1rem;
+                        border-right: #ddd 1px solid;
+
+                        > a {
+            				font-size: 1.1rem;
+                            text-align: center;
+                            font-weight: 500;
+                            margin: 0;
+                            padding: 0 2rem;
+                        }
+
+                        > img {
+                            .icon-size (6rem);
+                            .flex( 0 0 6rem );
+                            margin-bottom: 1rem;
+                        }
+
+                        &:last-of-type {
+                            border: 0;
+                        }
+                    }
+
+                    hr {
+                        display: none;
+                    }
+                }
+            }
+
+            &.our-reach {
+                margin: 0;
+                margin-top: -6.9rem;
+                padding-top: 6.9rem;
+                position: relative;
+
+    	        header {
+    				margin-bottom: 0;
+                    h2 {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .wrap {
+            .flex-display();
+            .flex-flow(row nowrap);
+            margin-bottom: 2rem;
         }
     }
 }

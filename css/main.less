@@ -954,7 +954,7 @@ body.home {
 			background: url("../img/map.svg") bottom right no-repeat, url("../img/square_100_grey.svg") 0 @vh-spacing no-repeat;
 			background-size: contain, cover;
 			margin: @vh-spacing 0 @vh-spacing 0;
-			padding: @vh-spacing;
+			padding: @vh-spacing 3rem;
 			padding-top: calc(@vh-spacing * 2);
 
 	        header {
@@ -967,8 +967,6 @@ body.home {
 					width: 45vw;
 				}
 	        }
-
-
 	    }
 
 	    &.events {
@@ -1176,7 +1174,7 @@ body.home {
             }
 
             > img {
-                .icon-size (13rem);
+                .icon-size (15rem);
                 .flex-order(0);
                 .flex( 0 0 13rem );
 
@@ -1419,6 +1417,9 @@ section.events {
 
 	hr {
 		margin: 4rem 0 3rem 0;
+		&:last-of-type {
+			display: none;
+		}
 	}
 }
 
@@ -1815,8 +1816,7 @@ PAGE DONATE
 
 body.page-donate {
 	section.content {
-		color: @color-nav-blue;
-		
+
 		.cover.donate {
 			margin: -4rem -@vw-spacing 4rem -@vw-spacing;
 			width: auto;
@@ -1832,6 +1832,10 @@ body.page-donate {
 			figure {
 				margin-top: 0;
 			}
+		}
+
+		.faq {
+			color: @color-nav-blue;
 		}
 	}
 }

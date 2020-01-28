@@ -7,6 +7,7 @@
 			<a class="sw-tab" title="Learn more" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>#sustainability"><span><span>This is a</span> low-carbon website</span></a>
 		</header>
 
+		<div class="wrap">
 		<section class="our-work">
 
 			<?php
@@ -69,7 +70,8 @@
 			</header>
 			<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Our reach' ) ) ); ?>">Know <span>more</span></a>
 		</section>
-
+		</div>
+		
 		<?php get_template_part( 'template-parts/list-upcoming', 'events' ); ?>
 
         <section class="co-create">

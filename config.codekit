@@ -229,6 +229,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icon-donate-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6706,
+		"inputAbbreviatedPath": "\/img\/icon-donate-black.png",
+		"outputAbbreviatedPath": "\/img\/icon-donate-black.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/icon-donate-white.png": {
 		"fileType": 32768,
 		"ignore": 0,

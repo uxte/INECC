@@ -12,6 +12,14 @@
 .clearfix:after {
   clear: both;
 }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-bottom-width: 0.2em;
+}
 /*=====================
 HEADER
 =====================*/
@@ -57,7 +65,6 @@ header.main-header nav.main-nav ul {
 }
 header.main-header nav.main-nav ul li a {
   color: #6394AB;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -84,6 +91,20 @@ header.main-header nav.main-nav ul li.menu-item-356 > a {
   background: none;
   padding-right: 0;
 }
+header.main-header nav.main-nav ul li.menu-item-356:hover {
+  background-image: url("../img/icon-donate-black.svg");
+}
+header.main-header nav.main-nav ul li.menu-item-356:hover a {
+  color: #222222;
+  border-bottom: #222222 5px solid;
+}
+header.main-header nav.main-nav ul li.menu-item-356.current_page_item {
+  background-image: url("../img/icon-donate-green.svg");
+}
+header.main-header nav.main-nav ul li.menu-item-356.current_page_item:hover a {
+  color: #1ED261;
+  border-bottom: #1ED261 5px solid;
+}
 header.main-header nav.main-nav ul li.menu-item-has-children {
   position: relative;
   overflow: hidden;
@@ -97,8 +118,8 @@ header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu {
   -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
   align-items: flex-start;
-  max-height: 10rem;
-  min-width: 40rem;
+  max-height: 13rem;
+  min-width: 27rem;
   position: absolute;
   left: 2rem;
   top: 3.5rem;
@@ -148,14 +169,21 @@ header.main-header nav.main-nav div.social-links,
 header.main-header nav.main-nav div.buttons {
   display: none;
 }
+/*MAIN */
+main header.cover {
+  margin-bottom: 2rem;
+}
 /*=====================
 HOME
 =====================*/
+body.home main header.cover h2 {
+  font-size: 2.3rem;
+  max-width: 780px;
+}
 body.home main header.cover a.sw-tab {
   background-image: url("../img/icon-sw.svg"), url("../img/sustainble-website-tab-top.svg");
   background-position: 4.5rem 1.3rem, center center;
   background-size: 3rem, contain;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.2em;
@@ -170,6 +198,88 @@ body.home main header.cover a.sw-tab > span {
 }
 body.home main header.cover a.sw-tab > span span {
   font-size: 0.7rem;
+}
+body.home main section > header h1 {
+  font-size: 2.2rem;
+  line-height: normal;
+}
+body.home main section > header h2 {
+  font-size: 1.4rem;
+  line-height: normal;
+}
+body.home main section.our-work {
+  padding: 0;
+}
+body.home main section.our-work header {
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+body.home main section.our-work ul.index {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-left: 3rem;
+}
+body.home main section.our-work ul.index li {
+  background: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-right: #ddd 1px solid;
+}
+body.home main section.our-work ul.index li > a {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  padding: 0 2rem;
+}
+body.home main section.our-work ul.index li > img {
+  width: 6rem;
+  height: 6rem;
+  -webkit-flex: 0 0 6rem;
+  -ms-flex: 0 0 6rem;
+  flex: 0 0 6rem;
+  margin-bottom: 1rem;
+}
+body.home main section.our-work ul.index li:last-of-type {
+  border: 0;
+}
+body.home main section.our-work ul.index hr {
+  display: none;
+}
+body.home main section.our-reach {
+  margin: 0;
+  margin-top: -6.9rem;
+  padding-top: 6.9rem;
+  position: relative;
+}
+body.home main section.our-reach header {
+  margin-bottom: 0;
+}
+body.home main section.our-reach header h2 {
+  width: auto;
+}
+body.home main .wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-bottom: 2rem;
 }
 /*=====================
 PAGE

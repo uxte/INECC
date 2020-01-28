@@ -813,7 +813,7 @@ body.home section.our-reach {
   background: url("../img/map.svg") bottom right no-repeat, url("../img/square_100_grey.svg") 0 5rem no-repeat;
   background-size: contain, cover;
   margin: 5rem 0 5rem 0;
-  padding: 5rem;
+  padding: 5rem 3rem;
   padding-top: calc(10rem);
 }
 body.home section.our-reach header {
@@ -1044,8 +1044,8 @@ body.home ul.index li > a {
   align-self: center;
 }
 body.home ul.index li > img {
-  width: 13rem;
-  height: 13rem;
+  width: 15rem;
+  height: 15rem;
   -webkit-order: 0;
   -ms-order: 0;
   order: 0;
@@ -1254,6 +1254,9 @@ section.events .event .button {
 }
 section.events hr {
   margin: 4rem 0 3rem 0;
+}
+section.events hr:last-of-type {
+  display: none;
 }
 /*=====================
 TEMPLATE LIST PRESS
@@ -1604,9 +1607,6 @@ PAGE ECOETHIC
 /*=====================
 PAGE DONATE
 =====================*/
-body.page-donate section.content {
-  color: #6394AB;
-}
 body.page-donate section.content .cover.donate {
   margin: -4rem -3rem 4rem -3rem;
   width: auto;
@@ -1621,6 +1621,9 @@ body.page-donate section.content .cover.donate p {
 }
 body.page-donate section.content .cover.donate figure {
   margin-top: 0;
+}
+body.page-donate section.content .faq {
+  color: #6394AB;
 }
 .inecc-dropdown h1,
 .inecc-dropdown h2,
