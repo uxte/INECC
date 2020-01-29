@@ -782,6 +782,7 @@ body.home main header.cover a.sw-tab > span span {
 }
 body.home section {
   padding: 0 3rem;
+  clear: both;
 }
 body.home section header h1 {
   margin: 0;
@@ -830,7 +831,7 @@ body.home section.events {
 }
 body.home section.events header h1 {
   background: transparent url("../img/icon-calendar.svg") left center no-repeat;
-  background-size: contain;
+  background-size: 3em;
   padding: 1.3rem 3.5em;
   margin-bottom: 1em;
   line-height: 1.2em;
@@ -1228,7 +1229,7 @@ section.events .event .img img {
 }
 section.events .event address {
   background: transparent url("../img/icon-place.svg") left top no-repeat;
-  background-size: 1.4em;
+  background-size: 1.3em;
   padding-left: 1.5em;
   line-height: 1.3em;
   margin-bottom: 0.5em;
