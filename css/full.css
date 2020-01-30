@@ -279,16 +279,34 @@ body.home main section.our-reach header {
 body.home main section.our-reach header h2 {
   width: auto;
 }
+body.home main section.events {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
 body.home main section.events header h1 {
   word-spacing: 30000px;
+  margin-bottom: 0;
+}
+body.home main section.events .event {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 body.home main section.events .event h2 {
   line-height: normal;
   margin-bottom: 1em;
 }
 body.home main section.events .event:first-of-type {
-  min-width: 41.3rem;
-  float: left;
+  max-width: 41.3rem;
+  height: 500px;
   padding-right: 2rem;
   margin-right: 2rem;
   border-right: #ccc 1px solid;
@@ -297,7 +315,7 @@ body.home main section.events .event:first-of-type {
 body.home main section.events .event.hide {
   display: block !important;
   visibility: visible;
-  float: none;
+  height: 250px;
 }
 body.home main section.events .event.hide .row .col:last-of-type,
 body.home main section.events .event.hide footer {

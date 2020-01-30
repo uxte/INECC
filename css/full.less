@@ -323,13 +323,18 @@ body.home {
 
             &.events {
 
-                //TRY THIS WITH FLEX INSTEAD OF FLOAT
+                .flex-display();
+                .flex-flow(row wrap);
+                .align-items(flex-start);
 
     	        header h1 {
                     word-spacing: 30000px; //Force wrap
-                    // margin-bottom: 0;
+                    margin-bottom: 0;
                 }
                 .event {
+                    .flex( 1 1 auto);
+                    // .flex-order(3);
+                    // float: left;
 
                     h2 {
                         line-height: normal;
@@ -337,8 +342,9 @@ body.home {
                     }
 
                     &:first-of-type {
-                        min-width: 41.3rem; //Fixed width
-                        float: left;
+                        max-width: 41.3rem; //Fixed width
+                        height: 500px;
+
                         padding-right: 2rem;
                         margin-right: 2rem;
                         border-right: #ccc 1px solid;
@@ -350,7 +356,9 @@ body.home {
                     &.hide {
                         display: block !important;
                         visibility: visible;
-                        float: none;
+                        // float: none;
+                        height: 250px;
+                        // .flex-order(1);
 
                         .row .col:last-of-type,
                         footer {
@@ -360,7 +368,9 @@ body.home {
 
                     &:nth-of-type(n+2) { //All except the first
                         background: yellow;
+                    }
 
+                    nav {
 
                     }
                 }
