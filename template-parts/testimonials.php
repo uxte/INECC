@@ -25,9 +25,11 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
         <?php the_content(); ?>
     </div>
     <footer>
-        <cite class="author"><?php the_title(); ?></cite>
-        <cite class="title"><?php print $post->testimonial_title; ?></cite>
-        <figure>
+        <div class="col">
+            <cite class="author"><?php the_title(); ?></cite>
+            <cite class="title"><?php print $post->testimonial_title; ?></cite>
+        </div>
+        <figure class="col">
             <img src="<?php print get_the_post_thumbnail( $post, 'medium' ); ?>" alt="<?php echo get_the_title(); ?>" />
         </figure>
     </footer>

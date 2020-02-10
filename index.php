@@ -70,32 +70,48 @@
 			</header>
 			<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Our reach' ) ) ); ?>">Know <span>more</span></a>
 		</section>
-		</div>
-		
+
+		</div><!-- wrap -->
+		<div class="wrapper">
+
 		<?php get_template_part( 'template-parts/list-upcoming', 'events' ); ?>
 
         <section class="co-create">
-            <h1>Co-create with us</h1>
-            <h2>Create meaningful dialogues</h2>
-            <p>Contribute to a more democratic and informed climate change dialogue our blog <strong>EcoEthic</strong> at <a href="mailto:ecoethic@inecc.net">ecoethic@inecc.net</a></p>
-            <figure class="logo-ecoethic"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-ecoethic-white.svg" alt="EcoEthic" /></figure>
-            <h2>Create a better quality of life</h2>
-            <p>Help create a better life for marginalized communities with your <strong>donations</strong>. <br>
-			If you have any questions about where your money is going, contact us at <a href="mailto:info@inecc.net">info@inecc.net</a></p>
-            <figure class="icon-donate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-donate-yellow.svg" alt="Donate icon" /></figure>
-			<span><a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>">Donate</a></span>
+			<h1>Co-create with us</h1>
+			<div class="col">
+	            <h2>Create meaningful dialogues</h2>
+	            <p>Contribute to a more democratic and informed climate change dialogue our blog <strong>EcoEthic</strong> at <a href="mailto:ecoethic@inecc.net">ecoethic@inecc.net</a></p>
+	            <figure class="logo-ecoethic"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-ecoethic-white.svg" alt="EcoEthic" /></figure>
+			</div>
+			<div class="col">
+				<h2>Create a better quality of life</h2>
+	            <p>Help create a better life for marginalized communities with your <strong>donations</strong>. <br>
+				If you have any questions about where your money is going, contact us at <a href="mailto:info@inecc.net">info@inecc.net</a></p>
+			</div>
+			<div class="col">
+				<figure class="icon-donate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-donate-yellow.svg" alt="Donate icon" /></figure>
+				<span><a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>">Donate</a></span>
+			</div>
         </section>
 
         <aside class="cta eco-website">
-            <h1>Climate-conscious <br>on and off-line</h1>
-			<h2>We work towards reducing our digital carbon footprint and more.</h2>
-            <a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>#sustainability">Know <span>more</span></a>
+			<div class="col">
+				<h1>Climate conscious on and off-line</h1>
+				<h2>We work towards reducing our digital carbon footprint and more.</h2>
+	            <a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>#sustainability">Know <span>more</span></a>
+			</div>
+			<ul class="col">
+				<li>A website designed & built to reduce energy consumption</li>
+				<li>Lower energy usage means a lower carbon footprint</li>
+				<li>A lower carbon footprint slows down Global Warming</li>
+			</ul>
         </aside>
 
         <section class="testimonials" id="testimonials">
 			<?php get_template_part( 'template-parts/testimonials' ); ?>
         </section>
 
+		</div><!-- wrapper -->
 	</main>
 
 <?php get_footer(); ?>

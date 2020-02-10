@@ -24,6 +24,7 @@ if ( $posts -> have_posts() ) :
         <h1>Upcoming events</h1>
     </header>
 
+    <div class="wrap grid">
     <?php
     // The Loop
     while ( $posts -> have_posts() ) :
@@ -69,5 +70,6 @@ if ( $posts -> have_posts() ) :
         <a href="#" rel="prev">Previous</a>
         <a href="#" rel="next">Next</a>
     </nav>
+    </div>
     <?php endif; ?>
 </section>

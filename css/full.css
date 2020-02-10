@@ -27,6 +27,20 @@ body {
 .button.icon.facebook {
   padding-right: 2.3rem;
 }
+.title-h1 {
+  font-size: 2.1rem;
+  line-height: normal;
+}
+.title-h2 {
+  font-size: 2.1rem;
+  line-height: normal;
+  font-size: 1.3rem;
+}
+.wrapper {
+  max-width: 1024px;
+  background-color: #fff;
+  box-shadow: 6px 3px 4px rgba(0, 0, 0, 0.2);
+}
 /*=====================
 HEADER
 =====================*/
@@ -48,6 +62,7 @@ header.main-header nav.main-nav {
   min-height: inherit;
   background: none;
   padding: 0;
+  margin-right: 1em;
 }
 header.main-header nav.main-nav > ul > li {
   padding-bottom: 0;
@@ -181,6 +196,43 @@ main header.cover {
   margin-bottom: 2rem;
 }
 /*=====================
+FOOTER
+=====================*/
+footer.main-footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+footer.main-footer a.back-to-top,
+footer.main-footer hr {
+  display: none;
+}
+footer.main-footer * {
+  margin-right: 1em;
+}
+footer.main-footer a.button.donate,
+footer.main-footer a.button.sitemap {
+  display: initial;
+}
+.social-links a {
+  width: 3.5rem;
+  height: 2.5rem;
+  margin: 0 1em;
+}
+.social-links a img {
+  width: 2.3em;
+}
+/*=====================
 HOME
 =====================*/
 body.home main header.cover h2 {
@@ -206,17 +258,30 @@ body.home main header.cover a.sw-tab > span {
 body.home main header.cover a.sw-tab > span span {
   font-size: 0.7rem;
 }
-body.home main section > header h1 {
+body.home main > .wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+body.home main section > h1,
+body.home main section > header h1,
+body.home main section > header h2 {
   font-size: 2.1rem;
   line-height: normal;
 }
+body.home main section > h2,
 body.home main section > header h2 {
-  font-size: 1.3rem;
+  font-size: 2.1rem;
   line-height: normal;
+  font-size: 1.3rem;
 }
 body.home main section.our-work {
   padding: 0;
-  max-width: 48rem;
+  min-width: 725px;
 }
 body.home main section.our-work header {
   margin-left: 3rem;
@@ -272,14 +337,80 @@ body.home main section.our-reach {
   margin-top: -6.9rem;
   padding-top: 6.9rem;
   position: relative;
+  width: 100%;
 }
 body.home main section.our-reach header {
   margin-bottom: 0;
 }
 body.home main section.our-reach header h2 {
-  width: auto;
+  width: 50%;
 }
 body.home main section.events {
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+body.home main section.events header h1 {
+  word-spacing: 30000px;
+}
+body.home main section.events .wrap.grid {
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+}
+body.home main section.events .event {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+body.home main section.events .event h2 {
+  line-height: normal;
+  margin-bottom: 1em;
+}
+body.home main section.events .event:not(.hide) {
+  padding-right: 2rem;
+  border-right: #ccc 1px solid;
+}
+body.home main section.events .event.hide {
+  display: block !important;
+  visibility: visible;
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: auto / span 1;
+}
+body.home main section.events .event.hide h2 {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3em;
+  line-height: 1.5em;
+}
+body.home main section.events .event.hide .img {
+  width: 13rem;
+  height: calc(13rem * 0.5625);
+}
+body.home main section.events .event.hide .row .col:last-of-type,
+body.home main section.events .event.hide footer {
+  display: none;
+}
+body.home main section.events nav.prev-next {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+}
+body.home main section.events nav.prev-next a {
+  padding: 0;
+  color: transparent;
+  width: 1em;
+  height: 3rem;
+}
+body.home main section.events nav.prev-next a[rel="prev"] {
+  margin-right: 0.5em;
+}
+body.home main section.events nav.prev-next a[rel="next"] {
+  margin-left: 0.5em;
+}
+body.home main section.co-create {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -287,44 +418,154 @@ body.home main section.events {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start;
+  padding: 3rem;
 }
-body.home main section.events header h1 {
-  word-spacing: 30000px;
+body.home main section.co-create h1 {
+  font-size: 2.1rem;
+  line-height: normal;
+  width: 100%;
+  flex: 0 0 100%;
+  margin-bottom: 0.5em;
+}
+body.home main section.co-create h2,
+body.home main section.co-create p {
+  font-size: 2.1rem;
+  line-height: normal;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  padding-bottom: 0.5em;
+}
+body.home main section.co-create figure {
+  margin: 0;
+}
+body.home main section.co-create figure.logo-ecoethic {
+  margin: 0.2em 0;
+}
+body.home main section.co-create figure.logo-ecoethic img {
+  width: 45%;
+}
+body.home main section.co-create figure.icon-donate {
+  margin: 0;
+}
+body.home main section.co-create figure.icon-donate img {
+  width: 7rem;
+}
+body.home main section.co-create span {
+  padding: 0 0.5em 0.3em 0.5em;
   margin-bottom: 0;
 }
-body.home main section.events .event {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+body.home main section.co-create span a.button {
+  font-size: 0.7em;
 }
-body.home main section.events .event h2 {
-  line-height: normal;
-  margin-bottom: 1em;
+body.home main section.co-create .col {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
-body.home main section.events .event:first-of-type {
-  max-width: 41.3rem;
-  height: 500px;
-  padding-right: 2rem;
+body.home main section.co-create .col:first-of-type {
   margin-right: 2rem;
-  border-right: #ccc 1px solid;
-  background: pink;
 }
-body.home main section.events .event.hide {
+body.home main section.testimonials {
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+}
+body.home main section.testimonials blockquote {
+  font-size: 1.1rem;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+body.home main section.testimonials blockquote .content:before {
+  top: -30px;
+  left: -50px;
+}
+body.home main section.testimonials blockquote .content:after {
+  content: close-quote;
+  bottom: -50px;
+  right: 0;
+}
+body.home main section.testimonials blockquote footer {
+  min-width: 30%;
+  padding-right: 2rem;
+}
+body.home main section.testimonials blockquote footer figure {
+  width: 8rem;
+  height: 8rem;
+}
+body.home main section.testimonials blockquote footer div.col {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+body.home main section.testimonials blockquote:not(.hide) {
+  padding-right: 2rem;
+  border-right: #fff 1px solid;
+}
+body.home main section.testimonials blockquote.hide {
   display: block !important;
   visibility: visible;
-  height: 250px;
+  grid-column: 2;
+  grid-row: auto / span 1;
 }
-body.home main section.events .event.hide .row .col:last-of-type,
-body.home main section.events .event.hide footer {
+body.home main section.testimonials blockquote.hide .content {
   display: none;
 }
-body.home main section.events .event:nth-of-type(n+2) {
-  background: yellow;
+body.home main section.testimonials blockquote.hide footer {
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
 }
-body.home main .wrap {
+body.home main section.testimonials blockquote.hide footer figure.col {
+  width: 6.5rem;
+  height: 6.5rem;
+  min-width: 6.5rem;
+  margin-right: 1em;
+}
+body.home main section.testimonials blockquote.hide footer div.col cite.author {
+  margin-bottom: 0;
+}
+body.home main section.testimonials nav.prev-next {
+  grid-column: 1;
+  grid-row: -1;
+  align-self: end;
+}
+body.home main section.testimonials nav.prev-next a {
+  padding: 0;
+  color: transparent;
+  width: 1em;
+  height: 3rem;
+}
+body.home main section.testimonials nav.prev-next a[rel="prev"] {
+  margin-right: 0.5em;
+}
+body.home main section.testimonials nav.prev-next a[rel="next"] {
+  margin-left: 0.5em;
+}
+body.home main aside.cta {
+  padding: 3rem;
+}
+body.home main aside.cta h1 {
+  font-size: 2.1rem;
+  line-height: normal;
+}
+body.home main aside.cta h2 {
+  font-size: 2.1rem;
+  line-height: normal;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+}
+body.home main aside.cta.eco-website {
+  height: auto;
+  background-position: 48% 30%;
+  background-size: 30%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -332,7 +573,41 @@ body.home main .wrap {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  margin-bottom: 2rem;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+body.home main aside.cta.eco-website .col {
+  max-width: 33%;
+  margin-bottom: 3rem;
+}
+body.home main aside.cta.eco-website h2 {
+  width: auto;
+}
+body.home main aside.cta.eco-website ul.col {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body.home main aside.cta.eco-website ul.col li {
+  font-size: 2.1rem;
+  line-height: normal;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  padding: 0 0 1em 3em;
+  background: transparent url("../img/icon-list-center.svg") left center no-repeat;
+  background-size: 2.5rem;
+}
+body.home main aside.cta.eco-website ul.col li:first-of-type {
+  background-image: url("../img/icon-list-top.svg");
+}
+body.home main aside.cta.eco-website ul.col li:last-of-type {
+  padding-bottom: 0;
+  background-image: url("../img/icon-list-bottom.svg");
 }
 /*=====================
 PAGE
@@ -362,5 +637,5 @@ section.events .event .row > .col:first-of-type {
 }
 section.events .event .img {
   width: 20rem;
-  height: calc(11.25rem);
+  height: calc(20rem * 0.5625);
 }

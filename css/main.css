@@ -17,7 +17,7 @@ body {
   background: #fff;
   color: #222222;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 2.7em;
+  font-size: 2.7rem;
   line-height: 1.5em;
 }
 body.green h1,
@@ -675,23 +675,13 @@ nav.tabs.sub > a:first-of-type {
 FOOTER
 =====================*/
 footer.main-footer {
-  padding: 5rem 3rem;
+  padding: 5rem 0;
   text-align: center;
   font-size: 2.2rem;
 }
 footer.main-footer a.button.donate,
 footer.main-footer a.button.sitemap {
-  margin: 4rem auto;
-  display: table;
-  white-space: nowrap;
-}
-footer.main-footer p.license,
-footer.main-footer address.author {
-  line-height: 1.3em;
-  margin: 4rem 3rem;
-}
-footer.main-footer address.author {
-  font-style: normal;
+  display: none;
 }
 .social-links {
   display: -webkit-flex;
@@ -815,7 +805,7 @@ body.home section.our-reach {
   background-size: contain, cover;
   margin: 5rem 0 5rem 0;
   padding: 5rem 3rem;
-  padding-top: calc(10rem);
+  padding-top: calc(5rem * 2);
 }
 body.home section.our-reach header {
   margin-bottom: 5rem;
@@ -844,7 +834,9 @@ body.home section.co-create {
   background: #0055FF url("../img/bkg-co-create.png") right center no-repeat;
   background-size: 70%;
   color: white;
-  padding: 3rem;
+  padding: 5rem 3rem;
+}
+body.home section.co-create .col {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -853,17 +845,17 @@ body.home section.co-create {
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
 }
-body.home section.co-create > h1,
-body.home section.co-create > h2 {
+body.home section.co-create h1,
+body.home section.co-create h2 {
   color: #FFD600;
   margin: 0;
   padding: 0;
 }
-body.home section.co-create > h1 {
+body.home section.co-create h1 {
   padding-bottom: 0.5em;
 }
-body.home section.co-create > h2,
-body.home section.co-create > p {
+body.home section.co-create h2,
+body.home section.co-create p {
   font-size: 3rem;
 }
 body.home section.co-create p {
@@ -872,25 +864,25 @@ body.home section.co-create p {
 body.home section.co-create p a {
   color: inherit;
 }
-body.home section.co-create > figure {
+body.home section.co-create figure {
   margin: 0;
 }
-body.home section.co-create > figure.logo-ecoethic {
+body.home section.co-create figure.logo-ecoethic {
   margin: 1em 0 2em 0;
 }
-body.home section.co-create > figure.logo-ecoethic img {
+body.home section.co-create figure.logo-ecoethic img {
   width: 40%;
 }
-body.home section.co-create > figure.icon-donate {
+body.home section.co-create figure.icon-donate {
   margin: 0.5em 0;
   -webkit-align-self: center;
   -ms-align-self: center;
   align-self: center;
 }
-body.home section.co-create > figure.icon-donate img {
+body.home section.co-create figure.icon-donate img {
   width: 14rem;
 }
-body.home section.co-create > span {
+body.home section.co-create span {
   background-color: #FFD600;
   padding: 0.4em 1em 0.8em 1em;
   margin-bottom: 1em;
@@ -958,6 +950,11 @@ body.home section.testimonials blockquote footer {
   -ms-order: 0;
   order: 0;
 }
+body.home section.testimonials blockquote footer div.col {
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+}
 body.home section.testimonials blockquote footer cite {
   font-style: normal;
   line-height: 1.2em;
@@ -966,15 +963,9 @@ body.home section.testimonials blockquote footer cite.author {
   font-weight: bold;
   color: #0055FF;
   margin-bottom: 0.5em;
-  -webkit-order: 1;
-  -ms-order: 1;
-  order: 1;
 }
 body.home section.testimonials blockquote footer cite.title {
   color: white;
-  -webkit-order: 2;
-  -ms-order: 2;
-  order: 2;
 }
 body.home section.testimonials blockquote footer figure {
   margin: 0;
@@ -1068,15 +1059,8 @@ body.home ul.index hr:last-of-type {
 }
 body.home aside.cta {
   padding: 4rem 3rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
 }
-body.home aside.cta > h1 {
+body.home aside.cta h1 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
@@ -1084,13 +1068,13 @@ body.home aside.cta > h1 {
   font-weight: 600;
   margin-bottom: 0.3em;
 }
-body.home aside.cta > h1 span {
+body.home aside.cta h1 span {
   text-transform: none;
   font-weight: lighter;
   display: block;
   color: #222222;
 }
-body.home aside.cta > h2 {
+body.home aside.cta h2 {
   margin-top: 0;
   font-size: 3rem;
   font-weight: normal;
@@ -1106,11 +1090,14 @@ body.home aside.cta.eco-website {
   background-size: 60vw;
   height: 70vw;
 }
-body.home aside.cta.eco-website > h1 {
+body.home aside.cta.eco-website h1 {
   color: #1ED261;
 }
-body.home aside.cta.eco-website > h2 {
+body.home aside.cta.eco-website h2 {
   width: 45%;
+}
+body.home aside.cta.eco-website ul.col {
+  display: none;
 }
 /*=====================
 PAGE
@@ -1220,7 +1207,7 @@ section.events .event .img {
   background: #E5E5E5 url("../img/icon-thumb.svg") center center no-repeat;
   background-size: 3em;
   width: 25rem;
-  height: calc(14.0625rem);
+  height: calc(25rem * 0.5625);
   overflow: hidden;
 }
 section.events .event .img img {
