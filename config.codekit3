@@ -9,6 +9,22 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/.ftpconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.ftpconfig",
+		"oF": 0
+		},
+	"/.ftpignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.ftpignore",
+		"oF": 0
+		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,

@@ -800,21 +800,38 @@ body.home section.our-work header h1 {
   color: #1ED261;
 }
 body.home section.our-reach {
-  background-color: transparent;
-  background: url("../img/map.svg") bottom right no-repeat, url("../img/square_100_grey.svg") 0 5rem no-repeat;
-  background-size: contain, cover;
-  margin: 5rem 0 5rem 0;
+  background: transparent url("../img/square_100_grey.svg") 0 10rem no-repeat;
+  background-size: cover;
+  margin: 0 0 5rem 0;
   padding: 5rem 3rem;
-  padding-top: calc(5rem * 2);
+  padding-top: 15rem;
+  position: relative;
+  overflow: hidden;
 }
 body.home section.our-reach header {
   margin-bottom: 5rem;
+  position: relative;
+  z-index: 99;
 }
 body.home section.our-reach header h1 {
   color: #0055FF;
 }
 body.home section.our-reach header h2 {
   width: 45vw;
+}
+body.home section.our-reach header .button {
+  margin-top: 1em;
+}
+body.home section.our-reach figure {
+  position: absolute;
+  right: -15%;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+}
+body.home section.our-reach figure img {
+  height: 55rem;
+  width: auto;
 }
 body.home section.events {
   margin-bottom: 5rem;
@@ -1585,7 +1602,7 @@ PAGE ECOETHIC
   margin-top: 0.5em;
 }
 .newsletter-archive .display_archive .campaign {
-  padding: 0.5em 0;
+  padding: 1em 0;
   border-bottom: #6394AB 1px solid;
   font-weight: bold;
 }

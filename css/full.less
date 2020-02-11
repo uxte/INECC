@@ -7,14 +7,14 @@ body {
 
 .button {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
     border-bottom-width: 0.2em;
 
     &.icon {
         padding-right: 3rem;
-        background-size: 2.4rem;
+        background-size: 2.2rem;
         &.facebook {
-    			padding-right: 2.3rem;
+    			padding-right: 2.2rem;
     		}
     }
 }
@@ -65,7 +65,7 @@ header.main-header {
 		}
 
 		ul {
-      li {
+            li {
 				margin-bottom: 0;
 				&:first-child {
 					margin-top: 0;
@@ -139,15 +139,23 @@ header.main-header {
                 overflow: hidden;
 
                 ul.sub-menu {
-                    padding-left: 0;
-
                     visibility: hidden;
-            	    .flex-flow(column wrap);
-                    .align-items(flex-start);
+                    padding: 0.5rem 2rem;
+
+                    // .flex-display();
+            	    // .flex-flow(column wrap);
+                    // .align-items(flex-start);
+
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-template-rows: repeat(3, auto);
+                    align-items: center;
+                    grid-gap: 0.8rem;
 
                     //Sub-menu dimensions
-                    max-height: 13rem;
-                    min-width: 27rem;
+                    // max-height: 13rem;
+                    // min-width: 27rem;
+                    // width: max-content; //Doesn't work on IE or Edge
 
                     position: absolute;
                     left: 2rem;
@@ -159,8 +167,10 @@ header.main-header {
 
                     li {
                         padding: 0;
-                        margin: 0;
                         background: none;
+                        min-width: 11rem;
+
+                        // .flex(0 0 );
 
                         a {
                             color: @color-black;
@@ -169,21 +179,22 @@ header.main-header {
                             text-transform: none;
                             display: block;
                             // white-space: nowrap;
-                            max-width: 9.2em;
+                            // max-width: 9.2em;
                             border-bottom: 0;
                             margin-left: 0;
-                            padding: 0.5rem 0 0.5rem 2rem;
                             line-height: 1.5em;
 
                             &:hover {
-                                font-weight: 666;
+                                // font-weight: 600;
+                                text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
                             }
                         }
 
                         &.current-menu-item {
                             > a {
                                 color: @color-green;
-                                font-weight: 500;
+                                // font-weight: 500;
+                                text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
                             }
                         }
                     }
@@ -380,9 +391,9 @@ body.home {
 
             &.our-reach {
                 margin: 0;
-                margin-top: -6.9rem;
-                padding-top: 6.9rem;
-                position: relative;
+                margin-top: -12rem;
+                padding-top: 12rem;
+                padding-left: 2rem;
                 width: 100%;
 
     	        header {
@@ -391,6 +402,14 @@ body.home {
                         width: 50%;
                     }
                 }
+
+                figure {
+    				right: auto; left: 4rem;
+
+    				img {
+    					height: 40rem;
+    				}
+    			}
             }
 
             &.events {
@@ -485,6 +504,8 @@ body.home {
                 .flex-display();
                 .flex-flow(row wrap);
                 padding: @vw-spacing;
+                background-size: 35%;
+                background-position: 70% center;
 
                 h1 {
                     .title-h1;
@@ -497,6 +518,11 @@ body.home {
                     line-height: 1.5em;
                     padding-bottom: 0.5em;
     	        }
+                p {
+                    font-weight: 100;
+                    letter-spacing: 0.03em;
+                    line-height: 1.4em;
+                }
                 figure {
     	            margin: 0;
 
@@ -659,6 +685,7 @@ body.home {
 
                 h2 {
     				width: auto;
+                    line-height: 1.4em;
     			}
 
                 ul.col {
@@ -668,7 +695,7 @@ body.home {
 
                    li {
                        .title-h2;
-                       line-height: 1.5em;
+                       line-height: 1.4em;
                        padding: 0 0 1em 3em;
                        background: transparent url("../img/icon-list-center.svg") left center no-repeat;
                        background-size: 2.5rem;
@@ -718,7 +745,7 @@ section.events {
 		}
 
         .row {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
             > .col {
 				.flex(0 1 auto);
 

@@ -936,15 +936,22 @@ body.home {
 	    }
 
 	    &.our-reach {
-			background-color: transparent;
-			background: url("../img/map.svg") bottom right no-repeat, url("../img/square_100_grey.svg") 0 @vh-spacing no-repeat;
-			background-size: contain, cover;
-			margin: @vh-spacing 0 @vh-spacing 0;
-			padding: @vh-spacing 3rem;
-			padding-top: calc(@vh-spacing * 2);
+			// background-color: transparent;
+			// background: url("../img/map.svg") bottom right no-repeat, url("../img/square_100_grey.svg") 0 @vh-spacing no-repeat;
+			// background-size: contain, cover;
+			background: transparent url("../img/square_100_grey.svg") 0 10rem no-repeat;
+			background-size: cover;
+			// background-color: @color-nav-blue-light;
+			margin: 0 0 @vh-spacing 0;
+			padding: @vh-spacing @vw-spacing;
+			padding-top: 10rem + @vh-spacing;
+			position: relative;
+			overflow: hidden;
 
 	        header {
 				margin-bottom: @vh-spacing;
+				position: relative;
+				z-index: 99;
 
 	            h1 {
 	                color: @color-blue;
@@ -952,7 +959,22 @@ body.home {
 				h2 {
 					width: 45vw;
 				}
+				.button {
+					margin-top: 1em;
+				}
 	        }
+
+			figure {
+				position: absolute;
+				right: -15%;
+				top:0; bottom: 0;
+				z-index: 9;
+
+				img {
+					height: 55rem;
+					width: auto;
+				}
+			}
 	    }
 
 	    &.events {
@@ -1793,7 +1815,7 @@ PAGE ECOETHIC
 	.display_archive {
 		margin-top: 0.5em;
 		.campaign {
-			padding: 0.5em 0;
+			padding: 1em 0;
 			border-bottom: @color-nav-blue 1px solid;
 			font-weight: bold;
 			> a {

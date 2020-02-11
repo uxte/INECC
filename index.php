@@ -67,8 +67,11 @@
 			<header>
 				<h1>Our reach</h1>
 				<h2>INECC works with the most vulnerable across India</h2>
+				<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Our reach' ) ) ); ?>">Know <span>more</span></a>
 			</header>
-			<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Our reach' ) ) ); ?>">Know <span>more</span></a>
+			<figure>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/map.svg" alt="Map of india">
+			</figure>
 		</section>
 
 		</div><!-- wrap -->

@@ -1,5 +1,7 @@
 *.log
 *.DS_Store
+*.ftpconfig
+*.ftpignore
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/

@@ -17,15 +17,15 @@ body {
 }
 .button {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   border-bottom-width: 0.2em;
 }
 .button.icon {
   padding-right: 3rem;
-  background-size: 2.4rem;
+  background-size: 2.2rem;
 }
 .button.icon.facebook {
-  padding-right: 2.3rem;
+  padding-right: 2.2rem;
 }
 .title-h1 {
   font-size: 2.1rem;
@@ -132,16 +132,13 @@ header.main-header nav.main-nav ul li.menu-item-has-children {
   overflow: hidden;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu {
-  padding-left: 0;
   visibility: hidden;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  -webkit-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start;
-  max-height: 13rem;
-  min-width: 27rem;
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  grid-gap: 0.8rem;
   position: absolute;
   left: 2rem;
   top: 3.5rem;
@@ -151,8 +148,8 @@ header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu {
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li {
   padding: 0;
-  margin: 0;
   background: none;
+  min-width: 11rem;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a {
   color: #222222;
@@ -160,18 +157,16 @@ header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a {
   font-weight: 400;
   text-transform: none;
   display: block;
-  max-width: 9.2em;
   border-bottom: 0;
   margin-left: 0;
-  padding: 0.5rem 0 0.5rem 2rem;
   line-height: 1.5em;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a:hover {
-  font-weight: 666;
+  text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li.current-menu-item > a {
   color: #1ED261;
-  font-weight: 500;
+  text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children:hover {
   overflow: visible;
@@ -334,9 +329,9 @@ body.home main section.our-work ul.index hr {
 }
 body.home main section.our-reach {
   margin: 0;
-  margin-top: -6.9rem;
-  padding-top: 6.9rem;
-  position: relative;
+  margin-top: -12rem;
+  padding-top: 12rem;
+  padding-left: 2rem;
   width: 100%;
 }
 body.home main section.our-reach header {
@@ -344,6 +339,13 @@ body.home main section.our-reach header {
 }
 body.home main section.our-reach header h2 {
   width: 50%;
+}
+body.home main section.our-reach figure {
+  right: auto;
+  left: 4rem;
+}
+body.home main section.our-reach figure img {
+  height: 40rem;
 }
 body.home main section.events {
   padding-top: 2rem;
@@ -419,6 +421,8 @@ body.home main section.co-create {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   padding: 3rem;
+  background-size: 35%;
+  background-position: 70% center;
 }
 body.home main section.co-create h1 {
   font-size: 2.1rem;
@@ -434,6 +438,11 @@ body.home main section.co-create p {
   font-size: 1.3rem;
   line-height: 1.5em;
   padding-bottom: 0.5em;
+}
+body.home main section.co-create p {
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  line-height: 1.4em;
 }
 body.home main section.co-create figure {
   margin: 0;
@@ -586,6 +595,7 @@ body.home main aside.cta.eco-website .col {
 }
 body.home main aside.cta.eco-website h2 {
   width: auto;
+  line-height: 1.4em;
 }
 body.home main aside.cta.eco-website ul.col {
   display: block;
@@ -597,7 +607,7 @@ body.home main aside.cta.eco-website ul.col li {
   font-size: 2.1rem;
   line-height: normal;
   font-size: 1.3rem;
-  line-height: 1.5em;
+  line-height: 1.4em;
   padding: 0 0 1em 3em;
   background: transparent url("../img/icon-list-center.svg") left center no-repeat;
   background-size: 2.5rem;
@@ -624,7 +634,7 @@ section.events .event > h2 {
   margin: 0;
 }
 section.events .event .row {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 section.events .event .row > .col {
   -webkit-flex: 0 1 auto;
