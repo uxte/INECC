@@ -3,7 +3,7 @@
     get_header();
 ?>
 
-<main>
+<main class="wrapper">
 
     <?php get_template_part( 'template-parts/page/page', 'tabs' ); ?>
 
@@ -61,7 +61,7 @@
     </header>
 
     <?php endwhile; endif; wp_reset_postdata(); ?>
-    
+
     <?php the_content(); ?>
 </aside>
 

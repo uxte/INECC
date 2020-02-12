@@ -124,7 +124,7 @@ function startSlider(slider) {
 
 startSlider('events');
 startSlider('testimonials');
-startSlider('our-history');
+startSlider('our-history-phases');
 
 // DROPDOWN BLOCKS
 function openDropDown( block ) {

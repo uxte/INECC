@@ -1,6 +1,13 @@
 @import "variables";
 @import "mixins";
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /**/
 body {
 	background: #fff;
@@ -359,13 +366,11 @@ nav.prev-next {
 
 .h-icon {
 	.title-h2;
+	margin-bottom: 0.8em;
 
 	.flex-display();
     .flex-flow(row nowrap);
-	.align-content(center);
-
-	text-transform: uppercase;
-	line-height: 3.1em;
+	.align-items(center);
 
 	img {
 		height: 8rem !important;
@@ -1283,13 +1288,12 @@ PAGE
 	main {
 
 		section.content {
-			> h2 {
+			h2 {
 				.title-h2;
 				margin-bottom: 0.5em;
 			}
-			> h3 {
-				margin: 0;
-				padding: 0;
+			h3, h4 {
+				margin-bottom: 0.5em;
 			}
 			p {
 				margin-top: 0;
@@ -1331,7 +1335,7 @@ PAGE
 hr {
 	border-color: fade(@color-nav-blue, 30%);
 	border-width: 2px;
-	margin: @vh-spacing auto;
+	margin: 2rem auto;
 }
 
 
@@ -1553,18 +1557,22 @@ PAGE ABOUT-US
 =====================*/
 
 body.page-about-us {
-
 	main {
-
 		section.content {
-			a.button {
-
+			.inecc-box,
+			.our-history  {
+				p {
+					&:first-of-type {
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
 	}
 }
 
 .team {
+	margin-bottom: 4rem;
 
 	h2, h3, h4, h5, h6 {
 		padding: 0;
@@ -1573,7 +1581,7 @@ body.page-about-us {
 
 	> div:first-of-type {
 		> h2, > h3, > h4, > h5 {
-			margin-bottom: 1em;
+			padding-bottom: 0.7em;
 		}
 	}
 
@@ -1583,6 +1591,11 @@ body.page-about-us {
 		.align-items(center);
 
 		margin-bottom: 3rem;
+
+		h6 {
+			font-size: 2.7rem;
+			font-weight: normal;
+		}
 
 		p {
 			margin: 0;
@@ -1598,24 +1611,19 @@ body.page-about-us {
 			figure {
 				border-radius: 50%;
 				overflow: hidden;
-				width: 40vw;
+				width: 35%;
 			}
 
 			.wp-block-media-text__content {
 				padding: 0;
 				padding-left: @vw-spacing;
-				width: 60vw;
-
-				h6 {
-					font-size: 2.7rem;
-					font-weight: normal;
-				}
+				width: 65%;
 			}
 		}
 	}
 }
 
-.our-history {
+.our-history-phases {
 	position: relative;
 	margin-bottom: @vh-spacing;
 
@@ -1668,17 +1676,12 @@ body.page-about-us {
 
 			&[rel="prev"] {
 				background-image: url("../img/icon-prev.svg");
-				background-position: right center;
-				margin-right: 1em;
-				padding-right: 6rem;
-				text-align: right;
+				background-position: center center;
 				left: 2rem;
 			}
 			&[rel="next"] {
 				background-image: url("../img/icon-next.svg");
-				background-position: left center;
-				margin-left: 1em;
-				padding-left: 6rem;
+				background-position: center center;
 				right: 2rem;
 			}
 		}

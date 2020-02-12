@@ -3,7 +3,7 @@
  * Template part for displaying pages parent
  */
 ?>
-<main>
+<main class="wrapper">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <header class="cover">

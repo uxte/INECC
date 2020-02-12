@@ -3,7 +3,7 @@
  * Template part for displaying page child
  */
 ?>
-<main>
+<main class="wrapper">
 
     <?php get_template_part( 'template-parts/page/page', 'tabs' ); ?>
 

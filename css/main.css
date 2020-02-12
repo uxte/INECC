@@ -12,6 +12,14 @@
 .clearfix:after {
   clear: both;
 }
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 /**/
 body {
   background: #fff;
@@ -306,10 +314,12 @@ nav.prev-next {
 .h-icon {
   margin: 0;
   padding-bottom: 0;
+  text-transform: uppercase;
   font-size: 4.2rem;
   font-weight: 600;
   font-size: 2.8rem;
   line-height: normal;
+  margin-bottom: 0.8em;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -317,11 +327,9 @@ nav.prev-next {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-content: center;
-  text-transform: uppercase;
-  line-height: 3.1em;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 .h-icon img {
   height: 8rem !important;
@@ -1125,7 +1133,7 @@ PAGE
 .page section {
   padding: 0 3rem;
 }
-.page main section.content > h2 {
+.page main section.content h2 {
   margin: 0;
   padding-bottom: 0;
   text-transform: uppercase;
@@ -1135,9 +1143,9 @@ PAGE
   line-height: normal;
   margin-bottom: 0.5em;
 }
-.page main section.content > h3 {
-  margin: 0;
-  padding: 0;
+.page main section.content h3,
+.page main section.content h4 {
+  margin-bottom: 0.5em;
 }
 .page main section.content p {
   margin-top: 0;
@@ -1170,7 +1178,7 @@ PAGE
 hr {
   border-color: rgba(99, 148, 171, 0.3);
   border-width: 2px;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 /*=====================
 TEMPLATE LIST EVENTS
@@ -1361,6 +1369,13 @@ nav.pagination .button.show-all > span {
 /*=====================
 PAGE ABOUT-US
 =====================*/
+body.page-about-us main section.content .inecc-box p:first-of-type,
+body.page-about-us main section.content .our-history p:first-of-type {
+  margin-bottom: 0;
+}
+.team {
+  margin-bottom: 4rem;
+}
 .team h2,
 .team h3,
 .team h4,
@@ -1373,7 +1388,7 @@ PAGE ABOUT-US
 .team > div:first-of-type > h3,
 .team > div:first-of-type > h4,
 .team > div:first-of-type > h5 {
-  margin-bottom: 1em;
+  padding-bottom: 0.7em;
 }
 .team .team-member {
   display: -webkit-flex;
@@ -1388,6 +1403,10 @@ PAGE ABOUT-US
   align-items: center;
   margin-bottom: 3rem;
 }
+.team .team-member h6 {
+  font-size: 2.7rem;
+  font-weight: normal;
+}
 .team .team-member p {
   margin: 0;
   font-size: 2rem;
@@ -1396,56 +1415,52 @@ PAGE ABOUT-US
 .team.executive-committee .team-member figure {
   border-radius: 50%;
   overflow: hidden;
-  width: 40vw;
+  width: 35%;
 }
 .team.executive-committee .team-member .wp-block-media-text__content {
   padding: 0;
   padding-left: 3rem;
-  width: 60vw;
+  width: 65%;
 }
-.team.executive-committee .team-member .wp-block-media-text__content h6 {
-  font-size: 2.7rem;
-  font-weight: normal;
-}
-.our-history {
+.our-history-phases {
   position: relative;
   margin-bottom: 5rem;
 }
-.our-history h2,
-.our-history h3,
-.our-history h4,
-.our-history h5,
-.our-history h6 {
+.our-history-phases h2,
+.our-history-phases h3,
+.our-history-phases h4,
+.our-history-phases h5,
+.our-history-phases h6 {
   padding: 0;
   margin: 0;
 }
-.our-history .phase {
+.our-history-phases .phase {
   padding: 3rem;
 }
-.our-history .phase .header {
+.our-history-phases .phase .header {
   text-align: center;
   text-transform: uppercase;
   font-size: 4rem;
 }
-.our-history .phase .date {
+.our-history-phases .phase .date {
   font-weight: bold;
   text-align: center;
   border-bottom: #6394AB 1px solid;
   padding-bottom: 0.5em;
 }
-.our-history .phase h4 {
+.our-history-phases .phase h4 {
   font-size: 3rem;
   line-height: 1em;
   margin-bottom: 0.5em;
 }
-.our-history .phase ul li::before {
+.our-history-phases .phase ul li::before {
   color: #FFB600;
 }
-.our-history .phase.hide {
+.our-history-phases .phase.hide {
   display: none !important;
   visibility: hidden;
 }
-.our-history .prev-next a {
+.our-history-phases .prev-next a {
   width: 1em;
   height: 5rem;
   overflow: hidden;
@@ -1454,19 +1469,14 @@ PAGE ABOUT-US
   position: absolute;
   top: 4rem;
 }
-.our-history .prev-next a[rel="prev"] {
+.our-history-phases .prev-next a[rel="prev"] {
   background-image: url("../img/icon-prev.svg");
-  background-position: right center;
-  margin-right: 1em;
-  padding-right: 6rem;
-  text-align: right;
+  background-position: center center;
   left: 2rem;
 }
-.our-history .prev-next a[rel="next"] {
+.our-history-phases .prev-next a[rel="next"] {
   background-image: url("../img/icon-next.svg");
-  background-position: left center;
-  margin-left: 1em;
-  padding-left: 6rem;
+  background-position: center center;
   right: 2rem;
 }
 /*=====================
