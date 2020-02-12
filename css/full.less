@@ -97,7 +97,7 @@ header.main-header {
                 }
 
                 &.current-menu-item,  &.current-menu-parent{
-                    a {
+                    > a {
                         color: @color-green;
                         border-bottom: @color-green 5px solid;
                     }
@@ -190,11 +190,14 @@ header.main-header {
                             }
                         }
 
-                        &.current-menu-item {
+                        &.current-menu-item:not(.menu-item-type-custom) {
                             > a {
                                 color: @color-green;
-                                // font-weight: 500;
-                                text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
+                                text-shadow: -0.05ex 0 @color-green, 0.05ex 0 @color-green;
+                                &:hover {
+                                    color: @color-black;
+                                    text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
+                                }
                             }
                         }
                     }
@@ -903,7 +906,7 @@ PAGE ABOUT-US
             line-height: 1.5em;
         }
         p {
-            font-size: 1.1rem;
+            font-size: 1.1rem !important;
         }
     }
 
@@ -922,6 +925,11 @@ PAGE ABOUT-US
 			}
 		}
 	}
+    &.general-body {
+		.team-member {
+            padding-right: 2rem;
+        }
+    }
 }
 
 .our-history {

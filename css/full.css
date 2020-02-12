@@ -98,8 +98,8 @@ header.main-header nav.main-nav ul li a:hover {
   border-bottom: #222222 5px solid;
   text-decoration: none;
 }
-header.main-header nav.main-nav ul li.current-menu-item a,
-header.main-header nav.main-nav ul li.current-menu-parent a {
+header.main-header nav.main-nav ul li.current-menu-item > a,
+header.main-header nav.main-nav ul li.current-menu-parent > a {
   color: #1ED261;
   border-bottom: #1ED261 5px solid;
 }
@@ -163,8 +163,12 @@ header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a {
 header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li a:hover {
   text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
 }
-header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li.current-menu-item > a {
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li.current-menu-item:not(.menu-item-type-custom) > a {
   color: #1ED261;
+  text-shadow: -0.05ex 0 #1ED261, 0.05ex 0 #1ED261;
+}
+header.main-header nav.main-nav ul li.menu-item-has-children ul.sub-menu li.current-menu-item:not(.menu-item-type-custom) > a:hover {
+  color: #222222;
   text-shadow: -0.05ex 0 #000, 0.05ex 0 #000;
 }
 header.main-header nav.main-nav ul li.menu-item-has-children:hover {
@@ -830,7 +834,7 @@ PAGE ABOUT-US
   line-height: 1.5em;
 }
 .team .team-member p {
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
 }
 .team .has-text-align-right {
   -webkit-flex: 0 0 100%;
@@ -842,6 +846,9 @@ PAGE ABOUT-US
 }
 .team.executive-committee .team-member .wp-block-media-text__content {
   padding-left: 1.5rem;
+}
+.team.general-body .team-member {
+  padding-right: 2rem;
 }
 .our-history {
   margin: 2rem 0;
