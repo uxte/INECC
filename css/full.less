@@ -810,6 +810,15 @@ hr {
     }
 }
 
+ul.list-horizontal {
+    .flex-display();
+    .flex-flow(row wrap);
+
+    > li {
+        .flex(1);
+    }
+}
+
 /*=====================
 PAGE ABOUT-US
 =====================*/
@@ -1050,6 +1059,25 @@ body.page-template-page-our-work-search {
 				}
 			}
 		}
+	}
+    aside.content.parent {
+		//Look like main content
+
+		header {
+			width: 100vw;
+            padding: 0;
+            padding-top: 1rem;
+            margin-bottom: 2rem;
+
+			h3 {
+				.title-h1;
+				margin: 0 @vw-spacing -0.5rem;
+			}
+		}
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5em;
+        }
 	}
 }
 

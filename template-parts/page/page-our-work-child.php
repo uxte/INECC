@@ -25,7 +25,7 @@
 
 </main>
 
-<aside class="content parent">
+<aside class="content parent wrapper">
     <?php
     //Get parent content
     $parent_id = $post -> post_parent;
