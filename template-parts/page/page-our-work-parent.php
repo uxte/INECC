@@ -49,6 +49,7 @@
 
     <?php endwhile; endif; wp_reset_postdata(); ?>
 
-    <?php set_query_var( 'tabs_sub', true ); get_template_part( 'template-parts/page/page', 'tabs' ); ?>
+    <?php// set_query_var( 'tabs_sub', true ); get_template_part( 'template-parts/page/page', 'tabs' ); ?>
+    <?php get_template_part( 'template-parts/page/page-tabs', 'sub' ); ?>
 
 </main>

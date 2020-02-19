@@ -670,6 +670,9 @@ PAGE
 .page main section.content ul li::before {
   left: -1.5rem;
 }
+.page main nav.tabs.sub {
+  margin-bottom: 5rem;
+}
 .wrap.align-left {
   width: 60%;
   margin-bottom: 2rem;
@@ -929,6 +932,60 @@ PAGE ABOUT-US
 .sustainability.two-column > div .col figure img {
   width: 25rem;
   padding-left: 3rem;
+}
+/*=====================
+PAGE OUR-WORK
+=====================*/
+body.page-template-page-our-work section.content.subpage,
+body.page-template-page-our-work-search section.content.subpage {
+  border-top-width: 0.3rem;
+  border-bottom-width: 0.3rem;
+}
+body.page-template-page-our-work section.content.subpage header,
+body.page-template-page-our-work-search section.content.subpage header {
+  margin-bottom: 3rem;
+}
+body.page-template-page-our-work section.content.subpage header h1,
+body.page-template-page-our-work-search section.content.subpage header h1,
+body.page-template-page-our-work section.content.subpage header h2,
+body.page-template-page-our-work-search section.content.subpage header h2 {
+  font-size: 2.1rem;
+  line-height: normal;
+  font-size: 1.3rem;
+  padding-right: 60%;
+}
+body.page-template-page-our-work section.content.subpage header img.icon,
+body.page-template-page-our-work-search section.content.subpage header img.icon {
+  height: 2em;
+  margin-right: 2rem;
+}
+/*TABS*/
+nav.tabs > a {
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  padding: 1rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+nav.tabs > a span {
+  border-bottom: #6394AB 0.3rem solid;
+  padding-bottom: 0.5em;
+}
+nav.tabs > a.selected {
+  color: white;
+  padding-bottom: 2.5rem;
+  margin-bottom: -0.3rem;
+}
+nav.tabs.sub > a {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+}
+nav.tabs.sub > a img {
+  width: 5.3rem;
+  margin-right: 1em;
 }
 /*=====================
 TEMPLATE LIST EVENTS

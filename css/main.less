@@ -688,7 +688,7 @@ main {
 nav.tabs {
 	.flex-display();
     .flex-flow(row nowrap);
-	.align-items(stretch);
+	.justify-content(center);
 
 	> a {
 		background: fade(@color-nav-blue, 20%);
@@ -701,12 +701,12 @@ nav.tabs {
 		padding: 1.5rem 1rem 1rem 1rem;
 		margin: 0 0.5rem 1rem 0.5rem;
 
-		.flex(0 0 ((100vw / 3) - (@vw-spacing * 2) - (0.5rem * 3) - 0.1rem) );
+		// .flex(0 0 ((100vw / 3) - (@vw-spacing * 2) - (0.5rem * 3) - 0.1rem) );
+		.flex(0 0 32.2%);
 		.flex-display();
 		.flex-flow(row nowrap);
 
 		span {
-			display: block;
 			border-bottom: @color-nav-blue 0.5rem solid;
 			padding-bottom: 0.5em;
 
@@ -735,35 +735,33 @@ nav.tabs {
 	}
 
 	&.sub {
-		//When tabs are shown in the bottom
-		.align-items(auto);
-
+	//When tabs are shown in the bottom
 		> a {
-
 			background-color: transparent;
+			padding: 0;
+			margin: 0;
+			.flex(1 1 50%);
 
-			&::before { //Add icon
-				content: "";
-				width: 100%; height: 10rem;
-				background-image: url('../img/icon-community.svg');
-    			background-size: contain;
-				background-repeat: no-repeat;
-				background-position: left bottom;
-				margin-right: 1rem;
-				.flex(0 0 50%);
+			img {
+				width:8rem;
+				height: 100%;
+				margin-right: 0.5em;
 			}
 
 			span {
-
+				.flex(1 1 auto);
 			}
 
+			&:first-of-type {
+				margin-right: 2rem;
+			}
+			&:last-of-type {
+				margin-left: 2rem;
+			}
 			&.resilience {
 				color: @color-green;
 				span {
 					border-bottom-color: @color-green;
-				}
-				&::before {
-					background-image: url('../img/icon-community.svg');
 				}
 			}
 			&.education {
@@ -771,27 +769,75 @@ nav.tabs {
 				span {
 					border-bottom-color: @color-yellow;
 				}
-				&::before {
-					background-image: url('../img/icon-education.svg');
-				}
 			}
 			&.research {
 				color: @color-blue;
 				span {
 					border-bottom-color: @color-blue;
 				}
-				&::before {
-					background-image: url('../img/icon-research.svg');
-				}
-			}
-
-			&:first-of-type {
-				margin-left: -1rem;
-				margin-right: 12rem;
 			}
 
 		}
 	}
+
+	// &.sub {
+	// 	//When tabs are shown in the bottom
+	// 	.align-items(auto);
+	//
+	// 	> a {
+	//
+	// 		background-color: transparent;
+	//
+	// 		&::before { //Add icon
+	// 			content: "";
+	// 			width: 100%; height: 10rem;
+	// 			background-image: url('../img/icon-community.svg');
+    // 			background-size: contain;
+	// 			background-repeat: no-repeat;
+	// 			background-position: left bottom;
+	// 			margin-right: 1rem;
+	// 			.flex(0 0 50%);
+	// 		}
+	//
+	// 		span {
+	//
+	// 		}
+	//
+	// 		&.resilience {
+	// 			color: @color-green;
+	// 			span {
+	// 				border-bottom-color: @color-green;
+	// 			}
+	// 			&::before {
+	// 				background-image: url('../img/icon-community.svg');
+	// 			}
+	// 		}
+	// 		&.education {
+	// 			color: @color-yellow;
+	// 			span {
+	// 				border-bottom-color: @color-yellow;
+	// 			}
+	// 			&::before {
+	// 				background-image: url('../img/icon-education.svg');
+	// 			}
+	// 		}
+	// 		&.research {
+	// 			color: @color-blue;
+	// 			span {
+	// 				border-bottom-color: @color-blue;
+	// 			}
+	// 			&::before {
+	// 				background-image: url('../img/icon-research.svg');
+	// 			}
+	// 		}
+	//
+	// 		&:first-of-type {
+	// 			margin-left: -1rem;
+	// 			margin-right: 12rem;
+	// 		}
+	//
+	// 	}
+	// }
 }
 
 
@@ -1323,6 +1369,9 @@ PAGE
 
 		nav.tabs {
 			margin: 0 @vw-spacing;
+			&.sub {
+				margin-top: @vh-spacing;
+			}
 		}
 	}
 
@@ -1725,6 +1774,10 @@ body.page-template-page-our-work-search {
 					margin-right: 4rem;
 				}
 			}
+
+			> h1, > h2, > h3 {
+                text-transform: uppercase;
+            }
 		}
 	}
 

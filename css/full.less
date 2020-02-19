@@ -766,6 +766,12 @@ PAGE
 				}
 			}
         }
+
+        nav.tabs {
+			&.sub {
+				margin-bottom: @vh-spacing;
+			}
+		}
     }
 }
 
@@ -1013,6 +1019,75 @@ PAGE ABOUT-US
                     padding-left: 3rem;
                 }
             }
+        }
+    }
+}
+
+/*=====================
+PAGE OUR-WORK
+=====================*/
+
+body.page-template-page-our-work,
+body.page-template-page-our-work-search {
+
+	section.content {
+
+		&.subpage {
+			//Look like a tab
+			border-top-width: 0.3rem;
+			border-bottom-width: 0.3rem;
+
+			header {
+                margin-bottom: 3rem;
+				h1, h2 {
+					.title-h2;
+                    padding-right: 60%;
+				}
+
+				img.icon {
+					height: 2em;
+					margin-right: 2rem;
+				}
+			}
+		}
+	}
+}
+
+
+/*TABS*/
+nav.tabs {
+
+	> a {
+		font-size: 1.3rem;
+        line-height: 1.2em;
+
+		padding: 1rem;
+		margin: 0 0.5rem 1rem 0.5rem;
+
+		// .flex(0 0 ((100vw / 3) - (@vw-spacing * 2) - (0.5rem * 3) - 0.1rem) );
+        .flex(1);
+
+		span {
+			border-bottom: @color-nav-blue 0.3rem solid;
+			padding-bottom: 0.5em;
+		}
+
+		&.selected {
+			color: white;
+			padding-bottom: 2.5rem;
+			margin-bottom: -0.3rem;
+		}
+	}
+
+	&.sub {
+		//When tabs are shown in the bottom
+        > a {
+			.flex(0 0 30%);
+
+			img {
+				width: 5.3rem;
+                margin-right: 1em;
+			}
         }
     }
 }

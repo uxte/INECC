@@ -1273,6 +1273,14 @@
 		"oAP": "/template-parts/list-upcoming-events.php",
 		"oF": 0
 		},
+	"/template-parts/page/_copy_2_page-tabs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/template-parts/page/_copy_2_page-tabs.php",
+		"oF": 0
+		},
 	"/template-parts/page/_copy_page-tabs.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1295,6 +1303,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/page/page-our-work-parent.php",
+		"oF": 0
+		},
+	"/template-parts/page/page-tabs-sub.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/page/page-tabs-sub.php",
 		"oF": 0
 		},
 	"/template-parts/page/page-tabs.php": {
