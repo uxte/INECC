@@ -474,12 +474,9 @@ body.home {
                         }
                     }
 
-                    &:nth-of-type(n+2) { //All except the first
-                    }
-
-                    nav {
-
-                    }
+                    address {
+            			margin-bottom: 2em;
+            		}
                 }
 
                 nav.prev-next {
@@ -1081,6 +1078,51 @@ body.page-template-page-our-work-search {
 	}
 }
 
+body.page-template-page-our-work-search {
+    section.content {
+		&.subpage {
+            section.events,
+            section.press,
+            section.publications {
+                max-width: 67%;
+            }
+            section.events {
+                .event {
+    				.img, time {
+    					margin-left: 0;
+    				}
+    				time {
+    					left: 0;
+    				}
+    			}
+            }
+            section.press {
+                article {
+                    h2 {
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+    				time {
+    					font-size: 1.2rem;
+    				}
+    			}
+            }
+            section.publications {
+                article {
+    				figure {
+                        height: 14.7rem;
+                    }
+                    time {
+    					font-size: 1.2rem;
+    				}
+                    .button {
+                        font-size: 1.2rem;
+                    }
+    			}
+            }
+        }
+    }
+}
 
 /*TABS*/
 nav.tabs {
@@ -1151,6 +1193,10 @@ section.events {
 			height: calc(20rem * 0.5625);
 
 		}
+
+        address {
+            margin-bottom: 2em;
+        }
 
     }
 }

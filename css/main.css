@@ -1531,6 +1531,10 @@ body.page-template-page-our-work section.content.subpage > h3,
 body.page-template-page-our-work-search section.content.subpage > h3 {
   text-transform: uppercase;
 }
+body.page-template-page-our-work section.content.subpage article > h2,
+body.page-template-page-our-work-search section.content.subpage article > h2 {
+  text-transform: none;
+}
 body.page-template-page-our-work aside.content.parent,
 body.page-template-page-our-work-search aside.content.parent {
   padding: 0 3rem;

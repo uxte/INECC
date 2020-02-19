@@ -398,6 +398,9 @@ body.home main section.events .event.hide .row .col:last-of-type,
 body.home main section.events .event.hide footer {
   display: none;
 }
+body.home main section.events .event address {
+  margin-bottom: 2em;
+}
 body.home main section.events nav.prev-next {
   grid-column: 1;
   grid-row: 2;
@@ -991,6 +994,34 @@ body.page-template-page-our-work-search aside.content.parent p {
   font-size: 1.2rem;
   line-height: 1.5em;
 }
+body.page-template-page-our-work-search section.content.subpage section.events,
+body.page-template-page-our-work-search section.content.subpage section.press,
+body.page-template-page-our-work-search section.content.subpage section.publications {
+  max-width: 67%;
+}
+body.page-template-page-our-work-search section.content.subpage section.events .event .img,
+body.page-template-page-our-work-search section.content.subpage section.events .event time {
+  margin-left: 0;
+}
+body.page-template-page-our-work-search section.content.subpage section.events .event time {
+  left: 0;
+}
+body.page-template-page-our-work-search section.content.subpage section.press article h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+body.page-template-page-our-work-search section.content.subpage section.press article time {
+  font-size: 1.2rem;
+}
+body.page-template-page-our-work-search section.content.subpage section.publications article figure {
+  height: 14.7rem;
+}
+body.page-template-page-our-work-search section.content.subpage section.publications article time {
+  font-size: 1.2rem;
+}
+body.page-template-page-our-work-search section.content.subpage section.publications article .button {
+  font-size: 1.2rem;
+}
 /*TABS*/
 nav.tabs > a {
   font-size: 1.3rem;
@@ -1042,6 +1073,9 @@ section.events .event .row > .col:first-of-type {
 section.events .event .img {
   width: 20rem;
   height: calc(20rem * 0.5625);
+}
+section.events .event address {
+  margin-bottom: 2em;
 }
 @media screen and (min-width: 1280px) {
   .wrapper {
