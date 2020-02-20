@@ -673,6 +673,9 @@ PAGE
 .page main section.content ul li::before {
   left: -1.5rem;
 }
+.page main section.content p.button {
+  line-height: 1em;
+}
 .page main nav.tabs.sub {
   margin-bottom: 5rem;
 }
@@ -724,6 +727,21 @@ ul.list-horizontal > li {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+ul.list-horizontal.two-col > li {
+  -webkit-flex: 40%;
+  -ms-flex: 40%;
+  flex: 40%;
+}
+ul.list-horizontal.two-col > li:nth-of-type(odd) {
+  margin-right: 1em;
+}
+.icon-pdf figure {
+  margin: 0.5em !important;
+}
+.icon-pdf figure a img {
+  width: 7rem;
+  height: auto;
 }
 /*=====================
 PAGE ABOUT-US
@@ -969,7 +987,7 @@ body.page-template-page-our-work-search section.content.subpage header h2 {
   font-size: 2.1rem;
   line-height: normal;
   font-size: 1.3rem;
-  padding-right: 60%;
+  margin-right: 60%;
 }
 body.page-template-page-our-work section.content.subpage header img.icon,
 body.page-template-page-our-work-search section.content.subpage header img.icon {
@@ -1025,6 +1043,7 @@ body.page-template-page-our-work-search section.content.subpage section.publicat
 /*TABS*/
 nav.tabs > a {
   font-size: 1.3rem;
+  text-transform: uppercase;
   line-height: 1.2em;
   padding: 1rem;
   margin: 0 0.5rem 1rem 0.5rem;
@@ -1076,6 +1095,47 @@ section.events .event .img {
 }
 section.events .event address {
   margin-bottom: 2em;
+}
+/*=====================
+PAGE ECOETHIC
+=====================*/
+.newsletter-archive .display_archive {
+  margin-top: 0;
+}
+.newsletter-archive .display_archive .campaign {
+  font-size: 1.2rem;
+  padding: 0.5em 0;
+}
+/*=====================
+PAGE CONTACT US
+=====================*/
+/*=====================
+PAGE DONATE
+=====================*/
+body.page-donate section.content .cover.donate {
+  margin: -2rem -3rem 2rem -3rem;
+}
+body.page-donate section.content .cover.donate h2 {
+  font-size: 2.3rem;
+  padding: 0 5em;
+}
+body.page-donate section.content .cover.donate p {
+  margin-bottom: 2rem;
+}
+body.page-donate section.content .cover.donate figure img {
+  width: 6rem;
+  height: auto;
+}
+body.page-donate section.content .inecc-box > div {
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+body.page-donate section.content .faq {
+  color: #6394AB;
+}
+.inecc-dropdown .block h3:first-of-type {
+  background-size: 2.2rem;
 }
 @media screen and (min-width: 1280px) {
   .wrapper {

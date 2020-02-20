@@ -11,7 +11,8 @@ $args = array(
             'inclusive' => true,
         )
     ),
-    'order'                  => 'ASC'
+    'order'                  => 'ASC',
+    'posts_per_page'         => 3
 );
 
 // The Query

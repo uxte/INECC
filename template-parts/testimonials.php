@@ -5,7 +5,8 @@ $args = array(
     'category_name'          => 'testimonial',
     'post_type'              => 'post',
     'post_status'            => 'publish',
-    'order'                  => 'ASC'
+    'order'                  => 'ASC',
+    'posts_per_page'         => 3
 );
 
 // The Query

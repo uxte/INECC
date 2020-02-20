@@ -762,6 +762,9 @@ PAGE
 					left: -1.5rem;
 				}
 			}
+            p.button {
+                line-height: 1em;
+            }
         }
 
         nav.tabs {
@@ -813,6 +816,27 @@ ul.list-horizontal {
 
     > li {
         .flex(1);
+    }
+
+    &.two-col {
+        > li {
+            .flex(40%);
+            &:nth-of-type(odd) {
+                margin-right: 1em;
+            }
+        }
+    }
+}
+
+.icon-pdf {
+    figure {
+        margin: 0.5em !important;
+        a {
+            img {
+                width: 7rem;
+                height: auto;
+            }
+        }
     }
 }
 
@@ -1047,7 +1071,7 @@ body.page-template-page-our-work-search {
                 margin-bottom: 3rem;
 				h1, h2 {
 					.title-h2;
-                    padding-right: 60%;
+                    margin-right: 60%;
 				}
 
 				img.icon {
@@ -1129,6 +1153,7 @@ nav.tabs {
 
 	> a {
 		font-size: 1.3rem;
+        text-transform: uppercase;
         line-height: 1.2em;
 
 		padding: 1rem;
@@ -1200,6 +1225,76 @@ section.events {
 
     }
 }
+
+/*=====================
+PAGE ECOETHIC
+=====================*/
+
+.newsletter-archive {
+	.display_archive {
+        margin-top: 0;
+		.campaign {
+            font-size: 1.2rem;
+            padding: 0.5em 0;
+			> a {
+
+			}
+		}
+	}
+}
+
+/*=====================
+PAGE CONTACT US
+=====================*/
+
+body.page-contact-us {
+	section.content {
+		h3 {
+		}
+	}
+}
+
+/*=====================
+PAGE DONATE
+=====================*/
+
+body.page-donate {
+	section.content {
+		.cover.donate {
+			margin: -2rem -@vw-spacing 2rem -@vw-spacing;
+			h2 {
+				font-size: 2.3rem;
+                padding: 0 5em;
+			}
+			p {
+				margin-bottom: 2rem;
+			}
+			figure {
+				img {
+                    width: 6rem;
+                    height: auto;
+                }
+			}
+		}
+
+        .inecc-box > div {
+            .flex-flow(column wrap);
+        }
+
+		.faq {
+			color: @color-nav-blue;
+		}
+	}
+}
+
+.inecc-dropdown {
+	.block {
+		h3:first-of-type { //Block header
+			background-size: 2.2rem;
+		}
+	}
+}
+
 
 
 //

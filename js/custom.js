@@ -3,12 +3,13 @@ function openMenu(menu, button) {
 
     menu.classList.toggle('open');
     button.classList.toggle('open');
-    event.preventDefault();
+    // event.preventDefault();
 }
 function setMenu() {
 
     var menu = document.getElementById("main-nav");
     var button = menu.querySelector("a.menu");
+    var item = menu.querySelector("li.menu-item");
 
     function bindClick() {
         return function() {
@@ -17,6 +18,7 @@ function setMenu() {
     }
 
     button.addEventListener("click", bindClick());
+    item.addEventListener("click", bindClick());
 }
 setMenu();
 
