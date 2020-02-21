@@ -52,7 +52,7 @@
 
 				<li class="<?php echo $class ?>">
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('thumbnail'); ?>
 				</li>
 
 				<hr>

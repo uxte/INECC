@@ -23,7 +23,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the
     <h2><?php the_title(); ?></h2>
     <div class="row">
         <figure class="img col">
-            <?php print get_the_post_thumbnail( $post, 'medium' ); ?>
+            <?php print get_the_post_thumbnail( $post, 'thumbnail' ); ?>
         </figure>
         <div class="content col">
             <?php the_content();  ?>

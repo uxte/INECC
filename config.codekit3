@@ -38,8 +38,8 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/full-min.css",
+		"oA": 0,
+		"oAP": "/css/min/full-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -54,7 +54,7 @@
 		"oA": 0,
 		"oAP": "/css/full.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
@@ -64,8 +64,8 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/main-min.css",
+		"oA": 0,
+		"oAP": "/css/min/main-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -80,7 +80,7 @@
 		"oA": 0,
 		"oAP": "/css/main.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
@@ -90,8 +90,8 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/map-min.css",
+		"oA": 0,
+		"oAP": "/css/min/map-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -106,7 +106,7 @@
 		"oA": 0,
 		"oAP": "/css/map.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
@@ -122,7 +122,7 @@
 		"oA": 1,
 		"oAP": "/css/mixins.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
@@ -133,7 +133,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/css/normalize-min.css",
+		"oAP": "/css/min/normalize-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -148,7 +148,7 @@
 		"oA": 1,
 		"oAP": "/css/variables.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
@@ -1237,7 +1237,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/style-min.css",
+		"oAP": "/min/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -3193,10 +3193,10 @@
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.css",
-		"autoOutputPathRelativePath": "",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 2,
 		"createSourceMap": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
@@ -3280,7 +3280,7 @@
 		"createSourceMap": 0,
 		"enableJavascript": 0,
 		"mathStyle": 0,
-		"outputStyle": 0,
+		"outputStyle": 1,
 		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
