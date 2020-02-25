@@ -789,8 +789,13 @@ hr {
     .flex-display();
     .flex-flow(row wrap);
 
+    :not(.col),
+    > h2 {
+        .flex(0 0 100%);
+    }
+
     .col {
-        .flex(1 1 50%);
+        .flex(1 1 40%);
 
         &:first-of-type {
             padding-right: 1rem;
