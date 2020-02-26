@@ -1,18 +1,27 @@
 // MENU
-function openMenu(menu, button) {
+// Define our viewportWidth variable
+var viewportWidth;
 
-    menu.classList.toggle('open');
-    button.classList.toggle('open');
-    // event.preventDefault();
-}
+// Set/update the viewportWidth value
+var setViewportWidth = function () {
+	viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+};
+
+var openMenu = function(menu, button) {
+    if (viewportWidth < 1025) {
+        menu.classList.toggle('open');
+        button.classList.toggle('open');
+        // event.preventDefault();
+    }
+};
 function setMenu() {
-
     var menu = document.getElementById("main-nav");
     var button = menu.querySelector("a.menu");
     var item = menu.querySelector("li.menu-item");
 
     function bindClick() {
         return function() {
+            setViewportWidth();
             openMenu( menu, button );
         };
     }
@@ -20,7 +29,14 @@ function setMenu() {
     button.addEventListener("click", bindClick());
     item.addEventListener("click", bindClick());
 }
+
+setViewportWidth();
 setMenu();
+
+// On resize events, recalculate and log
+window.addEventListener('resize', function () {
+	setViewportWidth();
+}, false);
 
 // SEE MORE
 // Show hidden elements on button click
