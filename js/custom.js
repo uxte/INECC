@@ -175,3 +175,17 @@ function startDropdown(dropdown) {
 }
 
 startDropdown('faq');
+
+// SIDEBAR NAV FIX SCROLL
+var sbnav = document.getElementById('sidebar-nav');
+var sbnav_y = sbnav.getBoundingClientRect().top - 48;
+
+window.onscroll = function() {
+	var window_y = window.scrollY;
+
+	if ( window_y >= sbnav_y ) {
+		sbnav.classList.add('fixed');
+	} else {
+		sbnav.classList.remove('fixed');
+	}
+};
