@@ -1370,6 +1370,12 @@ aside.sidebar {
  	                    padding-right: 1.5em;
  					}
                 }
+
+                &.current-menu-item, &.current-menu-parent {
+                    > a {
+                        color: @color-green !important;
+                    }
+                }
  			}
          }
 
@@ -1382,7 +1388,7 @@ aside.sidebar {
 
 body.home {
     aside.sidebar {
-        top: 738px;
+        top: 834px;
     }
 }
 

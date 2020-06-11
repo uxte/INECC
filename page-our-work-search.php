@@ -40,6 +40,10 @@
 
 </main>
 
+<div class="search">
+    SEARCH
+</div>
+
 <aside class="content parent wrapper">
     <?php
     //Get parent content
