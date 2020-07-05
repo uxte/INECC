@@ -1,13 +1,34 @@
 <?php
 
+$s = $_GET['s'];
+$local = $_GET['localities'];
+$cat = $_GET['cat'];
+
 // WP_Query arguments
 $args = array(
     'category_name'          => 'event',
     'post_type'              => 'post',
     'post_status'            => 'publish, future',
-    'order'                  => 'DESC'
+    'order'                  => 'DESC',
+    'cat'                    => $cat,
 );
 
+if(!empty($local)) {
+    $args = array(
+        'meta_query' => array(
+            'relation' => 'AND',
+            array(
+                'key' => 'event_place',
+                'value' => ''.$local.''
+            )
+        )
+            );
+}
+if(!empty($s)) {
+    $args = array(
+        's' => $s,
+    );
+}
 // The Query
 $posts = new WP_Query( $args );
 
