@@ -1105,6 +1105,71 @@ body.page-template-page-our-work-search {
             line-height: 1.5em;
         }
 	}
+	aside.search-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+		&.absolute {
+			position: absolute;
+			width: 275px;
+			left: calc(580px + 6rem);
+        }
+		.button-container {
+			background-color: transparent;
+			display: block;
+			width: 100%;
+			padding: .5rem;
+			&:nth-child(2) {
+				float: none;
+				position: relative;
+                order: 2;
+				&:before {
+                    display: none;
+				}
+			}
+			a.button {
+				color: rgba(@color-nav-blue, .5);
+                border-bottom: 0;
+                border: 1px solid rgba(@color-nav-blue, .5);
+                display: block;
+                text-align: center;
+                padding: 1rem;
+			}
+		}
+		.search, .filter {
+            //display:block;
+			padding: 2rem .5rem;
+            background-color: transparent;
+			font-size: 1.1rem;
+			line-height: 1.7em;
+            h4 {
+                display: none;
+            }
+			form {
+				ul {
+					margin: 1rem 0;
+					input[type="radio"] {
+						width: 1rem;
+						height: 1rem;
+					}
+				}
+			}
+            .button-container {
+                margin-top: 1rem;
+            }
+            .button-close {
+                //display: none;
+				top: 1rem;
+				right: 2rem;
+                &:after {
+					zoom: 1.5;
+                }
+            }
+        }
+        .filter {
+            order: 4;
+        }
+    }
 }
 
 body.page-template-page-our-work-search {

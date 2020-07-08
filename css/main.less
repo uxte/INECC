@@ -1814,6 +1814,8 @@ body.page-template-page-our-work-search {
 		}
 	}
 	aside.search-container {
+		background-color: transparent;
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
 		padding: 0 @vw-spacing;
 		select {
 			width: 100%;
@@ -1837,14 +1839,17 @@ body.page-template-page-our-work-search {
 					background-color: @color-green;
 				}
 			}
-			a {
+			a.button {
+				color: @color-green;
+				border-bottom-color: @color-green;
 				vertical-align: middle;
 			}
 		}
 		.search, .filter {
 			display:none;
-			padding: 1rem @vw-spacing;
+			padding: 3rem @vw-spacing;
 			background-color: rgba(@color-nav-blue, .1);
+			position: relative;
 			h4 {
 				color: @color-green;
 				padding-bottom: 2rem;
@@ -1852,6 +1857,7 @@ body.page-template-page-our-work-search {
 				border-bottom: 2px solid rgba(@color-nav-blue, .4); 
 			}
 			.button-container {
+				float: none;
 				background-color: @color-green;
 				display: block;
 				width: 100%;
@@ -1865,6 +1871,34 @@ body.page-template-page-our-work-search {
 			}
 			input[type="text"] {
 				width: 100%;
+			}
+			label {
+				font-weight: bold;
+			}
+			form {
+				ul {
+					list-style-type: none;
+					margin: 2rem 0;
+					padding: 0;
+					input[type="radio"] {
+						margin-right: 10px;
+						width: 2rem;
+						height: 2rem;
+					}
+				}
+				select {
+					margin: 1rem 0;
+				}
+			}
+			.button-close {
+				position: absolute;
+				top: 2rem;
+				right: 6rem;
+				&:after {
+					content: url("../img/icon-cross-blue.svg");
+					position: absolute;
+					zoom: 3.5;
+				}
 			}
 		}
 		#filter:target, #search:target {

@@ -189,3 +189,16 @@ window.onscroll = function() {
 		sbnav.classList.remove('fixed');
 	}
 };
+function search(){
+    var searchContainer = document.getElementById('searchContainer');
+    var eventsContainer = document.getElementById('eventsContainer');
+    var eventsTop = eventsContainer.getBoundingClientRect();
+    
+    searchContainer.classList.add('absolute');
+    searchContainer.style.top = eventsTop.top+'px';
+}
+if(viewportWidth > 1025 && document.getElementsByClassName('search-container')[0]){
+    window.addEventListener('load', function() {
+        search();
+    });
+}

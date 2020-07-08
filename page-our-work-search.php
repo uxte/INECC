@@ -18,7 +18,7 @@
         <?php endwhile; endif; wp_reset_postdata(); ?>
 
         <?php if ( is_page('INECC Events') ) : ?>
-        <section class="events">
+        <section class="events" id="eventsContainer">
 			<?php get_template_part( 'template-parts/list', 'events' ); ?>
 		</section>
         <?php endif; ?>
@@ -40,12 +40,12 @@
 
 </main>
 
-<aside class="search-container wrapper">
+<aside class="search-container wrapper" id="searchContainer">
     <div class="button-container">
-        <a href="#filter" class="button button-filter has-green-color">Filter</a>
+        <a href="#search" class="button button-search">Search</a>
     </div>
     <div class="button-container">
-        <a href="#search" class="button button-search has-green-color">Search</a>
+        <a href="#filter" class="button button-filter">Filter</a>
     </div>
     <div class="search" id="search">
         <h4>SEARCH</h4>
@@ -55,7 +55,7 @@
                 <button type="submit" class="button has-white-color">Search</button>
             </div>
         </form>
-        <a href="#" class="button-close">x</a>
+        <a href="#" class="button-close"></a>
     </div>
     <div class="filter" id="filter">
         <h4>FILTER</h4>
@@ -96,7 +96,7 @@
                 <button type="submit" class="button has-white-color">Apply filter</button>
             </div>
         </form>
-        <a href="#" class="button-close">x</a>
+        <a href="#" class="button-close"></a>
     </div>
         <?php /*
             $s = $_GET['s'];
