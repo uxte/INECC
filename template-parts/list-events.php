@@ -44,7 +44,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
 ?>
 
 <article class="event slide <?php echo $class_hide;?>" id="<?php echo $post->post_name?>">
-    <h2><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'INECC Events' ) ) ) . "#" . $post->post_name ?>"><?php the_title(); ?></a></h2>
+    <h2><a href="<?php echo $post->event_fb; ?> ?>"><?php the_title(); ?></a></h2>
     <div class="row">
         <div class="col">
             <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php print get_the_date('M \<\s\p\a\n\>d\<\/\s\p\a\n\>');  ?></time>
