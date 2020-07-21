@@ -202,3 +202,24 @@ if(viewportWidth > 1025 && document.getElementsByClassName('search-container')[0
         search();
     });
 }
+
+//SIDEBAR-NAV - add current-menu-item class to the anchors
+if(viewportWidth > 1025 && document.getElementsByClassName('sidebar-nav')[0]){
+    window.addEventListener('hashchange', function() {
+        var hash = window.location.hash.substring(1);
+        var menuAbout = document.getElementById('sidebar-nav').querySelector("li.menu-item-911 .sub-menu");
+        var menuAnchor = menuAbout.querySelectorAll("li.menu-item a");
+
+        for (var i = 0; i < menuAnchor.length; i++) {
+            var menuAnchorHash = menuAnchor[i].href.substring(menuAnchor[i].href.indexOf('#') + 1);
+            if (menuAnchorHash === hash) {
+                //window.alert(menuAnchorHash);
+                //window.alert(hash);
+                menuAnchor[i].parentNode.classList.add('current-menu-item');
+                //break;
+            } else {
+                menuAnchor[i].parentNode.classList.remove('current-menu-item');
+            }
+        }
+    });
+}
