@@ -1,6 +1,6 @@
 <aside class="sidebar">
 
-<?php //if ( is_user_logged_in() ) : ?>
+<?php if ( is_user_logged_in() ) : ?>
 
 <?php
 $args = array(
@@ -21,7 +21,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the
     </div>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
-<?php //endif; ?>
+<?php endif; ?>
 
 <?php if ( !is_home() ) : ?>
     <nav class="sidebar-nav" id="sidebar-nav">
