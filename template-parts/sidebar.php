@@ -23,7 +23,7 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the
 <?php endwhile; endif; wp_reset_postdata(); ?>
 <?php endif; ?>
 
-<?php if ( !is_home() ) : ?>
+<?php if ( !is_home() && !is_page( 'Sitemap' ) ) : ?>
     <nav class="sidebar-nav" id="sidebar-nav">
     <?php
     wp_nav_menu( array(
