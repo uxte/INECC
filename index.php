@@ -70,7 +70,7 @@
 				<a class="button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Our reach' ) ) ); ?>">Know <span>more</span></a>
 			</header>
 			<figure>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/map.svg" alt="Map of india">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/map.png" alt="Map of india">
 			</figure>
 		</section>
 
