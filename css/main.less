@@ -1417,6 +1417,11 @@ TEMPLATE LIST EVENTS
 section.events {
 	padding: 0;
 
+    > div.search-results-header {
+        color: @color-orange;
+        border-color: @color-orange;
+    }
+
 	.event {
 
 		> h1,
@@ -1518,6 +1523,11 @@ TEMPLATE LIST PRESS
 section.press {
 	padding: 0;
 
+    > div.search-results-header {
+        color: @color-green-dark;
+        border-color: @color-green-dark;
+    }
+
 	article {
 		h2 {
 			font-size: inherit;
@@ -1539,6 +1549,11 @@ TEMPLATE LIST PUBLICATIONS
 ========================*/
 section.publications {
 	padding: 0;
+
+    > div.search-results-header {
+        color: @color-blue-dark;
+        border-color: @color-blue-dark;
+    }
 
 	article {
 		margin-bottom: 3rem;
@@ -1762,6 +1777,13 @@ body.page-about-us {
 PAGE OUR-WORK
 =====================*/
 
+div.search-results-header {
+    color: #000;
+    border: 1px solid #000;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
 body.page-template-page-our-work,
 body.page-template-page-our-work-search {
 
@@ -1829,6 +1851,7 @@ body.page-template-page-our-work-search {
 		background-color: @color-nav-blue-light;
         margin: (@vh-spacing) -(@vw-spacing+2rem) -2rem;
         position: relative;
+        overflow: hidden;
 
         .tabs {
 
@@ -1845,6 +1868,20 @@ body.page-template-page-our-work-search {
                 &:first-of-type {
                     float: right;
                 }
+            }
+        }
+
+        button.button.close {
+            position: absolute;
+            top: 10rem;
+            right: 7rem;
+            z-index: 999;
+            border: 0;
+
+            &:after {
+                content: url("../img/icon-cross-blue.svg");
+                position: absolute;
+                zoom: 5;
             }
         }
 
@@ -1910,17 +1947,9 @@ body.page-template-page-our-work-search {
                 }
 			}
 
-			.button.close {
-				position: absolute;
-				top: 2rem;
-				right: 8rem;
-
-				&:after {
-					content: url("../img/icon-cross-blue.svg");
-					position: absolute;
-					zoom: 5;
-				}
-			}
+            &.active {
+                display: block;
+            }
 		}
 
         section.search {
@@ -1950,9 +1979,9 @@ body.page-template-page-our-work-search {
             }
         }
 
-		#filter:target, #search:target {
-            display: block;
-		}
+		// #filter:target, #search:target {
+        //     display: block;
+		// }
 	}
 }
 
