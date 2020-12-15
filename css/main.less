@@ -2214,6 +2214,81 @@ body.page-menu {
     }
 }
 
+
+//PAGE SITEMAP
+body.page-sitemap {
+	section.content {
+        
+        nav.sitemap-nav {
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+					margin-left: 0rem;
+                    margin-bottom: 0.2em;
+                    &:before {
+                        display:none;
+                    }
+                    &:first-child {
+                        margin-top: 0.5em;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        letter-spacing: 0.04em;
+                        //font-size: 1.3rem;
+                        line-height: 1.3em;
+                        color: @color-black;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: @color-black;
+                        }
+                    }
+
+                    ul {
+                        //padding-left: 1em;
+
+                        li {
+                            border: 0;
+
+                            a {
+                                text-transform: none;
+                            }
+                        }
+                    }
+
+                    &.menu-item-has-children {
+                        ul.sub-menu {
+                            margin-bottom: 1em;
+                            li {
+								margin-left: 2rem;
+                                a {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                    &.menu-item-670 { //Donate link
+                        > a {
+                            background: transparent url("../img/icon-donate-black.svg") no-repeat right center;
+                            background-size: contain;
+                            padding-right: 1.5em;
+                        }
+                   }
+                }
+            }
+        }
+
+    }
+}
+
 // SIDEBAR
 aside.sidebar {
     display: none;

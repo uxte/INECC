@@ -6,8 +6,8 @@
     <hr>
 
     <?php get_template_part( 'template-parts/social', 'links' ); ?>
-    <a class="button donate" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>">Donate to build a better future</a>
-    <a class="button sitemap" href="#">Site map</a>
+    <a class="button donate" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>" title="Donate">Donate to build a better future</a>
+    <a class="button sitemap" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Site map' ) ) ); ?>" title="Site map">Site map</a>
 
 </footer>
 
