@@ -1,7 +1,12 @@
 @import "variables";
 @import "mixins";
 
+html {
+    scroll-behavior: smooth;
+} 
+
 body {
+    position: relative;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -1429,19 +1434,61 @@ aside.sidebar {
     line-height: 1em;
 
     .sb-post {
-        background: #eee;
-        margin: @vw-spacing;
         max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+        img {
+            width:100%;
+        }
+        .sb-post-content {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            bottom: 4.5em;
+            left: 0;
+            text-align: center;
+        }
+        .wp-block-button {
+            &:extend(.button);
+        }
     }
 
+    a.sb-menu-toggle {
+        display: block;
+        background: fade(#fff, 50%) url("../img/icon-menu-green.svg") no-repeat 0 0;
+        background-size: 1.1rem;
+        background-position: right;
+        color: @color-nav-blue;
+        text-decoration: none;
+        font-size: 1rem;
+        padding-right: 2rem;
+        text-align: right;
+        .open-menu {
+            display: block;
+        }
+        .close-menu {
+            display: none;
+        }
+        &.open {
+            background-image:url("../img/icon-cross-green.svg");
+            .close-menu {
+                display: block;
+            }
+            .open-menu {
+                display: none;
+            }
+        }
+
+    }
     nav.sidebar-nav {
         margin: @vw-spacing;
-
          ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            &.open {
+                display: none;
+            }
              li {
  				margin-bottom: 0.2em;
  				&:first-child {
@@ -1453,7 +1500,7 @@ aside.sidebar {
  					text-transform: uppercase;
                     font-weight: 500;
                     letter-spacing: 0.04em;
- 					font-size: 1.3rem;
+ 					font-size: .9rem;
                     line-height: 1.3em;
                     color: @color-nav-blue;
 
@@ -1464,6 +1511,7 @@ aside.sidebar {
  				}
 
  				ul {
+                     display: block;
  					padding-left: 1em;
 
  					li {
@@ -1504,8 +1552,10 @@ aside.sidebar {
     }
     
     a.back-to-top {
+        position: absolute;
         font-size: 1rem;
-        margin-top: 25px;
+        bottom: 20em;
+        width: 100%;
     }
 }
 

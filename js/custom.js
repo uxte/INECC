@@ -33,6 +33,14 @@ function setMenu() {
 setViewportWidth();
 setMenu();
 
+var sbMenuToggle = document.querySelector("#sbMenuToggle");
+var sbMenu = document.querySelector("#sbMenu");
+
+sbMenuToggle.addEventListener("click", function(){
+    sbMenuToggle.classList.toggle("open");
+    sbMenu.classList.toggle("open");
+});
+
 // On resize events, recalculate and log
 window.addEventListener('resize', function () {
 	setViewportWidth();
@@ -177,7 +185,7 @@ function startDropdown(dropdown) {
 startDropdown('faq');
 
 // SIDEBAR NAV FIX SCROLL
-var sbnav = document.getElementById('sidebar-nav');
+/*var sbnav = document.getElementById('sidebar-nav');
 var sbnav_y = sbnav.getBoundingClientRect().top - 48;
 
 window.onscroll = function() {
@@ -188,7 +196,7 @@ window.onscroll = function() {
 	} else {
 		sbnav.classList.remove('fixed');
 	}
-};
+};*/
 // function search(){
 //     var searchContainer = document.getElementById('searchContainer');
 //     var eventsContainer = document.getElementById('eventsContainer');
