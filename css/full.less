@@ -1,7 +1,12 @@
 @import "variables";
 @import "mixins";
 
+html {
+    scroll-behavior: smooth;
+} 
+
 body {
+    position: relative;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -242,11 +247,11 @@ FOOTER
 =====================*/
 
 footer.main-footer {
-    .flex-display();
-	.flex-flow(row nowrap);
-    .justify-content(center);
-    .align-items(center);
-
+    //.flex-display();
+	//.flex-flow(row nowrap);
+    //.justify-content(center);
+    //.align-items(center);
+    text-align: left;
     a.back-to-top,
     hr {
         display: none;
@@ -255,10 +260,18 @@ footer.main-footer {
     * {
         margin-right: 1em;
     }
-
-    a.button.donate,
-    a.button.sitemap {
-        display: initial;
+    div.content {
+        .flex-display();
+        .flex-flow(row nowrap);
+        .justify-content(center);
+        .align-items(center);
+        a.button.donate,
+        a.button.sitemap {
+            display: initial;
+        }
+    }
+    img {
+		width: auto;
     }
 
     // p.license, address.author {
@@ -908,22 +921,22 @@ PAGE ABOUT-US
     padding-bottom: @vw-spacing;
 
     > div {
-        .flex-display();
-        .flex-flow(row wrap);
+        //.flex-display();
+        //.flex-flow(row wrap);
 
         h2 {
             .flex(0 0 100%);
             margin-bottom: 1em;
         }
 
-        .col {
+        /*.col {
             .flex(1 1 50%);
             //column widths
             &:first-of-type {
                 .flex-basis(25%);
                 padding-right: 2rem;
             }
-        }
+        }*/
     }
 }
 
@@ -1363,7 +1376,7 @@ body.page-donate {
 		}
 
         .inecc-box > div {
-            .flex-flow(column wrap);
+            //.flex-flow(column wrap);
         }
 
 		.faq {
@@ -1380,6 +1393,36 @@ body.page-donate {
 	}
 }
 
+//PAGE SITEMAP
+body.page-sitemap {
+	section.content {
+        
+        nav.sitemap-nav {
+            
+            ul {
+
+                li {
+
+                    a {
+                        font-size: 1.3rem;
+                    }
+
+                    &.menu-item-has-children {
+                        ul.sub-menu {
+                            li {
+                                a {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
 // SIDEBAR
 aside.sidebar {
     position: absolute;
@@ -1391,19 +1434,61 @@ aside.sidebar {
     line-height: 1em;
 
     .sb-post {
-        background: #eee;
-        margin: @vw-spacing;
         max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+        img {
+            width:100%;
+        }
+        .sb-post-content {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            bottom: 4.5em;
+            left: 0;
+            text-align: center;
+        }
+        .wp-block-button {
+            &:extend(.button);
+        }
     }
 
+    a.sb-menu-toggle {
+        display: block;
+        background: fade(#fff, 50%) url("../img/icon-menu-green.svg") no-repeat 0 0;
+        background-size: 1.1rem;
+        background-position: right;
+        color: @color-nav-blue;
+        text-decoration: none;
+        font-size: 1rem;
+        padding-right: 2rem;
+        text-align: right;
+        .open-menu {
+            display: block;
+        }
+        .close-menu {
+            display: none;
+        }
+        &.open {
+            background-image:url("../img/icon-cross-green.svg");
+            .close-menu {
+                display: block;
+            }
+            .open-menu {
+                display: none;
+            }
+        }
+
+    }
     nav.sidebar-nav {
         margin: @vw-spacing;
-
          ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            &.open {
+                display: none;
+            }
              li {
  				margin-bottom: 0.2em;
  				&:first-child {
@@ -1415,7 +1500,7 @@ aside.sidebar {
  					text-transform: uppercase;
                     font-weight: 500;
                     letter-spacing: 0.04em;
- 					font-size: 1.3rem;
+ 					font-size: .9rem;
                     line-height: 1.3em;
                     color: @color-nav-blue;
 
@@ -1426,6 +1511,7 @@ aside.sidebar {
  				}
 
  				ul {
+                     display: block;
  					padding-left: 1em;
 
  					li {
@@ -1463,6 +1549,13 @@ aside.sidebar {
              position: fixed;
              top: 0;
          }
+    }
+    
+    a.back-to-top {
+        position: absolute;
+        font-size: 1rem;
+        bottom: 20em;
+        width: 100%;
     }
 }
 

@@ -33,6 +33,14 @@ function setMenu() {
 setViewportWidth();
 setMenu();
 
+var sbMenuToggle = document.querySelector("#sbMenuToggle");
+var sbMenu = document.querySelector("#sbMenu");
+
+sbMenuToggle.addEventListener("click", function(){
+    sbMenuToggle.classList.toggle("open");
+    sbMenu.classList.toggle("open");
+});
+
 // On resize events, recalculate and log
 window.addEventListener('resize', function () {
 	setViewportWidth();
@@ -175,7 +183,6 @@ function startDropdown(dropdown) {
 }
 
 startDropdown('faq');
-
 
 // SEARCH TABS
 var searchOrFilter = function(){};
