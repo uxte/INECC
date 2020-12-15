@@ -19,7 +19,7 @@ $posts = new WP_Query( $args );
 // The Loop
 if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the_post(); ?>
 
-<article id="<?php echo $post->post_name?>">
+<article id="<?php echo $post->post_name; ?>">
     <h2><?php the_title(); ?></h2>
     <div class="row">
         <figure class="img col">
@@ -37,8 +37,24 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
-<?php if ( $posts->found_posts >= 11 && $posts_per_page != -1 ) : //If query has more than 10 posts add a "Show all" button ?>
+<?php if ( $posts->found_posts >= 11 && $posts_per_page != -1 ) : //If query has more than 10 posts add a "Show all" button   
+    $args = array(
+        'category_name'         => 'publication',
+        'post_type'             => 'post',
+        'post_status'           => 'publish',
+        'order'                 => 'DESC',
+        'posts_per_page'        => 1,
+        'offset'                => 9
+    );
+    // The Query
+    $posts = new WP_Query( $args );
+    if ($posts -> have_posts()):
+        while ( $posts -> have_posts() ) : $posts -> the_post();
+            $href="#". $post->post_name;
+        endwhile;
+    endif; wp_reset_postdata();
+?>
 <nav class="pagination">
-    <a class="button icon show-all" href="<?php wp_guess_url(); ?>?posts_per_page=-1"> See more <span>content</span></a>
+    <a class="button icon show-all" href="<?php wp_guess_url(); ?>?posts_per_page=-1<?php echo $href; ?>"> See more <span>content</span></a>
 </nav>
 <?php endif; ?>
