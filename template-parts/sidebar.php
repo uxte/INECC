@@ -35,4 +35,6 @@ if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the
     </nav>
 <?php endif; ?>
 
+<?php /* <a class="back-to-top" rel="nofollow" href="#top">Back to top</a> */ ?>
+
 </aside>

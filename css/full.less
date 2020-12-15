@@ -242,11 +242,11 @@ FOOTER
 =====================*/
 
 footer.main-footer {
-    .flex-display();
-	.flex-flow(row nowrap);
-    .justify-content(center);
-    .align-items(center);
-
+    //.flex-display();
+	//.flex-flow(row nowrap);
+    //.justify-content(center);
+    //.align-items(center);
+    text-align: left;
     a.back-to-top,
     hr {
         display: none;
@@ -255,10 +255,18 @@ footer.main-footer {
     * {
         margin-right: 1em;
     }
-
-    a.button.donate,
-    a.button.sitemap {
-        display: initial;
+    div.content {
+        .flex-display();
+        .flex-flow(row nowrap);
+        .justify-content(center);
+        .align-items(center);
+        a.button.donate,
+        a.button.sitemap {
+            display: initial;
+        }
+    }
+    img {
+		width: auto;
     }
 
     // p.license, address.author {
@@ -1493,6 +1501,11 @@ aside.sidebar {
              position: fixed;
              top: 0;
          }
+    }
+    
+    a.back-to-top {
+        font-size: 1rem;
+        margin-top: 25px;
     }
 }
 
