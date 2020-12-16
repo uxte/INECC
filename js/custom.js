@@ -33,6 +33,7 @@ function setMenu() {
 setViewportWidth();
 setMenu();
 
+//
 var sbMenuToggle = document.querySelector("#sbMenuToggle");
 var sbMenu = document.querySelector("#sbMenu");
 

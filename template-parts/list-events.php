@@ -1,8 +1,8 @@
 <?php
 
 $search     = $_REQUEST[ 'search' ];
-$local      = $_REQUEST[ 'local' ];
 $cat        = $_REQUEST[ 'cat' ];
+$local      = $_REQUEST[ 'local' ];
 
 // WP_Query arguments
 $args = array(
@@ -31,9 +31,21 @@ $posts = new WP_Query( $args );
 
 // if search
 if ( isset( $search ) ) {
-    $isSearchPage = true;
     $count = $posts -> post_count;
-    print '<div class="search-results-header">' . $count . ' results for search term: <strong>' . $_REQUEST[ 'search' ] . ' </strong></div>';
+    print '<div class="search-results-header"><strong>' . $count . '</strong> results for search term: <strong>' . $search . ' </strong></div>';
+}
+
+// if filter
+if ( isset( $local ) || isset( $cat ) ) {
+    $count = $posts -> post_count;
+    $cat_name = get_term( $cat )->name;
+
+    print '<div class="search-results-header"><strong>' . $count . '</strong> results for filter: ';
+    print   '<strong>' . $cat_name . ' </strong>';
+    if ( $local != null ) {
+        print ' in <strong>' . $local . ' </strong>';
+    }
+    print '</div>';
 }
 
 // The Loop
