@@ -14,6 +14,7 @@
     </nav>
 
     <?php
+    if ( is_user_logged_in() ) {
         $pageID = get_the_ID();
 
         $args = array(
@@ -44,7 +45,7 @@
                 </div>
             </div>
 
-    <?php endwhile; endif; wp_reset_postdata(); ?>
+    <?php endwhile; endif; wp_reset_postdata(); } ?>
 
         <a class="back-to-top" rel="nofollow" href="#top">Back to top</a>
 
