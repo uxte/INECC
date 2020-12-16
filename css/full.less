@@ -3,7 +3,7 @@
 
 html {
     scroll-behavior: smooth;
-} 
+}
 
 body {
     position: relative;
@@ -1075,6 +1075,13 @@ PAGE ABOUT-US
 PAGE OUR-WORK
 =====================*/
 
+div.search-results-header {
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    padding: 1em ;
+    margin-bottom: 1.5em;
+}
+
 body.page-template-page-our-work,
 body.page-template-page-our-work-search {
 
@@ -1135,6 +1142,15 @@ body.page-template-page-our-work-search {
             display: none;
         }
 
+        button.button.close {
+            display: none;
+            top: 1rem;
+            right: 2.5rem;
+            &:after {
+                zoom: 1.5;
+            }
+        }
+
 		section.search, section.filter {
             display: block;
 			padding: 0 1rem;
@@ -1152,6 +1168,8 @@ body.page-template-page-our-work-search {
 
             form {
                 fieldset {
+                    .flex-flow(column wrap);
+
                     legend {
                         margin-bottom: 1rem;
                     }
@@ -1162,15 +1180,6 @@ body.page-template-page-our-work-search {
                             }
                         }
                     }
-                }
-            }
-
-            .button.close {
-                //display: none;
-				top: 1rem;
-				right: 2.5rem;
-                &:after {
-					zoom: 1.5;
                 }
             }
 
@@ -1396,9 +1405,9 @@ body.page-donate {
 //PAGE SITEMAP
 body.page-sitemap {
 	section.content {
-        
+
         nav.sitemap-nav {
-            
+
             ul {
 
                 li {
@@ -1460,7 +1469,7 @@ aside.sidebar {
         background-position: right;
         color: @color-nav-blue;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding-right: 2rem;
         text-align: right;
         .open-menu {
@@ -1478,8 +1487,8 @@ aside.sidebar {
                 display: none;
             }
         }
-
     }
+
     nav.sidebar-nav {
         margin: @vw-spacing;
          ul {
@@ -1489,7 +1498,7 @@ aside.sidebar {
             &.open {
                 display: none;
             }
-             li {
+            li {
  				margin-bottom: 0.2em;
  				&:first-child {
  					margin-top: 0.5em;
@@ -1498,10 +1507,9 @@ aside.sidebar {
  				a {
  					text-decoration: none;
  					text-transform: uppercase;
-                    font-weight: 500;
                     letter-spacing: 0.04em;
- 					font-size: .9rem;
-                    line-height: 1.3em;
+ 					font-size: 1.1rem;
+                    line-height: 1.5em;
                     color: @color-nav-blue;
 
  					&:hover {
@@ -1545,12 +1553,16 @@ aside.sidebar {
  			}
          }
 
+         > ul > li > a {
+             font-weight: bold;
+         }
+
          &.fixed {
              position: fixed;
              top: 0;
          }
     }
-    
+
     a.back-to-top {
         position: absolute;
         font-size: 1rem;

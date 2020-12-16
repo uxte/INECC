@@ -368,6 +368,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/icon-cross-green.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-cross-green.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/img/icon-cross.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1223,7 +1233,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/js/min/min/custom-min-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1267,6 +1277,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-our-work.php",
+		"oF": 0
+		},
+	"/page-sitemap.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-sitemap.php",
 		"oF": 0
 		},
 	"/page.php": {
