@@ -15,9 +15,9 @@ var openMenu = function(menu, button) {
     }
 };
 function setMenu() {
-    var menu = document.getElementById("main-nav");
-    var button = menu.querySelector("a.menu");
-    var item = menu.querySelector("li.menu-item");
+    var menu = document.getElementById('main-nav');
+    var button = menu.querySelector('a.menu');
+    var item = menu.querySelector('li.menu-item');
 
     function bindClick() {
         return function() {
@@ -26,8 +26,8 @@ function setMenu() {
         };
     }
 
-    button.addEventListener("click", bindClick());
-    item.addEventListener("click", bindClick());
+    button.addEventListener('click', bindClick());
+    item.addEventListener('click', bindClick());
 }
 
 setViewportWidth();
@@ -69,7 +69,7 @@ function showElements(button, container) {
 
         });
 
-        button.innerHTML = buttonText.replace("less", "more");
+        button.innerHTML = buttonText.replace('less', 'more');
 
     } else {
 
@@ -77,7 +77,7 @@ function showElements(button, container) {
             el.classList.remove('hide');
         });
 
-        button.innerHTML = buttonText.replace("more", "less");
+        button.innerHTML = buttonText.replace('more', 'less');
 
     }
 
@@ -95,7 +95,7 @@ function bindSeeMoreButtons() {
 
     var buttons = document.getElementsByClassName('button see-more');
     for ( var i = 0; i < buttons.length; i++ ) {
-        buttons[i].addEventListener("click", bindClick(i));
+        buttons[i].addEventListener('click', bindClick(i));
     }
 }
 bindSeeMoreButtons();
@@ -146,12 +146,12 @@ function startSlider(slider) {
         var buttonsArray = slider.getElementsByClassName('prev-next')[0].getElementsByTagName('A');
 
         for ( var i = 0; i < buttonsArray.length; i++ ) {
-            buttonsArray[i].addEventListener("click", bindClick(i));
+            buttonsArray[i].addEventListener('click', bindClick(i));
         }
     }
 }
 
-startSlider('events');
+// startSlider('events');
 startSlider('testimonials');
 startSlider('our-history-phases');
 
@@ -180,36 +180,54 @@ function startDropdown(dropdown) {
 
         var buttonsArray = dropdown.getElementsByClassName('block-header');
         for ( var i = 0; i < buttonsArray.length; i++ ) {
-            buttonsArray[i].addEventListener("click", bindClick(i));
+            buttonsArray[i].addEventListener('click', bindClick(i));
         }
     }
 }
 
 startDropdown('faq');
 
-// SIDEBAR NAV FIX SCROLL
-/*var sbnav = document.getElementById('sidebar-nav');
-var sbnav_y = sbnav.getBoundingClientRect().top - 48;
+// SEARCH TABS
+var searchOrFilter = function(){};
+var bindSofTabs = function(){};
 
-window.onscroll = function() {
-	var window_y = window.scrollY;
+if ( document.body.classList.contains('page-template-page-our-work-search') ) { // Load only on specific page
 
-	if ( window_y >= sbnav_y ) {
-		sbnav.classList.add('fixed');
-	} else {
-		sbnav.classList.remove('fixed');
-	}
-};*/
-// function search(){
-//     var searchContainer = document.getElementById('searchContainer');
-//     var eventsContainer = document.getElementById('eventsContainer');
-//     var eventsTop = eventsContainer.getBoundingClientRect();
-//
-//     searchContainer.classList.add('absolute');
-//     searchContainer.style.top = eventsTop.top+'px';
-// }
-// if(viewportWidth > 1025 && document.getElementsByClassName('search-container')[0]){
-//     window.addEventListener('load', function() {
-//         search();
-//     });
-// }
+	// Show hidden blocks on tab click
+	searchOrFilter = function(tab) {
+
+	    var sof = document.getElementById('searchOrFilter');
+		var sofBlocks = sof.querySelectorAll('section');
+
+		sofBlocks[0].classList.remove('active');
+		sofBlocks[1].classList.remove('active');
+
+		if ( tab.classList.contains('search') ) {
+			sofBlocks[0].classList.add('active');
+		}
+		if ( tab.classList.contains('filter') ) {
+			sofBlocks[1].classList.add('active');
+		}
+
+	};
+
+	bindSofTabs = function() {
+		var sofTabs = document.getElementById('searchOrFilterTabs');
+		var tabs = sofTabs.querySelectorAll('.button');
+		var close = document.getElementById('closeSearchOrFilter');
+
+	    function bindClick() {
+	        return function() {
+	            searchOrFilter(this);
+	        };
+	    }
+
+	    for ( var i = 0; i < tabs.length; i++ ) {
+	        tabs[i].addEventListener('click', bindClick(i));
+	    }
+		close.addEventListener('click', bindClick());
+	};
+
+	bindSofTabs();
+
+}

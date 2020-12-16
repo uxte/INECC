@@ -7,24 +7,8 @@
 		"uuidString": "55B6AA80-A1AE-4C5E-A042-FA4778CFD949"
 		}
 	],
-"creatorBuild": "32147",
+"creatorBuild": "32001",
 "files": {
-	"/.ftpconfig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.ftpconfig",
-		"oF": 0
-		},
-	"/.ftpignore": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.ftpignore",
-		"oF": 0
-		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -343,6 +327,26 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/img/icon-community.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-cross-blue.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-cross-blue.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-cross-green.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/icon-cross-green.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -1031,6 +1035,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/map.png": {
+		"ft": 32768,
+		"iS": 51796,
+		"oA": 0,
+		"oAP": "/img/map.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/map.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1204,6 +1219,14 @@
 		"oAP": "/page-our-work.php",
 		"oF": 0
 		},
+	"/page-sitemap.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-sitemap.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1319,6 +1342,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/page/page-tabs.php",
+		"oF": 0
+		},
+	"/template-parts/page/subpage-content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/page/subpage-content.php",
 		"oF": 0
 		},
 	"/template-parts/sidebar.php": {
@@ -3375,13 +3406,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
-		"compilerType": 1,
 		"createSourceMap": 0,
+		"debugStyle": 0,
 		"decimalPrecision": 10,
-		"emitCharset": 1,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0
+		"shouldRunBless": 0,
+		"useLibsass": 1
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,

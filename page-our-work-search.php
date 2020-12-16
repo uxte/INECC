@@ -39,34 +39,34 @@
 
         </div>
 
-        <aside class="search-filter" id="searchContainer">
+        <aside class="search-filter" id="searchOrFilter">
 
-            <div class="tabs">
-                <div class="btn-container"><a class="button search" href="#search">Search</a></div>
-                <div class="btn-container"><a class="button filter" href="#filter">Filter</a></div>
+            <div class="tabs" id="searchOrFilterTabs">
+                <div class="btn-container"><a class="button search" >Search</a></div>
+                <div class="btn-container"><a class="button filter" >Filter</a></div>
             </div>
 
-            <section class="search" id="search">
+            <button class="button close" id="closeSearchOrFilter"></button>
+
+            <section class="search" id="searchBlock">
                 <h2>Search</h2>
 
-                <form class="form-search" action="." method="GET">
+                <form class="form-search" action="<?php esc_url(get_permalink()); ?>" method="GET">
 
-                    <input type="text" placeholder="What are you looking for?" name="s" />
+                    <input type="text" placeholder="What are you looking for?" required name="search" />
 
                     <div class="btn-container submit">
-                        <button class="button has-white-color" type="submit" >Search</button>
+                        <button class="button has-white-color" type="submit">Search</button>
                     </div>
 
                 </form>
 
-                <a class="button close" href="#"></a>
-
             </section>
 
-            <section class="filter" id="filter">
+            <section class="filter" id="filterBlock">
                 <h2>Filter</h2>
 
-                <form class="form-filter" action="." method="GET">
+                <form class="form-filter" action="<?php esc_url(get_permalink()); ?>" method="GET">
 
                     <fieldset class="filter-by-areas-of-work">
 
@@ -76,22 +76,38 @@
                         </legend>
 
                         <?php
-                            $parent_cat = get_the_category();
-                            $category_id = $parent_cat[0]->cat_ID;
-                            $categories = get_categories( array(
-                                'orderby' => 'name',
-                                'parent'  => $category_id
-                            ) );
-                            foreach ( $categories as $category ) {
-                                $cat_ID = $category->cat_ID;
+                            $page_name = end( explode( '-', $post->post_name ) );
+                            $category = get_term_by('slug', $page_name, 'category');
+                            $category_id = $category->term_id;
+
+                            $taxonomies = array(
+                                'category'
+                            );
+
+                            $args = array(
+                                // 'parent'         => $category_id,
+                                'child_of'       => $category_id,
+                                'orderby'        => 'name',
+                                'hide_empty'     => 0
+                            );
+
+                            $sub_categories = get_terms($taxonomies, $args);
+
+                            //var_dump( $sub_categories );
+
+                            foreach ( $sub_categories as $category ) {
+                                $cat_id = $category->term_id;
+
                                 $cat_name = preg_replace('/[ ,]+/', '', strtolower($category->name));
                                 print '<label for="' . $cat_name . '">';
-                                    print '<input type="radio" id="' . $cat_name . '" name="cat" value="' . $cat_ID . '" >';
+                                    print '<input type="radio" id="' . $cat_name . '" value="' . $cat_id . '" name="cat">';
                                 print $category->name . '</label>';
                             }
                         ?>
 
                     </fieldset>
+
+                    <?php if ($page_name == "events"): ?>
 
                     <fieldset class="filter-by-location">
 
@@ -99,7 +115,7 @@
 
                         <label for="localities">States</label>
 
-                        <select name="localities" id="localities">
+                        <select name="local" id="localities">
                             <?php
                                 $localities = get_meta_values( 'event_place', 'post' );
                                 print '<option disabled selected value>All states</option>';
@@ -114,87 +130,19 @@
 
                     </fieldset>
 
+                    <?php endif; ?>
+
                     <div class="btn-container submit">
                         <button class="button has-white-color" type="submit" >Apply filter</button>
                     </div>
 
                 </form>
 
-                <!-- <div class="btn-container open tab"><a class="button open" href="#filter">Filter</a></div> -->
-                <a class="button close" href="#"></a>
 
             </section>
-
-            <?php /*
-                $s = $_GET['s'];
-                $local = $_GET['localities'];
-                $cat = $_GET['cat'];
-
-                $args = array(
-                    'post_type'              => 'post',
-                    'post_status'            => 'publish',
-                    'order'                  => 'DESC',
-                    'cat'                    => $cat,
-                );
-                if(!empty($local)) {
-                    $args = array(
-                        'meta_query' => array(
-                            'relation' => 'AND',
-                            array(
-                                'key' => 'event_place',
-                                'value' => ''.$local.''
-                            )
-                        )
-                            );
-                }
-                if(!empty($s)) {
-                    $args = array(
-                        's' => $s,
-                    );
-                }
-                // The Query
-                $posts = new WP_Query( $args );
-
-                // The Loop
-                if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
-                    $posts -> the_post();
-
-            ?>
-
-                    <article class="event slide <?php echo $class_hide;?>" id="<?php echo $post->post_name?>">
-                        <h2><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'INECC Events' ) ) ) . "#" . $post->post_name ?>"><?php the_title(); ?></a></h2>
-                        <div class="row">
-                            <div class="col">
-                                <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php print get_the_date('M \<\s\p\a\n\>d\<\/\s\p\a\n\>');  ?></time>
-                                <div class="img"><?php print get_the_post_thumbnail( $post, 'medium' ); ?></div>
-                                <!-- <figure><img src="/img/thumb.svg" alt="Thumb" /></figure> -->
-                            </div>
-                            <div class="col">
-                                <address><?php print $post->event_place; ?></address>
-                                <?php the_excerpt(); ?>
-                            </div>
-                        </div>
-                        <footer class="row">
-                            <div class="col">
-                                <a class="button icon calendar" href="<?php echo make_cal_link($post); ?>" target="_blank">Add to my <span>calendar</span></a>
-                            </div>
-                            <div class="col">
-                                <a class="button icon facebook" rel="noreferrer nofollow" href="<?php echo $post->event_fb; ?>">Find out <span>more on</span></a>
-                            </div>
-                        </footer>
-                    </article>
-
-                    <hr>
-
-            <?php endwhile; endif; wp_reset_postdata(); */ ?>
-
         </aside>
-
     </section>
-
 </main>
-
-
 
 <aside class="content parent wrapper">
     <?php

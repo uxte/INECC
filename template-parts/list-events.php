@@ -1,36 +1,52 @@
 <?php
 
-$s = $_GET['s'];
-$local = $_GET['localities'];
-$cat = $_GET['cat'];
+$search     = $_REQUEST[ 'search' ];
+$cat        = $_REQUEST[ 'cat' ];
+$local      = $_REQUEST[ 'local' ];
 
 // WP_Query arguments
 $args = array(
-    'category_name'          => 'event',
-    'post_type'              => 'post',
-    'post_status'            => 'publish, future',
-    'order'                  => 'DESC',
-    'cat'                    => $cat,
+    'category_name'        => 'events',
+    'post_type'            => 'post',
+    'post_status'          => 'publish, future',
+    'order'                => 'DESC',
+    's'                    => $search,
+    'cat'                  => $cat,
 );
 
-if(!empty($local)) {
+if ( isset ($local) ) {
     $args = array(
-        'meta_query' => array(
-            'relation' => 'AND',
+        'meta_query'           => array(
+            'relation'         => 'AND',
             array(
-                'key' => 'event_place',
-                'value' => ''.$local.''
+                'key'          => 'event_place',
+                'value'        => ''.$local.''
             )
         )
-            );
-}
-if(!empty($s)) {
-    $args = array(
-        's' => $s,
     );
 }
+
 // The Query
 $posts = new WP_Query( $args );
+
+// if search
+if ( isset( $search ) ) {
+    $count = $posts -> post_count;
+    print '<div class="search-results-header"><strong>' . $count . '</strong> results for search term: <strong>' . $search . ' </strong></div>';
+}
+
+// if filter
+if ( isset( $local ) || isset( $cat ) ) {
+    $count = $posts -> post_count;
+    $cat_name = get_term( $cat )->name;
+
+    print '<div class="search-results-header"><strong>' . $count . '</strong> results for filter: ';
+    print   '<strong>' . $cat_name . ' </strong>';
+    if ( $local != null ) {
+        print ' in <strong>' . $local . ' </strong>';
+    }
+    print '</div>';
+}
 
 // The Loop
 if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :

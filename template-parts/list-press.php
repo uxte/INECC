@@ -1,15 +1,37 @@
 <?php
 
+$search     = $_REQUEST[ 'search' ];
+$cat        = $_REQUEST[ 'cat' ];
+
 // WP_Query arguments
 $args = array(
-    'category_name'          => 'press',
-    'post_type'              => 'post',
-    'post_status'            => 'publish',
-    'order'                  => 'DESC'
+    'category_name'        => 'press',
+    'post_type'            => 'post',
+    'post_status'          => 'publish',
+    'order'                => 'DESC',
+    's'                     => $search,
+    'cat'                   => $cat,
 );
 
 // The Query
 $posts = new WP_Query( $args );
+
+// if search
+if ( isset( $search ) ) {
+    $isSearchPage = true;
+    $count = $posts -> post_count;
+    print '<div class="search-results-header"><strong>' . $count . '</strong> results for search term: <strong>' . $search . ' </strong></div>';
+}
+
+// if filter
+if ( isset( $cat ) ) {
+    $count = $posts -> post_count;
+    $cat_name = get_term( $cat )->name;
+
+    print '<div class="search-results-header"><strong>' . $count . '</strong> results for filter: ';
+    print   '<strong>' . $cat_name . ' </strong>';
+    print '</div>';
+}
 
 // The Loop
 if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) : $posts -> the_post(); ?>
