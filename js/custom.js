@@ -33,16 +33,14 @@ function setMenu() {
 setViewportWidth();
 setMenu();
 
-//Sidebar Menu
-if (viewportWidth > 1420) {
-    var sbMenuToggle = document.querySelector("#sbMenuToggle");
-    var sbMenu = document.querySelector("#sbMenu");
+//
+var sbMenuToggle = document.querySelector("#sbMenuToggle");
+var sbMenu = document.querySelector("#sbMenu");
 
-    sbMenuToggle.addEventListener("click", function(){
-        sbMenuToggle.classList.toggle("open");
-        sbMenu.classList.toggle("open");
-    });
-}
+sbMenuToggle.addEventListener("click", function(){
+    sbMenuToggle.classList.toggle("open");
+    sbMenu.classList.toggle("open");
+});
 
 // On resize events, recalculate and log
 window.addEventListener('resize', function () {
