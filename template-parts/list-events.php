@@ -1,36 +1,40 @@
 <?php
 
-$s = $_GET['s'];
-$local = $_GET['localities'];
-$cat = $_GET['cat'];
+$search     = $_REQUEST[ 'search' ];
+$local      = $_REQUEST[ 'local' ];
+$cat        = $_REQUEST[ 'cat' ];
 
 // WP_Query arguments
 $args = array(
-    'category_name'          => 'event',
-    'post_type'              => 'post',
-    'post_status'            => 'publish, future',
-    'order'                  => 'DESC',
-    'cat'                    => $cat,
+    'category_name'        => 'events',
+    'post_type'            => 'post',
+    'post_status'          => 'publish, future',
+    'order'                => 'DESC',
+    's'                    => $search,
+    'cat'                  => $cat,
 );
 
-if(!empty($local)) {
+if ( isset ($local) ) {
     $args = array(
-        'meta_query' => array(
-            'relation' => 'AND',
+        'meta_query'           => array(
+            'relation'         => 'AND',
             array(
-                'key' => 'event_place',
-                'value' => ''.$local.''
+                'key'          => 'event_place',
+                'value'        => ''.$local.''
             )
         )
-            );
-}
-if(!empty($s)) {
-    $args = array(
-        's' => $s,
     );
 }
+
 // The Query
 $posts = new WP_Query( $args );
+
+// if search
+if ( isset( $search ) ) {
+    $isSearchPage = true;
+    $count = $posts -> post_count;
+    print '<div class="search-results-header">' . $count . ' results for search term: <strong>' . $_REQUEST[ 'search' ] . ' </strong></div>';
+}
 
 // The Loop
 if ( $posts -> have_posts() ) : while ( $posts -> have_posts() ) :
