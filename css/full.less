@@ -1500,9 +1500,6 @@ aside.sidebar {
             }
             li {
  				margin-bottom: 0.2em;
- 				&:first-child {
- 					margin-top: 0.5em;
- 				}
 
  				a {
  					text-decoration: none;
@@ -1550,10 +1547,13 @@ aside.sidebar {
                         color: @color-green;
                     }
                 }
-                &.menu-item-has-children:first-child {
-                    .sub-menu {
-                        > a {
-                            color: @color-nav-blue!important;
+                &:first-child {
+                    margin-top: 0.5em;
+                    ul.sub-menu {
+                        li, li.current-menu-item {
+                            > a {
+                                color: @color-nav-blue!important;
+                            }
                         }
                     }
                 }
