@@ -1276,8 +1276,8 @@ nav.tabs {
 
 		&.selected {
 			color: white;
-			padding-bottom: 2.5rem;
-			margin-bottom: -0.3rem;
+			padding-bottom: 3.1rem;
+			margin-bottom: -0.2rem;
 		}
 	}
 
@@ -1547,7 +1547,14 @@ aside.sidebar {
 
                 &.current-menu-item, &.current-menu-parent {
                     > a {
-                        color: @color-green !important;
+                        color: @color-green;
+                    }
+                }
+                &.menu-item-has-children:first-child {
+                    .sub-menu {
+                        > a {
+                            color: @color-nav-blue;
+                        }
                     }
                 }
  			}
