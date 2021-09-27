@@ -45,5 +45,7 @@
                 <a class="menu" href="#menu">Menu</a>
             </div>
         </nav>
+        
+        <a class="sw-tab" title="Learn more" href="<?php echo esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>#sustainability"><span><span>This is a</span> low-carbon website</span></a>
 
 	</header>

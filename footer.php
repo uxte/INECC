@@ -1,5 +1,5 @@
 
-<?php get_template_part( 'template-parts/sidebar'); ?>
+<?php /*get_template_part( 'template-parts/sidebar');*/ ?>
 
 <footer class="main-footer wrapper">
     <a class="back-to-top" rel="nofollow" href="#top">Back to top</a>
